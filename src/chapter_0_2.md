@@ -89,15 +89,19 @@ To make a standard clickable link, wrap the URL with "<>".
 To give a link a title that replaces the URL, first put the title within "[]", and have it immediately followed by "()".
 
 \[example title\]\(https://www.google.com\)
+
 [example title](https://www.google.com)
 
 Images are much the same as above, use a "!" preceding the title and the link designation.
 
-![example image](https://discordapp.com/channels/373745291289034763/482251184980361256/570216861275521034)
+\!\[example image\]\(https://cdn.discordapp.com/emojis/460756324729356299.png?v=1\)
+
+![example image](https://cdn.discordapp.com/emojis/460756324729356299.png?v=1)
 
 For either, if you want alternate text to popup when hovering over the element, put the alternate text within the "()", after the link, and in quotation marks, like so:
 
 \[example title\]\(https://www.google.com "This Is Google!"\)
+
 [example title](https://www.google.com "This Is Google!")
 
 #### Headings
