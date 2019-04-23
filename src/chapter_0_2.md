@@ -101,6 +101,8 @@ For either, if you want alternate text to popup when hovering over the element, 
 
 [example title](https://www.google.com "This Is Google!")
 
+If your image isn't uploaded onto the web, that's fine - just send me the file, and I can attach it on my side. Make a note for me, saying (image_1 here), or somesuch.
+
 #### Headings
 
 You can set six different bolded-sizes for headers, for visual distinction. A header is simply a number sign (#) followed by the text that is being head'ed. There can be one number sign, up to six number signs, preceding the text. One number sign is the largest, six the smallest.
