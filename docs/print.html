@@ -154,13 +154,15 @@
 <a class="header" href="#markdown-conversion" id="markdown-conversion"><h3>Markdown Conversion</h3></a>
 <p>This page is intended as a very quick guide on how to convert your tutorial into the language used here, markdown. Markdown is super simple and made to be incredibly simple.</p>
 <a class="header" href="#standard-text" id="standard-text"><h4>Standard Text</h4></a>
-<p>These three are the backbone of any good tutorial.</p>
-<p>Italics - *text*
-<em>this is an example</em></p>
-<p>Bold - **text**
-<strong>this is an example</strong></p>
-<p>Italics &amp; Bold - ***text***
-<strong><em>this is an example</em></strong></p>
+<p>These four are the backbone of any good tutorial.</p>
+<p>Italics - *text*</p>
+<p><em>this is an example</em></p>
+<p>Bold - **text**</p>
+<p><strong>this is an example</strong></p>
+<p>Italics &amp; Bold - ***text***</p>
+<p><strong><em>this is an example</em></strong></p>
+<p>Strikethroughs - ~~text~~</p>
+<p>~~this is an example!~~</p>
 <a class="header" href="#blockquotes" id="blockquotes"><h4>Blockquotes</h4></a>
 <p>Blockquotes are a great way of showing specific code or db stuffs. All you have to do is put a &quot;&gt;&quot; preceding a paragraph.</p>
 <blockquote>
@@ -181,6 +183,51 @@
 </blockquote>
 </blockquote>
 </blockquote>
+<a class="header" href="#lists" id="lists"><h4>Lists</h4></a>
+<p>Super simple, like the rest of this language. To make a nice bulleted list, use &quot;-&quot; prior to the item, with a line break in between.</p>
+<ul>
+<li>Example list.</li>
+<li>Look at my shiny buttons.
+<ul>
+<li>You can even indent.
+You can also randomly not use a bullet to say something.</li>
+</ul>
+</li>
+<li>And then use a bullet again.</li>
+</ul>
+<p>If you want to number the list, just put &quot;1.&quot; prior to the first item, and then iterate the number for each new list item.</p>
+<ol>
+<li>First thing on the agenda - put 1.</li>
+<li>Shortly after that, put 2.
+I think you get the example by now.</li>
+<li>One more, for good measure.</li>
+</ol>
+<a class="header" href="#codeblocks" id="codeblocks"><h4>Codeblocks</h4></a>
+<p>For any written code, you can use a single backtick/grave (`) on both sides of the text in order to write code inline. Kinda like <code>this</code>.</p>
+<p>If you want to make blocks of code, you can use three of the above, on both sides of the text.</p>
+<pre><code class="language-lua">local example = &quot;text&quot;
+
+function do_stuff()
+    print(example)
+end
+
+do_stuff()
+</code></pre>
+<a class="header" href="#line-breaks" id="line-breaks"><h4>Line Breaks</h4></a>
+<p>If you want to make big lines across the screen, use three (or more) hyphens, asterisks, or underscores, in a line by themselves.</p>
+<hr />
+<a class="header" href="#links-and-images" id="links-and-images"><h4>Links and Images</h4></a>
+<p>Links are pretty simple, and can have a specified tooltips for when they're hovered over, or converted into text and made into a hyperlink, or can remain a standard clickable link.</p>
+<p>To make a standard clickable link, wrap the URL with &quot;&lt;&gt;&quot;.</p>
+<p><a href="https://www.google.com">https://www.google.com</a></p>
+<p>To give a link a title that replaces the URL, first put the title within &quot;[]&quot;, and have it immediately followed by &quot;()&quot;.</p>
+<p>[example title](https://www.google.com)
+<a href="https://www.google.com">example title</a></p>
+<p>Images are much the same as above, use a &quot;!&quot; preceding the title and the link designation.</p>
+<p><img src="https://discordapp.com/channels/373745291289034763/482251184980361256/570216861275521034" alt="example image" /></p>
+<p>For either, if you want alternate text to popup when hovering over the element, put the alternate text within the &quot;()&quot;, after the link, and in quotation marks, like so:</p>
+<p>[example title](https://www.google.com &quot;This Is Google!&quot;)
+<a href="https://www.google.com" title="This Is Google!">example title</a></p>
 <a class="header" href="#headings" id="headings"><h4>Headings</h4></a>
 <p>You can set six different bolded-sizes for headers, for visual distinction. A header is simply a number sign (#) followed by the text that is being head'ed. There can be one number sign, up to six number signs, preceding the text. One number sign is the largest, six the smallest.</p>
 <a class="header" href="#one-number-sign" id="one-number-sign"><h1>One Number Sign</h1></a>
