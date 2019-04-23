@@ -7,7 +7,7 @@ This page is intended as a very quick guide on how to convert your tutorial into
 
 #### Standard Text
 
-These four are the backbone of any good tutorial.
+These three are the backbone of any good tutorial.
 
 Italics - \*text\*
 
@@ -21,9 +21,6 @@ Italics & Bold - \*\*\*text\*\*\*
 
 ***this is an example***
 
-Strikethroughs - \~\~text\~\~
-
-~~this is an example!~~
 
 #### Blockquotes
 
