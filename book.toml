@@ -3,3 +3,6 @@ authors = ["Chad Vandewettering"]
 multilingual = false
 src = "src"
 title = "Modding Resources"
+
+[build]
+build-dir = "./docs"

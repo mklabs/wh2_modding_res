@@ -1,3 +1,5 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+[Modding Resources](./chapter_0.md)
+
+- [Tools & Resources](./chapter_1.md)
