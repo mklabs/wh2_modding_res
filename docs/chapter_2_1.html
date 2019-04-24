@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Modding Resources</title>
+        <title>Building Buildings - Modding Resources</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> Listeners</a></li></ol></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html" class="active"><strong aria-hidden="true">2.1.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> Listeners</a></li></ol></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -136,116 +136,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#modding-resources" id="modding-resources"><h1>Modding Resources</h1></a>
-<a class="header" href="#hello-and-welcome" id="hello-and-welcome"><h3>Hello and Welcome!</h3></a>
-<p>Welcome to this little paradise of modding, for Total War: WARHAMMER II. Before we go on, a few things to note:</p>
-<ul>
-<li>This website is run and maintained by a beautiful union between GitHub and myself, Vandy. (It's hosted on GitHub Pages, if you can't tell from the URL.)</li>
-<li>This is an independent project, completely separate from anything resembling official-ness via Creative Assembly, or SEGA, or Games Workshop, or whatever.</li>
-<li>All tutorials hosted here are done so with the consent of their respective authors - not a great fan of stolen work!</li>
-<li>This site doesn't seek to be an exhaustive list of guaranteed victories, but a slowly-growing community effort to condense knowledge that we have, and formalize it.</li>
-</ul>
-<p>This project is early yet, and won't be easy for me to maintain. If you would like to help me, reach out to me, and I'll have you convert some tutorials into .md files. A tutorial for that will be made sometime soon... ironically.</p>
-<a class="header" href="#divisions" id="divisions"><h3>Divisions</h3></a>
-<p>The way I'm going to divide up the tutorials is utterly and completely undecided as of yet.</p>
-<a class="header" href="#submissions" id="submissions"><h3>Submissions</h3></a>
-<p>If you'd like to submit your tutorial, I don't care.</p>
-<a class="header" href="#converting-to-markdown" id="converting-to-markdown"><h1>Converting to Markdown</h1></a>
-<a class="header" href="#markdown-conversion" id="markdown-conversion"><h3>Markdown Conversion</h3></a>
-<p>This page is intended as a very quick guide on how to convert your tutorial into the language used here, markdown. Markdown is super simple and made to be incredibly simple.</p>
-<a class="header" href="#standard-text" id="standard-text"><h4>Standard Text</h4></a>
-<p>These three are the backbone of any good tutorial.</p>
-<p>Italics - *text*</p>
-<p><em>this is an example</em></p>
-<p>Bold - **text**</p>
-<p><strong>this is an example</strong></p>
-<p>Italics &amp; Bold - ***text***</p>
-<p><strong><em>this is an example</em></strong></p>
-<a class="header" href="#blockquotes" id="blockquotes"><h4>Blockquotes</h4></a>
-<p>Blockquotes are a great way of showing specific code or db stuffs. All you have to do is put a &quot;&gt;&quot; preceding a paragraph.</p>
-<blockquote>
-<p>This is a blockquote.</p>
-<p>And this is the blockquote's end.</p>
-</blockquote>
-<blockquote>
-<p>You can use most markdown elements in a blockquote, but I won't cover the possibilities here.</p>
-</blockquote>
-<blockquote>
-<p>You can also make nestled blockquotes.</p>
-<blockquote>
-<p>Like this.</p>
-<blockquote>
-<blockquote>
-<p>And, this.</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<a class="header" href="#lists" id="lists"><h4>Lists</h4></a>
-<p>Super simple, like the rest of this language. To make a nice bulleted list, use &quot;-&quot; prior to the item, with a line break in between.</p>
-<ul>
-<li>Example list.</li>
-<li>Look at my shiny buttons.
-<ul>
-<li>You can even indent.
-You can also randomly not use a bullet to say something.</li>
-</ul>
-</li>
-<li>And then use a bullet again.</li>
-</ul>
-<p>If you want to number the list, just put &quot;1.&quot; prior to the first item, and then iterate the number for each new list item.</p>
-<ol>
-<li>First thing on the agenda - put 1.</li>
-<li>Shortly after that, put 2.
-I think you get the example by now.</li>
-<li>One more, for good measure.</li>
-</ol>
-<a class="header" href="#codeblocks" id="codeblocks"><h4>Codeblocks</h4></a>
-<p>For any written code, you can use a single backtick/grave (`) on both sides of the text in order to write code inline. Kinda like <code>this</code>.</p>
-<p>If you want to make blocks of code, you can use three of the above, on both sides of the text.</p>
-<pre><code class="language-lua">local example = &quot;text&quot;
-
-function do_stuff()
-    print(example)
-end
-
-do_stuff()
-</code></pre>
-<a class="header" href="#line-breaks" id="line-breaks"><h4>Line Breaks</h4></a>
-<p>If you want to make big lines across the screen, use three (or more) hyphens, asterisks, or underscores, in a line by themselves.</p>
-<hr />
-<a class="header" href="#links-and-images" id="links-and-images"><h4>Links and Images</h4></a>
-<p>Links are pretty simple, and can have a specified tooltips for when they're hovered over, or converted into text and made into a hyperlink, or can remain a standard clickable link.</p>
-<p>To make a standard clickable link, wrap the URL with &quot;&lt;&gt;&quot;.</p>
-<p><a href="https://www.google.com">https://www.google.com</a></p>
-<p>To give a link a title that replaces the URL, first put the title within &quot;[]&quot;, and have it immediately followed by &quot;()&quot;.</p>
-<p>[example title](https://www.google.com)</p>
-<p><a href="https://www.google.com">example title</a></p>
-<p>Images are much the same as above, use a &quot;!&quot; preceding the title and the link designation.</p>
-<p>![example image](https://cdn.discordapp.com/emojis/460756324729356299.png?v=1)</p>
-<p><img src="https://cdn.discordapp.com/emojis/460756324729356299.png?v=1" alt="example image" /></p>
-<p>For either, if you want alternate text to popup when hovering over the element, put the alternate text within the &quot;()&quot;, after the link, and in quotation marks, like so:</p>
-<p>[example title](https://www.google.com &quot;This Is Google!&quot;)</p>
-<p><a href="https://www.google.com" title="This Is Google!">example title</a></p>
-<p>If your image isn't uploaded onto the web, that's fine - just send me the file, and I can attach it on my side. Make a note for me, saying (image_1 here), or somesuch.</p>
-<a class="header" href="#headings" id="headings"><h4>Headings</h4></a>
-<p>You can set six different bolded-sizes for headers, for visual distinction. A header is simply a number sign (#) followed by the text that is being head'ed. There can be one number sign, up to six number signs, preceding the text. One number sign is the largest, six the smallest.</p>
-<a class="header" href="#one-number-sign" id="one-number-sign"><h1>One Number Sign</h1></a>
-<a class="header" href="#two-number-signs" id="two-number-signs"><h2>Two Number Signs</h2></a>
-<a class="header" href="#three-number-signs" id="three-number-signs"><h3>Three Number Signs</h3></a>
-<a class="header" href="#four-number-signs" id="four-number-signs"><h4>Four Number Signs</h4></a>
-<a class="header" href="#five-number-signs" id="five-number-signs"><h5>Five Number Signs</h5></a>
-<a class="header" href="#six-number-signs" id="six-number-signs"><h6>Six Number Signs</h6></a>
-<a class="header" href="#tools--resources" id="tools--resources"><h1>Tools &amp; Resources</h1></a>
-<p>Every modder needs proper tools, just like every lumberjack needs a swingset. This list does not claim to be a sure-fire solution to every single issue a modder might face, nor an impervious list of perfect programs, designed to cater your every need. This list <strong>does</strong> have a lot of value in it, I believe, and if used correctly, a lot can be achieved.</p>
-<a class="header" href="#kaedrins-mod-manager" id="kaedrins-mod-manager"><h4>Kaedrin's Mod Manager</h4></a>
-<p><a href="https://github.com/Kaedrin/warhammer-mod-manager/releases/">Kaedrin's Mod Manager</a> is a very useful alternative mod manager that works for all Total War games since Total War: Empire.</p>
-<p>You can get in contact with the creator, Kaedrin, in the Modding Den's channel <a href="https://discord.gg/yHvXGRb">#kaedrin_mod_manager</a>.</p>
-<a class="header" href="#frodos-rusted-pack-file-manager" id="frodos-rusted-pack-file-manager"><h4>Frodo's Rusted Pack File Manager</h4></a>
-<p><a href="https://github.com/Frodo45127/rpfm/releases/latest">RPFM</a> is a great pack-file managing tool, essential for any modder. Active development has new features coming regularly, as well as constant bugfixes or squashings.</p>
-<p>Get in contact with the creator, Frodo, in the Modding Den's channel <a href="https://github.com/Frodo45127/rpfm/releases/latest">#rpfm</a>.</p>
-<a class="header" href="#database-stuff" id="database-stuff"><h1>Database Stuff</h1></a>
-<a class="header" href="#building-buildings" id="building-buildings"><h1>Building Buildings</h1></a>
+                        <a class="header" href="#building-buildings" id="building-buildings"><h1>Building Buildings</h1></a>
 <a class="header" href="#so-you-want-to-build-a-building" id="so-you-want-to-build-a-building"><h3>So you want to build a building?</h3></a>
 <p>Buildings are a great feature in the game, and editing them can allow for a lot of fun new mechanics! New building chains can allows new units, new effects, and new landmarks. The best news of all is that most ideas with building chains are possible.</p>
 <a class="header" href="#vocabulary" id="vocabulary"><h3>Vocabulary</h3></a>
@@ -357,147 +248,21 @@ For now, however, delete all previous entries like usual, add a new row, and inp
 <li>Please rename your tables and your mod. There is no reason to not rename your tables and your mod, and problems can ensue otherwise. Oh, and please make sure you are using unique id's for these tables! If you use vanilla ones/id's from other mods, then you're ensuring incompatibility.</li>
 </ol>
 <p>Thanks for reading!</p>
-<a class="header" href="#lua-3" id="lua-3"><h1>Lua &lt;3</h1></a>
-<a class="header" href="#listeners" id="listeners"><h1>Listeners</h1></a>
-<a class="header" href="#can-you-hear-me" id="can-you-hear-me"><h3>Can You Hear Me?</h3></a>
-<p>A listener is an important script command that, simply, waits for something to happen - or, <em>listens</em> for something to happen - in the game, and then triggers something else. Using a listener, we can listen for an event such as the creation of an army, the occupation of a city, or even a battle, and then we use the information from that situation, check for something specific, and run our code if the event matches our criteria. For example: we may be looking for Mannfred to occupy Altdorf. In this case we'd have to use a listener to &quot;listen&quot; for a city being occupied, but we don't want to listen for just <em>any</em> city being occupied. In our example, we have to listen for Altdorf being occupied, and for Mannfred doing the occupying. The listener will listen for every single time a city is occupied, and once those two conditions are met - <em>Mannfred</em> occupying <em>Altdorf</em>... Clue, anyone? - then our listener will trigger some code. In layman's code, our listener will <em>do a thing</em>!</p>
-<p>Overall, it is a very valuable connection between Lua and game data, and any scripter should understand the in's and out's of a listener.</p>
-<p>Let's break down the basics of a listener. Here is it, at its most basic form:</p>
-<pre><code class="language-lua">core:add_listener(
-    &quot;listener_name&quot;,
-    &quot;event_name&quot;,
-    boolean1,
-    function(context)
-    end,
-    boolean2
-)
-</code></pre>
-<ul>
-<li>&quot;listener_name&quot;: Can be whatever you want it to be! (Keep in mind if you share the same listener_name as another listener, and that name is called with core:remove_listener(&quot;listener_name&quot;), one of those listeners will be removed, and it'd be hard to tell which would be. Use unique names!)</li>
-<li>&quot;event_name&quot;: This must be one within a set of Events that CA defines. You can view this <a href="https://cdn.discordapp.com/attachments/531219831861805069/569627247217082387/scripting_doc.html">list here</a>. We'll cover this list more in depth later on.</li>
-<li>boolean1: This is the &quot;conditional&quot; boolean. If it is set to true, the function to execute will execute; if it is set to false, the function will not execute.</li>
-<li>function: This is the &quot;callback&quot; function, which only runs if the conditional boolean returns as true. Can be whatever valid function you want! Note that it MUST have the format of &quot;function(context) --[[....]] end,&quot;</li>
-<li>boolean2: This is the &quot;persistence&quot; boolean. If it is set to true, the listener will continue listening. If it is set to false, the listener will be removed from the game data.</li>
-</ul>
-<a class="header" href="#ca-events" id="ca-events"><h3>CA Events</h3></a>
-<p>Just kidding.</p>
-<p>Let's talk more in detail about the Events I mentioned.</p>
-<p>As previously clarified, Events are predefined objects that are used exclusively in tandem with Listeners. A full list of Events, and all of their methods, and all of the interfaces, can be found <a href="https://cdn.discordapp.com/attachments/531219831861805069/569627247217082387/scripting_doc.html">here</a>. Let's go over how to use this document!</p>
-<p>At the top of the document is a long list of Events, each clickable to divert to another part of the document. Each of these Events have specific usage. It should be noted here that documentation on some events is rather light, ie. when to use certain ones versus others, but a lot can be found out by looking at vanilla scripts or other mods. ((NOTE: Flesh out a full Events page to detail each Event))</p>
-<p>I want to start a new function after the player takes over Altdorf. After searching the term &quot;Occup&quot;, the event &quot;GarrisonOccupiedEvent&quot; is highlighted. This looks promising! After clicking, the available functions are &quot;garrison_residence&quot; and &quot;character&quot;, which seem to be the region that was occupied, and the character that led the assault, in order.</p>
-<a class="header" href="#conditional-coding" id="conditional-coding"><h3>Conditional Coding</h3></a>
-<p>Remember &quot;boolean1&quot; from up above? If that is set to true/false, it's not really effective code. We can replace that true/false with a function that returns a true/false value, and that way we can actually check the event, see if a specific thing happened in that event, and then spit out a boolean to trigger the callback function.</p>
-<pre><code class="language-lua">    function(context)
-        return context:[thing we want to check]
-    end,
-</code></pre>
-<p>In essence, the above is the foundation for what all effective conditional functions in a listener should be. Context, in the context of listeners, is an object which contains all the data that occurred within the Event. But let's back up. Remember on the document, we found GarrisonOccupiedEvent? Let's go back to it and click it again. We see two options, as mentioned before - &quot;garrison_residence&quot; and &quot;character&quot;. As our intention is to find a specific region being occupied - Altdorf - we need to use that path.</p>
-<p>At this point, our WIP code looks like the following:</p>
-<pre><code class="language-lua">    function(context)
-        return context:garrison_residence()
-    end,
-</code></pre>
-<p>For the conditional function, you always want to start with &quot;return context:&quot;, and the next method can only be one of the methods that is accessible by that Event - which is where this document comes SO in handy. For other examples, click around the different Events listed at the top. Each &quot;Function&quot; underneath each Event after clicking it is a valid method for the context of that Event. The &quot;RegionSelected&quot; event only has access to a &quot;region&quot; function, which means the only valid method is to use &quot;context:region()&quot;. &quot;DilemmaChoiceMadeEvent&quot;, however, has access to &quot;faction&quot;, &quot;choice&quot;, &quot;campaign_model&quot;, and &quot;dilemma&quot;, so those four are all valid methods.</p>
-<p><strong><em>NOTE: Yes, you have to add &quot;()&quot; to the end of the function's name.</em></strong></p>
-<p>Back to our example - you'll see the garrison_residence has &quot;GARRISON_RESIDENCE_SCRIPT_INTERFACE&quot; beneath it. You'll see this, too, is clickable. Much like context, the garrison residence script interface is a big object that contains all the data about that garrison residence. All of the functions listed below it are valid methods, meaning we can continue our chain of information! Our goal is to find a region with the key &quot;wh_main_reikland_altdorf&quot;, after all.</p>
-<p>Looking in the &quot;GARRISON_RESIDENCE_SCRIPT_INTERFACE&quot;, I don't see a &quot;key&quot; or &quot;name&quot;. Matter of fact, the most likely path is &quot;region()&quot;. That brings our code to...</p>
-<pre><code class="language-lua">    function(context)
-        return context:garrison_residence():region()
-    end,
-</code></pre>
-<p>After checking the <code>REGION_SCRIPT_INTERFACE</code>, we finally see the &quot;name&quot; method, which allows us to fully check our context. Our line of code is finally built to:</p>
-<pre><code class="language-lua">    function(context)
-        return context:garrison_residence():region():name() == &quot;wh_main_reikland_altdorf&quot;
-    end,
-</code></pre>
-<p>But that's not all! All this does is to check if the Altdorf region is being occupied, but it says nothing about Mannfred! We'll go back to the very beginning - find the GarrisonOccupiedEvent on the document, and return to its functions, which were garrison_residence() and character(). We want to build an &quot;and&quot; sentence for our conditional, so that it only triggers the function when Altdorf is occupied <strong>AND</strong> when it's occupied by Mannfred. Let's try to plot our trajectory a little. We should try to find a script_interface that allows us to reference an agent_subtype key, which is the cleanest and most mod-friendly way to search for Mannfred. Looking at CHARACTER_SCRIPT_INTERFACE, I see two functions - character_subtype() and character_subtype_key(). The latter is used to return a string - ie., it doesn't check for a specific subtype key, but it will tell us what the characters subtype key is. We need to <em>check</em> for a specific subtype key, &quot;vmp_mannfred_von_carstein&quot;.</p>
-<pre><code class="language-lua">    function(context)
-        return context:garrison_residence():region():name() == &quot;wh_main_reikland_altdorf&quot; and context:character():character_subtype(&quot;vmp_mannfred_von_carstein&quot;)
-    end,
-</code></pre>
-<p>Note here that the first line of context, that ends in &quot;:name()&quot;, needs to have an equal-to check because we don't want to return the <em>name</em> of the region, but we want to return a value of true or false if the name of the region is equal to the string we define - &quot;wh_main_reikland_altdorf&quot;.</p>
-<p>Further note, one might be wondering what the &quot;return&quot; part of this whole deal is. Essentially, a return statement stops the current block of code - ie., the function(context) - and, if something is designated, it returns a value. In this case, it is returning a boolean, which is how we managed to turn an at-first boolean into a function.</p>
-<p>A strong conditional function is very important to writing good listeners, as listeners can be very performance-heavy if there are many triggering, and the more that are whittled away via a strong conditional, the better performance will be. Be mindful of your conditionals!</p>
-<a class="header" href="#callback-functions" id="callback-functions"><h3>Callback Functions</h3></a>
-<p>At this point in the walkthrough, we have about 60% of our listener completed! It's not bad, let's take a quick look at what we actually have written:</p>
-<pre><code class="language-lua">core:add_listener(
-    &quot;MannfredOccupiesAltdorf&quot;,
-    &quot;GarrisonOccupiedEvent&quot;,
-    function(context)
-        return context:garrison_residence():region():name() == &quot;wh_main_reikland_altdorf&quot; and context:character():character_subtype(&quot;vmp_mannfred_von_carstein&quot;)
-    end,
-    function(context)
-        -- code to execute
-    end,
-    boolean2
-)
-</code></pre>
-<p>I'd like to point out a couple quick notes. To start off - yes, your listener_name can be anything you want, as long as it's a string. You need a comma after <em>every argument</em> in the command, of which there are five that are detailed way at the top - listener_name, name, conditional boolean, callback, and persistence boolean. The code above is written the way it is because that's a common application of it, and allows it to be easily read, but realistically this can all be written on one line. In no world is that optimal, though.</p>
-<p>Alright, so we are on the function to execute block, also known as the callback function. Here, we have much more freedom than the conditional function, as we can do whatever is needed with this block. For instance, we can have a callback function that triggers an event (like a dilemma or a message), or grants a unit/experience/ancillary, or unlocks something like a Rite or a Legendary Lord. For our instance, I want to just give Mannfred's army a new unit and a new effect bundle.</p>
-<p><strong><em>NOTE: For our sake, we're going to assume the new unit and new effect bundle are already defined.</em></strong></p>
-<p>Looking up in our <a href="https://cdn.discordapp.com/attachments/531219831861805069/569627247217082387/scripting_doc.html">commands document</a>, I see a grant_unit_to_character to command. Checking vanilla usage, I see it takes two args - a char_lookup_str and a unit_key string. The unit_key string - which refers to the main_units_tables - is, in our situation, &quot;tutorial_big_bat&quot;. To find a char_lookup_str, we have to first find the character's cqi.</p>
-<p><em>For more information on char_lookup_str and cqi, go to [page link here that doesn't yet exist]</em></p>
-<p>Thankfully for us, we can go back to where we were before and use the context of the Event to find all the info from before. Looking at the &quot;CHARACTER_SCRIPT_INTERFACE&quot;, we see a direct link to cqi, with the method &quot;cqi()&quot;. For this, we define our local values as such:</p>
-<pre><code class="language-lua">    local char_cqi = context:character():cqi()
-    local char_lookup_str = cm:char_lookup_str(char_cqi)
-</code></pre>
-<p>With this, we find the CQI first of the character, and then apply that to find the character's lookup string, which is the type needed for grant_unit_to_character.</p>
-<p>Before we apply that command though, we should find the arguments we need for apply_effect_bundle_to_force(), which is our command that will give an effect bundle to Mannfred's army. We first need our effect bundle; we'll use &quot;tutorial_free_hair&quot;. The second argument is a military force CQI, and our third argument is a number of turns. We'll make it five turns long.</p>
-<p>To find the military force CQI, we use something similar as above. We will go from character to military force, and then find the CQI there. We can use something like the following:</p>
-<pre><code class="language-lua">    local mf_cqi = context:character():military_force():command_queue_index()
-</code></pre>
-<p>Note that, in this situation, we couldn't use &quot;cqi()&quot;. That's one reason why it's so important to check vanilla application and the documents. If we used &quot;cqi()&quot;, it would've caused the listener to abort.</p>
-<p>Alright, now we have all we need to build our callback function! Let's mush it all together real quickly.</p>
-<pre><code class="language-lua">function(context)
-
-    local char_cqi = context:character():cqi()
-    local char_lookup_str = cm:char_lookup_str(char_cqi)
-    local mf_cqi = context:character():military_force():command_queue_index()
-    
-    cm:grant_unit_to_character(char_lookup_str, &quot;tutorial_big_bat&quot;)
-    cm:apply_effect_bundle_to_force(&quot;tutorial_free_hair&quot;, mf_cqi, 5)
-
-end,
-</code></pre>
-<p>And that's a quick walkthrough on how to assemble your callback function! Please note, you can have whatever you want here, and there's nothing saying you <em>must</em> restrict yourself to the context of the event. As an example, I can do the same thing without context, like so:</p>
-<pre><code class="language-lua">function(context)
-
-    local mannfred_faction = cm:get_faction(&quot;wh_main_vmp_vampire_counts&quot;)
-    local mannfred = mannfred_faction:faction_leader()
-    
-    local char_cqi = mannfred:cqi()	
-    local char_lookup_str = cm:char_lookup_str(char_cqi)
-    local mf_cqi = mannfred:military_force():command_queue_index()
-    
-    cm:grant_unit_to_character(char_lookup_str, &quot;tutorial_big_bat&quot;)
-    cm:apply_effect_bundle_to_force(&quot;tutorial_free_hair&quot;, mf_cqi, 5)
-
-end,
-</code></pre>
-<p>This takes a little bit longer than using context, but it is a solution to applying commands to objects that aren't involved in the context. So if, for example, you wanted to give all Vampire factions aside from Mannfred's own an <code>effect_bundle</code> that increases their diplomatic relations with Mannfred after he conquers Altdorf, you can. The world is your oyster when it comes to listeners.</p>
-<a class="header" href="#persistence" id="persistence"><h3>Persistence</h3></a>
-<p>One last thing, and it's gonna be much quicker than the last two. The final boolean - persistence - can be set to true, or false. True means that the listener will fire more than once; false means that, once the entire code is run through, the listener is removed from the game state and won't be called again. This only gives two options - once, or infinite. There is a third option, by using core:remove_listener(&quot;listener_name&quot;). At whichever point this code is called, the listener with the matching &quot;listener_name&quot; is removed from the game state, and won't be called again. A remove_listener statement like this can be used after enabling a counter that listens for the listener firing five times, or to cancel the listener if the turn is beyond 100, or much else.</p>
-<p>Keep in mind that, to &quot;fire&quot;, only the conditional needs to return true. If there's more if statements in your callback function, and they fail, but your persistence is set to false, the listener will remove itself.</p>
-<pre><code class="language-lua">core:add_listener(
-    &quot;my_listener&quot;, 
-    &quot;GarrisonOccupiedEvent&quot;, 
-    true, 
-    function(context) 
-        if this_is_done then
-            --stuff happens
-        end;
-    end, 
-    false
-)
-</code></pre>
-<p>So this listener will cancel after one use if &quot;GarrisonOccupiedEvent&quot; is triggered, regardless of whether or not &quot;this is done&quot; returns as true or false.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="chapter_2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
+                        
+                            <a rel="next" href="chapter_3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -507,7 +272,15 @@ end,
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a href="chapter_2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
+                
+                    <a href="chapter_3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 
@@ -532,14 +305,6 @@ end,
         <!-- Custom JS scripts -->
         
 
-        
-        
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
-        
         
 
     </body>

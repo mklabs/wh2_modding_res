@@ -5,5 +5,6 @@
 
 - [Tools & Resources](./chapter_1.md)
 - [Database Editing](./chapter_2.md)
+    - [Building Buildings](./chapter_2_1.md)
 - [Lua](./chapter_3.md)
     - [Listeners](./chapter_3_1.md)
