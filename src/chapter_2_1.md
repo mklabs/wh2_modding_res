@@ -1,6 +1,5 @@
 ﻿# Building Buildings
 
-
 ### So you want to build a building? 
 
 Buildings are a great feature in the game, and editing them can allow for a lot of fun new mechanics! New building chains can allows new units, new effects, and new landmarks. The best news of all is that most ideas with building chains are possible.
@@ -9,22 +8,14 @@ Buildings are a great feature in the game, and editing them can allow for a lot 
 
 I want to first cover some vernacular that we will be using throughout this tutorial. These terms are conceptual but critical to understanding what Creative Assembly is manipulating in their game files.
 
-**Building Availability Slot (BAS)**
-A building availability slot is the link between building chains and the faction/culture/subculture that can build them.
-**Chain**
-A chain is much like it sounds - a direct chain of buildings. In the images, below. each vertical set of buildings that can be upgraded is a chain. The tier 1 barracks, the tier 2 barracks, and the tier three barracks are each a level.
-**Id**
-An id is similar to a key in that it is an identifier, except it is a randomly generated number used in certain tables of the database.
-**Key**
-A key is an identifier, a definition point in the database.
-**Level**
-A level is each individual building that you can construct in the game. They can be one-off or individual, or they can be upgraded into other buildings. The Empire tier 1 barracks, tier 2 barracks, and the tier 3 barracks are each a level.
-**Set**
-A set is more or less a visual effect that conveys a category. As you'll see in the images below, "Military Recruitment" and "Infrastructure" are examples of buildings sets, which lump together various different building chains into a specific group.
-**Slot Template**
-The database (db) classification of various locations, and the union between buildings and regions. Slot templates allow you to lock buildings to specific locations (for example, landmarks). However, ***not every settlement has a unique slot template.*** For instance, Altdorf has the slot templates "wh_main_special_altdorf_primary" and "wh_main_special_altdorf_secondary", while Bibali has the basic "wh_main_human_minor_primary_coast" slot template. As we see an unmodded game, Altdorf has unique buildings in, while Bilbali does not, so we can infer that Creative Assembly had no need to add in a custom slot template for the latter.
-**Superchain**
-A superchain can be seen as a collection of various chains from different races/factions, which can save data space when linking to slot templates (the only way to link buildings to locations). For instance, all settled factions except for the Wood Elves (due to their unique building style) have their standard infantry building linked to the "wh2_main_sch_military1_barracks" superchain, which is available at all locations. It consolidates the entirety of your buildings into one package.
+- **Key**: A key is an identifier, a definition point in the database.
+- **Id**: An id is similar to a key in that it is an identifier, except it is a randomly generated number used in certain tables of the database.
+- **Level**: A level is each individual building that you can construct in the game. They can be one-off or individual, or they can be upgraded into other buildings. The Empire tier 1 barracks, tier 2 barracks, and the tier 3 barracks are each a level.
+- **Chain**: A chain is much like it sounds - a direct chain of buildings. In the images, below. each vertical set of buildings that can be upgraded is a chain. The tier 1 barracks, the tier 2 barracks, and the tier three barracks are each a level.
+- **Building Availability Set (BAS)**: A building availability set is the link between building chains and the faction/culture/subculture that can build them.
+- **Superchain**: A superchain can be seen as a collection of various chains from different races/factions, which can save data space when linking to slot templates (the only way to link buildings to locations). For instance, all settled factions except for the Wood Elves (due to their unique building style) have their standard infantry building linked to the `wh2_main_sch_military1_barracks` superchain, which is available at all settlements. It consolidates the entirety of your buildings into one package.
+- **Set**: A set is more or less a visual effect that conveys a category. As you'll see in the images below, "Military Recruitment" and "Infrastructure" are examples of buildings sets, which lump together various different building chains into a specific group.
+- **Slot Template**: The database (db) classification of various locations, and the union between buildings and regions. Slot templates allow you to lock buildings to specific locations (for example, landmarks). However, ***not every settlement has a unique slot template.*** For instance, Altdorf has the slot templates `wh_main_special_altdorf_primary` and `wh_main_special_altdorf_secondary`, while Bibali has the basic "wh_main_human_minor_primary_coast" slot template. As we see in an unmodded game, Altdorf has unique buildings in, while Bilbali does not, so we can infer that Creative Assembly had no need to add in a custom slot template for the latter.
 
 PICTURE
 PICTURE
