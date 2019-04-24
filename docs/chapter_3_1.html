@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Modding Resources</title>
+        <title>Listeners - Modding Resources</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> Listeners</a></li></ol></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html" class="active"><strong aria-hidden="true">3.1.</strong> Listeners</a></li></ol></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -136,117 +136,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#modding-resources" id="modding-resources"><h1>Modding Resources</h1></a>
-<a class="header" href="#hello-and-welcome" id="hello-and-welcome"><h3>Hello and Welcome!</h3></a>
-<p>Welcome to this little paradise of modding, for Total War: WARHAMMER II. Before we go on, a few things to note:</p>
-<ul>
-<li>This website is run and maintained by a beautiful union between GitHub and myself, Vandy. (It's hosted on GitHub Pages, if you can't tell from the URL.)</li>
-<li>This is an independent project, completely separate from anything resembling official-ness via Creative Assembly, or SEGA, or Games Workshop, or whatever.</li>
-<li>All tutorials hosted here are done so with the consent of their respective authors - not a great fan of stolen work!</li>
-<li>This site doesn't seek to be an exhaustive list of guaranteed victories, but a slowly-growing community effort to condense knowledge that we have, and formalize it.</li>
-</ul>
-<p>This project is early yet, and won't be easy for me to maintain. If you would like to help me, reach out to me, and I'll have you convert some tutorials into .md files. A tutorial for that will be made sometime soon... ironically.</p>
-<a class="header" href="#divisions" id="divisions"><h3>Divisions</h3></a>
-<p>The way I'm going to divide up the tutorials is utterly and completely undecided as of yet.</p>
-<a class="header" href="#submissions" id="submissions"><h3>Submissions</h3></a>
-<p>If you'd like to submit your tutorial, I don't care.</p>
-<a class="header" href="#converting-to-markdown" id="converting-to-markdown"><h1>Converting to Markdown</h1></a>
-<a class="header" href="#markdown-conversion" id="markdown-conversion"><h3>Markdown Conversion</h3></a>
-<p>This page is intended as a very quick guide on how to convert your tutorial into the language used here, markdown. Markdown is super simple and made to be incredibly simple.</p>
-<a class="header" href="#standard-text" id="standard-text"><h4>Standard Text</h4></a>
-<p>These three are the backbone of any good tutorial.</p>
-<p>Italics - *text*</p>
-<p><em>this is an example</em></p>
-<p>Bold - **text**</p>
-<p><strong>this is an example</strong></p>
-<p>Italics &amp; Bold - ***text***</p>
-<p><strong><em>this is an example</em></strong></p>
-<a class="header" href="#blockquotes" id="blockquotes"><h4>Blockquotes</h4></a>
-<p>Blockquotes are a great way of showing specific code or db stuffs. All you have to do is put a &quot;&gt;&quot; preceding a paragraph.</p>
-<blockquote>
-<p>This is a blockquote.</p>
-<p>And this is the blockquote's end.</p>
-</blockquote>
-<blockquote>
-<p>You can use most markdown elements in a blockquote, but I won't cover the possibilities here.</p>
-</blockquote>
-<blockquote>
-<p>You can also make nestled blockquotes.</p>
-<blockquote>
-<p>Like this.</p>
-<blockquote>
-<blockquote>
-<p>And, this.</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<a class="header" href="#lists" id="lists"><h4>Lists</h4></a>
-<p>Super simple, like the rest of this language. To make a nice bulleted list, use &quot;-&quot; prior to the item, with a line break in between.</p>
-<ul>
-<li>Example list.</li>
-<li>Look at my shiny buttons.
-<ul>
-<li>You can even indent.
-You can also randomly not use a bullet to say something.</li>
-</ul>
-</li>
-<li>And then use a bullet again.</li>
-</ul>
-<p>If you want to number the list, just put &quot;1.&quot; prior to the first item, and then iterate the number for each new list item.</p>
-<ol>
-<li>First thing on the agenda - put 1.</li>
-<li>Shortly after that, put 2.
-I think you get the example by now.</li>
-<li>One more, for good measure.</li>
-</ol>
-<a class="header" href="#codeblocks" id="codeblocks"><h4>Codeblocks</h4></a>
-<p>For any written code, you can use a single backtick/grave (`) on both sides of the text in order to write code inline. Kinda like <code>this</code>.</p>
-<p>If you want to make blocks of code, you can use three of the above, on both sides of the text.</p>
-<pre><code class="language-lua">local example = &quot;text&quot;
-
-function do_stuff()
-    print(example)
-end
-
-do_stuff()
-</code></pre>
-<a class="header" href="#line-breaks" id="line-breaks"><h4>Line Breaks</h4></a>
-<p>If you want to make big lines across the screen, use three (or more) hyphens, asterisks, or underscores, in a line by themselves.</p>
-<hr />
-<a class="header" href="#links-and-images" id="links-and-images"><h4>Links and Images</h4></a>
-<p>Links are pretty simple, and can have a specified tooltips for when they're hovered over, or converted into text and made into a hyperlink, or can remain a standard clickable link.</p>
-<p>To make a standard clickable link, wrap the URL with &quot;&lt;&gt;&quot;.</p>
-<p><a href="https://www.google.com">https://www.google.com</a></p>
-<p>To give a link a title that replaces the URL, first put the title within &quot;[]&quot;, and have it immediately followed by &quot;()&quot;.</p>
-<p>[example title](https://www.google.com)</p>
-<p><a href="https://www.google.com">example title</a></p>
-<p>Images are much the same as above, use a &quot;!&quot; preceding the title and the link designation.</p>
-<p>![example image](https://cdn.discordapp.com/emojis/460756324729356299.png?v=1)</p>
-<p><img src="https://cdn.discordapp.com/emojis/460756324729356299.png?v=1" alt="example image" /></p>
-<p>For either, if you want alternate text to popup when hovering over the element, put the alternate text within the &quot;()&quot;, after the link, and in quotation marks, like so:</p>
-<p>[example title](https://www.google.com &quot;This Is Google!&quot;)</p>
-<p><a href="https://www.google.com" title="This Is Google!">example title</a></p>
-<p>If your image isn't uploaded onto the web, that's fine - just send me the file, and I can attach it on my side. Make a note for me, saying (image_1 here), or somesuch.</p>
-<a class="header" href="#headings" id="headings"><h4>Headings</h4></a>
-<p>You can set six different bolded-sizes for headers, for visual distinction. A header is simply a number sign (#) followed by the text that is being head'ed. There can be one number sign, up to six number signs, preceding the text. One number sign is the largest, six the smallest.</p>
-<a class="header" href="#one-number-sign" id="one-number-sign"><h1>One Number Sign</h1></a>
-<a class="header" href="#two-number-signs" id="two-number-signs"><h2>Two Number Signs</h2></a>
-<a class="header" href="#three-number-signs" id="three-number-signs"><h3>Three Number Signs</h3></a>
-<a class="header" href="#four-number-signs" id="four-number-signs"><h4>Four Number Signs</h4></a>
-<a class="header" href="#five-number-signs" id="five-number-signs"><h5>Five Number Signs</h5></a>
-<a class="header" href="#six-number-signs" id="six-number-signs"><h6>Six Number Signs</h6></a>
-<a class="header" href="#tools--resources" id="tools--resources"><h1>Tools &amp; Resources</h1></a>
-<p>Every modder needs proper tools, just like every lumberjack needs a swingset. This list does not claim to be a sure-fire solution to every single issue a modder might face, nor an impervious list of perfect programs, designed to cater your every need. This list <strong>does</strong> have a lot of value in it, I believe, and if used correctly, a lot can be achieved.</p>
-<a class="header" href="#kaedrins-mod-manager" id="kaedrins-mod-manager"><h4>Kaedrin's Mod Manager</h4></a>
-<p><a href="https://github.com/Kaedrin/warhammer-mod-manager/releases/">Kaedrin's Mod Manager</a> is a very useful alternative mod manager that works for all Total War games since Total War: Empire.</p>
-<p>You can get in contact with the creator, Kaedrin, in the Modding Den's channel <a href="https://discord.gg/yHvXGRb">#kaedrin_mod_manager</a>.</p>
-<a class="header" href="#frodos-rusted-pack-file-manager" id="frodos-rusted-pack-file-manager"><h4>Frodo's Rusted Pack File Manager</h4></a>
-<p><a href="https://github.com/Frodo45127/rpfm/releases/latest">RPFM</a> is a great pack-file managing tool, essential for any modder. Active development has new features coming regularly, as well as constant bugfixes or squashings.</p>
-<p>Get in contact with the creator, Frodo, in the Modding Den's channel <a href="https://github.com/Frodo45127/rpfm/releases/latest">#rpfm</a>.</p>
-<a class="header" href="#database-stuff" id="database-stuff"><h1>Database Stuff</h1></a>
-<a class="header" href="#lua-3" id="lua-3"><h1>Lua &lt;3</h1></a>
-<a class="header" href="#listeners" id="listeners"><h1>Listeners</h1></a>
+                        <a class="header" href="#listeners" id="listeners"><h1>Listeners</h1></a>
 <a class="header" href="#can-you-hear-me" id="can-you-hear-me"><h3>Can You Hear Me?</h3></a>
 <p>A listener is an important script command that, simply, waits for something to happen - or, <em>listens</em> for something to happen - in the game, and then triggers something else. Using a listener, we can listen for an event such as the creation of an army, the occupation of a city, or even a battle, and then we use the information from that situation, check for something specific, and run our code if the event matches our criteria. For example: we may be looking for Mannfred to occupy Altdorf. In this case we'd have to use a listener to &quot;listen&quot; for a city being occupied, but we don't want to listen for just <em>any</em> city being occupied. In our example, we have to listen for Altdorf being occupied, and for Mannfred doing the occupying. The listener will listen for every single time a city is occupied, and once those two conditions are met - <em>Mannfred</em> occupying <em>Altdorf</em>... Clue, anyone? - then our listener will trigger some code. In layman's code, our listener will <em>do a thing</em>!</p>
 <p>Overall, it is a very valuable connection between Lua and game data, and any scripter should understand the in's and out's of a listener.</p>
@@ -385,6 +275,10 @@ end,
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="chapter_3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
                         
 
@@ -394,6 +288,10 @@ end,
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
 
                 
@@ -420,14 +318,6 @@ end,
         <!-- Custom JS scripts -->
         
 
-        
-        
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
-        
         
 
     </body>

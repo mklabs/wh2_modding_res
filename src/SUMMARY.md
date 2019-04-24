@@ -4,3 +4,6 @@
 [Converting to Markdown](./chapter_0_2.md)
 
 - [Tools & Resources](./chapter_1.md)
+- [Database Editing](./chapter_2.md)
+- [Lua](./chapter_3.md)
+    - [Listeners](./chapter_3_1.md)
