@@ -437,21 +437,21 @@ end
 <p>This is our first look at functions, which I'll go much further in detail about next lesson. &quot;testing_init()&quot; is a function, which does the &quot;out(&quot;Hello World!&quot;) line when it's called. Likewise, &quot;out(&quot;Hello World&quot;)&quot; is a function of its own, and it prints the text within the brackets to a log.txt file, which CA uses for error-checking scripts and printing out details. We're using it for this first tutorial, but we'll see it many more times as we go on.</p>
 <p>Save it, and save as &quot;testing_init.lua&quot; within your modding folder on your PC. Boom, your first Lua file. And you did it <em>all</em> by yourself!</p>
 <p>Open up RPFM, and create a new packfile. Within the packfile, make the following script directory: &quot;script/campaign/mod&quot;. Within the &quot;/mod&quot; folder, add your testing_init.lua file. Save it as whatever you'd like.</p>
-<p>I mentioned that the &quot;out()&quot; function is a CA function that prints text onto a log.txt file, but I missed a detail - on retail, that log file is never made. So, what we need to do is go and download/enable the [Script Debug Activator][https://steamcommunity.com/sharedfiles/filedetails/?id=1271877744&amp;searchtext=script+debug+activator] mod, by theSniperDevil, which enables the creation of that log file.</p>
+<p>I mentioned that the &quot;out()&quot; function is a CA function that prints text onto a log.txt file, but I missed a detail - on retail, that log file is never made. So, what we need to do is go and download/enable the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1271877744&amp;searchtext=script+debug+activator">Script Debug Activator</a> mod, by theSniperDevil, which enables the creation of that log file.</p>
 <p>Now go grab your new .pack file, and drop it into Steam/steamapps/common/Total War WARHAMMER II/data (which will here-to-for be referred to as <strong>/data folder</strong>). Enable the .pack file with the mod manager of your choosing, load up the game, and load up a campaign.</p>
 <p>In your game folder (Steam/steamapps/common/Total War WARHAMMER II), you should see a new file - script_log_DDMMYY_HHMM.txt. Open that up with a text editor, use find to search for &quot;Hello World&quot;. If it's there, it worked, and if it isn't, something went fatally wrong! Go back and try again.</p>
 <a class="header" href="#post-credits-explanations" id="post-credits-explanations"><h4>Post-Credits Explanations</h4></a>
 <p>At this point, I'd like to quickly cover how CA loads and runs script mods for modders. There is a mod-script loader built into TW:WH2, and it's pretty simple for us to use. We can load our mods automatically in different game modes, using the following paths:</p>
 <ul>
-<li>Campaign (Mortal Empires): script/campaign/main_warhammer/mod</li>
-<li>Campaign (Vortex): script/campaign/wh2_main_great_vortex/mod</li>
-<li>Campaign (either): script/campaign/mod</li>
-<li>Battle (excluding quest-battles): script/battle/mod</li>
-<li>Frontend: script/frontend/mod</li>
+<li><strong>Campaign (Mortal Empires)</strong>: script/campaign/main_warhammer/mod</li>
+<li><strong>Campaign (Vortex)</strong>: script/campaign/wh2_main_great_vortex/mod</li>
+<li><strong>Campaign (either)</strong>: script/campaign/mod</li>
+<li><strong>Battle (excluding quest-battles)</strong>: script/battle/mod</li>
+<li><strong>Frontend</strong>: script/frontend/mod</li>
 </ul>
 <p>And lastly, there's one path that is available during all game modes, and loads before any of the other paths (so if you load campaign, and have a script in the following directory, it will be loaded before any in the script/campaign/mod directory). I must warn, though, that this directory should only be used if you're being very smart about what's within, making sure it's all game-mode-agnostic, or making sure you're checking for the game-mode within</p>
 <ul>
-<li>Lib: script/_lib/mod</li>
+<li><strong>Lib</strong>: script/_lib/mod</li>
 </ul>
 <p>Within each of these directories (barring the battle one), if you have a function named the same thing as the .lua file (like testing_init from our last example), it will be automatically called. We'll talk more about what this means, and some alternatives to this method that I prefer, but for now we'll stick with it. Remember, if the <strong>function name</strong> matches the <strong>file name</strong> of the script, then it'll be run, except when it's in the /battle directory.</p>
 <a class="header" href="#challenge" id="challenge"><h4>Challenge</h4></a>
