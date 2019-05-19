@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.1.</strong> Hello World</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.1.</strong> Hello World</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -275,6 +275,161 @@ do_stuff()
 <a href="files/ca_types.lua">ca_types.lua</a>
 <a href="files/uimf_types.lua">uimf_types.lua</a></p>
 <a class="header" href="#database-stuff" id="database-stuff"><h1>Database Stuff</h1></a>
+<a class="header" href="#tolerant-tables" id="tolerant-tables"><h1>Tolerant Tables</h1></a>
+<a class="header" href="#whats-a-tolerant-table" id="whats-a-tolerant-table"><h5>What's a tolerant table?</h5></a>
+<p><strong>A tolerant table is an arbitrarily defined table that will not crash when a <em>referenced</em> key is missing in a certain column.</strong> This is particularly relevant when you are overriding new content from another mod and it turned out that you do not need to port two or more tables just to provide background references for those keys. Instead, you need just one table for the value to edit.</p>
+<p>It may also be a trap leading to stuff not working in your own mod while also not crashing to desktop.</p>
+<a class="header" href="#registry" id="registry"><h2>Registry</h2></a>
+<p>Here is a list of such tables and streamline overrides. We encourage you all to report any new findings, preferably in alphabetical order. When reporting new tables, please include the date, because we do not know if or when this kind of behavior can abruptly change CA-side, and older dates can be considered suspicious when you have weird crashes after a patch.</p>
+<ol>
+<li>
+<p><strong>ancillary effects junction</strong></p>
+<ul>
+<li>tolerates missing <em>ancillary</em> as of 2nd November 2018</li>
+</ul>
+</li>
+<li>
+<p><strong>building culture variants</strong></p>
+<ul>
+<li>tolerates missing <em>building level</em> and <em>culture</em> (<em>likely sc and faction as well</em>) as of 26th March 2019.</li>
+</ul>
+</li>
+<li>
+<p><strong>building effects junction</strong></p>
+<ul>
+<li>tolerates missing <em>building level</em>, but not <em>effect</em> as of 20th August 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>building units allowed</strong></p>
+<ul>
+<li>tolerates missing <em>building level</em> as of 20th August 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>campaign stances factions junctions</strong></p>
+<ul>
+<li>tolerates missing <em>faction</em> as of 9th December 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>cdir events dilemma/incident/mission option junctions</strong></p>
+<ul>
+<li>tolerates missing <em>value</em> and <em>dilemma</em>, even in the assembly kit, as of 8th December 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>cdir military generator unit qualities</strong></p>
+<ul>
+<li>tolerates missing <em>unit</em> as of 12th Orctober 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>effect bonus value ids unit sets</strong></p>
+<ul>
+<li>tolerates missing <em>effect</em> as of 5th Orctober 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>effect bundles to effects junction</strong></p>
+<ul>
+<li>tolerates missing <em>effect</em> as of 18th August 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>faction rebellion units junctions</strong></p>
+<ul>
+<li>tolerates missing <em>faction</em> as of 2nd November 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>frontend faction effects junctions</strong></p>
+<ul>
+<li>tolerates missing <em>effect scope</em> as of 1st January 2019.</li>
+</ul>
+</li>
+<li>
+<p><strong>land units</strong></p>
+<ul>
+<li>tolerates missing <em>missing weapon</em></li>
+<li>tolerates missing <em>historical+short descr, mount, attribute group</em> as long as the unit is not selected in-game, as of April 2019.</li>
+<li>tolerates missing <em>engine</em>, but the supposed engine will not show up in battle, as of 12th November 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>land units to unit abilities junction</strong></p>
+<ul>
+<li>tolerates missing <em>land unit</em> as of 20th August 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>main units</strong></p>
+<ul>
+<li>tolerates missing <em>campaign mount</em> as of 12th Orctober 2018.</li>
+<li>tolerates missing <em>ui_groupings</em> on startup sometimes, and will crash on clicking Custom Battles otherwise.</li>
+</ul>
+</li>
+<li>
+<p><strong>melee weapons</strong></p>
+<ul>
+<li>tolerates missing <em>contact effect phase</em> as of 9th November 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>projectile bombardments</strong></p>
+<ul>
+<li>tolerates missing <em>projectile type</em> as of 12th November 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>special ability phase stat effects</strong></p>
+<ul>
+<li>tolerates missing <em>phase</em> as of 9th November 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>special ability groups to units junction</strong></p>
+<ul>
+<li>tolerates missing <em>unit</em> as of 20th Orctober 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>technology nodes</strong></p>
+<ul>
+<li>tolerates missing <em>faction</em> as of 1st January 2019.</li>
+</ul>
+</li>
+<li>
+<p><strong>unit set unit attribute junction</strong></p>
+<ul>
+<li>tolerates wrong <em>attribute</em> as of 20th Orctober 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>unit set to unit junction</strong></p>
+<ul>
+<li>tolerates missing <em>main unit</em> as of 20th August 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>unit variants</strong></p>
+<ul>
+<li>tolerates missing <em>land unit</em> as of 26th March 2019.</li>
+</ul>
+</li>
+<li>
+<p><strong>units to groupings military permissions</strong></p>
+<ul>
+<li>tolerates missing military group as of 12th December 2018.</li>
+</ul>
+</li>
+<li>
+<p><strong>ui unit bullet point unit overrides</strong></p>
+<ul>
+<li>tolerates wrong <em>unit</em> as of 27th February 2019.</li>
+</ul>
+</li>
+</ol>
 <a class="header" href="#building-buildings" id="building-buildings"><h1>Building Buildings</h1></a>
 <a class="header" href="#so-you-want-to-build-a-building" id="so-you-want-to-build-a-building"><h3>So you want to build a building?</h3></a>
 <p>Buildings are a great feature in the game, and editing them can allow for a lot of fun new mechanics! New building chains can allows new units, new effects, and new landmarks. The best news of all is that most ideas with building chains are possible.</p>
@@ -588,6 +743,8 @@ end,
 )
 </code></pre>
 <p>So this listener will cancel after one use if &quot;GarrisonOccupiedEvent&quot; is triggered, regardless of whether or not &quot;this is done&quot; returns as true or false.</p>
+<a class="header" href="#etc" id="etc"><h1>Etc</h1></a>
+<p>All other auxillary stuff goes here, I s'pose.</p>
 
                     </main>
 
