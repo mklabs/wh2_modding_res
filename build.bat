@@ -1,5 +1,5 @@
 ECHO OFF
-dir C:\Users\Chad Vandewettering\Desktop\Mods\!Modding_res
+dir S:\GitHub\repos\wh2_modding_res
 mdbook build
 ECHO "Done!"
 EXIT
