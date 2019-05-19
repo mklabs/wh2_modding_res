@@ -17,8 +17,8 @@ I want to first cover some vernacular that we will be using throughout this tuto
 - **Set**: A set is more or less a visual effect that conveys a category. As you'll see in the images below, "Military Recruitment" and "Infrastructure" are examples of buildings sets, which lump together various different building chains into a specific group.
 - **Slot Template**: The database (db) classification of various locations, and the union between buildings and regions. Slot templates allow you to lock buildings to specific locations (for example, landmarks). However, ***not every settlement has a unique slot template.*** For instance, Altdorf has the slot templates `wh_main_special_altdorf_primary` and `wh_main_special_altdorf_secondary`, while Bibali has the basic "wh_main_human_minor_primary_coast" slot template. As we see in an unmodded game, Altdorf has unique buildings in, while Bilbali does not, so we can infer that Creative Assembly had no need to add in a custom slot template for the latter.
 
-PICTURE
-PICTURE
+![][picture_1]
+![][picture_2]
 
 ### Getting Started
 
@@ -137,8 +137,7 @@ In the localised string, I input "Test Building." This will be the name of each 
 Lastly, in building_chains.loc we can enter the chain name that pops up under the name of the building. I input: "building_chains_chain_tooltip_vandy_main_test_building_1" with the localised string "Testing!" for the entry.
 
 ### You Did it!
-
-PICTURE
+![][picture_3]
 
 Your first building or building chain is completed! Go on, pat yourself on the back. There are plenty of creative options with buildings - you can introduce penalties and consequences to new building chains, or create interesting links of, say, two different buildings that can both get to level 3, but you can only get one to level 4 or 5. It is possible to link units to buildings, either vanilla or custom; link new technologies, and even create band new landmarks.
 
@@ -153,3 +152,8 @@ Something happened and now you are getting a crash.That happens and it's okay, w
 6. Please rename your tables and your mod. There is no reason to not rename your tables and your mod, and problems can ensue otherwise. Oh, and please make sure you are using unique id's for these tables! If you use vanilla ones/id's from other mods, then you're ensuring incompatibility.
 
 Thanks for reading!
+
+
+[picture_1]: /src/images/2_1-01.png
+[picture_2]: /src/images/2_1-02.png
+[picture_3]: /src/images/2_1-03.png

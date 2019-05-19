@@ -101,7 +101,7 @@ For either, if you want alternate text to popup when hovering over the element, 
 
 [example title](https://www.google.com "This Is Google!")
 
-If your image isn't uploaded onto the web, that's fine - just send me the file, and I can attach it on my side. Make a note for me, saying (image_1 here), or somesuch.
+If your image isn't uploaded onto the web, that's fine - just send me the file, and I can attach it on my side. Make a note for me, saying ![][image_1] for the first image, ![][image_2] for the second and so on, and I'll take care of the rest!
 
 #### Headings
 
