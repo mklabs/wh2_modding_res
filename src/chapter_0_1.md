@@ -8,7 +8,7 @@ Welcome to this little paradise of modding, for Total War: WARHAMMER II. Before 
 - All tutorials hosted here are done so with the consent of their respective authors - not a great fan of stolen work!
 - This site doesn't seek to be an exhaustive list of guaranteed victories, but a slowly-growing community effort to condense knowledge that we have, and formalize it.
 
-This project is early yet, and won't be easy for me to maintain. If you would like to help me, reach out to me, and I'll have you convert some tutorials into .md files. A tutorial for that will be made sometime soon... ironically.
+This project is early yet, and won't be easy for me to maintain. If you would like to help me, reach out to me, and I'll have you convert some tutorials into .md files. Read how below, in "Converting to Markdown".
 
 ### Divisions
 
