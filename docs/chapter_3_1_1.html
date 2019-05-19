@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson 1: Variables - Modding Resources</title>
+        <title>Hello World - Modding Resources</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_1.html" class="active"><strong aria-hidden="true">3.1.1.</strong> Lesson 1: Variables</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_1.html" class="active"><strong aria-hidden="true">3.1.1.</strong> Hello World</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -136,9 +136,36 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#lesson-1-variables" id="lesson-1-variables"><h1>Lesson 1: Variables</h1></a>
-<p>test</p>
-<a class="header" href="#this-is-a-test-of-the-emergency-broadcast-system" id="this-is-a-test-of-the-emergency-broadcast-system"><h4>This Is A Test Of The Emergency Broadcast System</h4></a>
+                        <a class="header" href="#hello-world" id="hello-world"><h1>Hello World!</h1></a>
+<p>As with basically every programming tutorial on the globe, I'll begin where they all do - printing a message that says &quot;Hello World!&quot;</p>
+<p>I'd like to quickly note that as this tutorial series progresses, I'm going to be helping less and less and explaining more and more. I don't want to hand-hold you through the entire project, and each lesson will include at least one &quot;challenge&quot;, where I give you an objective and tell you to go do it. Self-guided teaching is important, and once you're done this tutorial series, you'll be expected to be at least remotely competent and able to work this stuff out independently. I highly recommend you stick to the challenges and give them a shot, they'll benefit you if you really want to get good with Lua.</p>
+<p>Alright, within your text editor of choice, create a new file. Within that file, type the following block:</p>
+<pre><code>function testing_init()
+    out(&quot;Hello World!&quot;)
+end
+</code></pre>
+<p>This is our first look at functions, which I'll go much further in detail about next lesson. &quot;testing_init()&quot; is a function, which does the &quot;out(&quot;Hello World!&quot;) line when it's called. Likewise, &quot;out(&quot;Hello World&quot;)&quot; is a function of its own, and it prints the text within the brackets to a log.txt file, which CA uses for error-checking scripts and printing out details. We're using it for this first tutorial, but we'll see it many more times as we go on.</p>
+<p>Save it, and save as &quot;testing_init.lua&quot; within your modding folder on your PC. Boom, your first Lua file. And you did it <em>all</em> by yourself!</p>
+<p>Open up RPFM, and create a new packfile. Within the packfile, make the following script directory: &quot;script/campaign/mod&quot;. Within the &quot;/mod&quot; folder, add your testing_init.lua file. Save it as whatever you'd like.</p>
+<p>I mentioned that the &quot;out()&quot; function is a CA function that prints text onto a log.txt file, but I missed a detail - on retail, that log file is never made. So, what we need to do is go and download/enable the [Script Debug Activator][https://steamcommunity.com/sharedfiles/filedetails/?id=1271877744&amp;searchtext=script+debug+activator] mod, by theSniperDevil, which enables the creation of that log file.</p>
+<p>Now go grab your new .pack file, and drop it into Steam/steamapps/common/Total War WARHAMMER II/data (which will here-to-for be referred to as <strong>/data folder</strong>). Enable the .pack file with the mod manager of your choosing, load up the game, and load up a campaign.</p>
+<p>In your game folder (Steam/steamapps/common/Total War WARHAMMER II), you should see a new file - script_log_DDMMYY_HHMM.txt. Open that up with a text editor, use find to search for &quot;Hello World&quot;. If it's there, it worked, and if it isn't, something went fatally wrong! Go back and try again.</p>
+<a class="header" href="#post-credits-explanations" id="post-credits-explanations"><h4>Post-Credits Explanations</h4></a>
+<p>At this point, I'd like to quickly cover how CA loads and runs script mods for modders. There is a mod-script loader built into TW:WH2, and it's pretty simple for us to use. We can load our mods automatically in different game modes, using the following paths:</p>
+<ul>
+<li>Campaign (Mortal Empires): script/campaign/main_warhammer/mod</li>
+<li>Campaign (Vortex): script/campaign/wh2_main_great_vortex/mod</li>
+<li>Campaign (either): script/campaign/mod</li>
+<li>Battle (excluding quest-battles): script/battle/mod</li>
+<li>Frontend: script/frontend/mod</li>
+</ul>
+<p>And lastly, there's one path that is available during all game modes, and loads before any of the other paths (so if you load campaign, and have a script in the following directory, it will be loaded before any in the script/campaign/mod directory). I must warn, though, that this directory should only be used if you're being very smart about what's within, making sure it's all game-mode-agnostic, or making sure you're checking for the game-mode within</p>
+<ul>
+<li>Lib: script/_lib/mod</li>
+</ul>
+<p>Within each of these directories (barring the battle one), if you have a function named the same thing as the .lua file (like testing_init from our last example), it will be automatically called. We'll talk more about what this means, and some alternatives to this method that I prefer, but for now we'll stick with it. Remember, if the <strong>function name</strong> matches the <strong>file name</strong> of the script, then it'll be run, except when it's in the /battle directory.</p>
+<a class="header" href="#challenge" id="challenge"><h4>Challenge</h4></a>
+<p>And time for your challenge. We're going to start from the top. Make a brand new pack, and a brand new script file, with a new name. Have this print out the text &quot;Goodbye World!&quot; on to the log file, as before. This time, however, make it print while in the frontend game mode (post-startup menus to select between Custom Battle/Campaign and what not).</p>
 
                     </main>
 

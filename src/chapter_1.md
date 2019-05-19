@@ -13,3 +13,9 @@ You can get in contact with the creator, Kaedrin, in the Modding Den's channel [
 [RPFM](https://github.com/Frodo45127/rpfm/releases/latest) is a great pack-file managing tool, essential for any modder. Active development has new features coming regularly, as well as constant bugfixes or squashings.
 
 Get in contact with the creator, Frodo, in the Modding Den's channel [#rpfm](https://github.com/Frodo45127/rpfm/releases/latest).
+
+#### Scripting Resources
+
+[entry.lua](files/entry.lua)
+[ca_types.lua](files/ca_types.lua)
+[uimf_types.lua](files/uimf_types.lua)

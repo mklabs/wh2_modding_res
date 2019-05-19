@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html" class="active"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.1.</strong> Lesson 1: Variables</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html" class="active"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.1.</strong> Hello World</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -137,7 +137,45 @@
                 <div id="content" class="content">
                     <main>
                         <a class="header" href="#from-start-to-scratch" id="from-start-to-scratch"><h1>From Start To Scratch</h1></a>
-<p>test</p>
+<p>Howdy and welcome, and hi, and hello. This section of the Lua section is devoted to covering as many <strong>basics</strong> of Lua one can touch on, as they pertain to Total War modding. The assumption is that the tutorial-reader has absolutely no background in coding or programming, so we will begin from the absolute top.</p>
+<p>This very first section, before we get into the language itself - we'll be covering the setup and introductory phases. Next section, we'll be writing our first ever actual script, and we'll go on from there, but DO NOT skip this lesson. It's short, sweet, and gives you all the background one needs to go on.</p>
+<p>I'll be covering a handful of setups that I find vital for programming in Lua. I'll be showing Notepad++, Visual Studio Code, and VSCode extension that helps debug your scripts. I find all of this to be essential, but you'll be safe with just starting as Notepad++ and returning for the rest later, when you feel more comfortable. For the love of all things holy, don't use Notepad basic.</p>
+<p>This tutorial assumes you already have RPFM downloaded. If you don't yet, go grab it.</p>
+<a class="header" href="#notepad-setup" id="notepad-setup"><h4>Notepad++ Setup</h4></a>
+<p>First off, [we need to grab Notepad++][https://notepad-plus-plus.org/]. Download it, install it wherever.</p>
+<p>Notepad++ is a beautiful text-editing program, and we'll be using it for a couple things. At this point in my existence, I use Notepad++ mainly for global searching through libraries of scripts, it's a great way to quickly read very many scripts at the same time.</p>
+<p>While you wait for Notepad++ to finish installing, you should open RPFM, and use the &quot;Open All CA Packs&quot; command (after making sure you have the proper game selected, under Game Selected).</p>
+<p>Now, go find a spot to create a script dump folder. You'll need to grab all CA's vanilla scripts and put them somewhere on your PC - I recommend an HDD, if you have two drives! - in order to easily browse through their files. Once you have one created and pinned and you know where it is, go back to RPFM, and go find the main &quot;script&quot; directory. Right-click it and select &quot;Extract&quot;, and target the new folder you just made.</p>
+<p>And, boom! You now have a script dump. I personally recommend renaming the &quot;script&quot; folder within your script dump folder to something like either the current patch of the game, or the current date. I do that so I can quickly reference different patches and compare versions when new DLC and updates are released.</p>
+<p>Lastly, open up Notepad++, and press &quot;File -&gt; Open Folder As Workspace...&quot;. Target your renamed &quot;script&quot; folder within the script dump directory, and you'll notice that the directory appears on the left-hand side. If you right-click the main folder over there, and press &quot;Find in Files...&quot;, you'll be able to global-search all CA scripts. Incredibly handy for looking at their usage of commands, or to see any references to, say, a lord.</p>
+<p>And that's Notepad++! You can make scripts in there as well, using &quot;File -&gt; New&quot; and naming it &quot;whatever_you_want.lua&quot; when saving. Though, I personally prefer using Visual Studio Code for programming in Lua (and it's what I'm typing this tutorial in), and that's where I have my IDE setup. If you're interested in VSCode, continue reading, if not carry on to the Hello World tutorial!</p>
+<a class="header" href="#visual-studio-code-setup" id="visual-studio-code-setup"><h4>Visual Studio Code Setup</h4></a>
+<p>Clearly, one needs Visual Studio Code. [Go get Visual Studio Code][https://code.visualstudio.com/].</p>
+<p>You got it? No? Why are you reading this?</p>
+<p>Okay, now you're ready? Good.</p>
+<p>Visual Studio Code is really nice for a handful of reasons. You can save &quot;code workspace&quot; files, which allow you to easily access several folders or files that you have saved for one project. I can jump really easily between, say, my Return of the Lichemaster code workspace, and my Other Currently Secret Things code workspace, with only a couple clicks. It has a really pretty dark mode, and the syntax highlighting for Lua is gorgeous, in my opinion.</p>
+<p>To use VSCode well, I suggest you setup one of these code workspaces, one for each project. To start, create a new folder on your PC, call it whatever you'd like. It's just to run through this example, so I don't really care. In VSCode, use File -&gt; Open Folder, and target that brand new folder.</p>
+<p>Within VSCode now, you can create new folders, open extras, and all, and it will be within the same code workspace. I use this constantly to replicate the paths needed in CA packfiles to load scripts - so I'll make a /script folder in all of my workspaces, and I'll replicate my packfile directories within the VSCode workspace.</p>
+<p>And that's it, VSCode is really simple to use (for our application atm). However, if we wanted to get more complicated and enable an IDE, keep reading!</p>
+<a class="header" href="#kailua-setup" id="kailua-setup"><h4>Kailua Setup</h4></a>
+<p>Within VSCode, click the bottom button on the far-left docker, the one with the title &quot;Extensions&quot;. Search for Kailua.</p>
+<p><img src="images/3_1-01.png" alt="test" /></p>
+<p>Install it, and enable it once it's finished installing (there will be a button saying &quot;Enable&quot;, if it says &quot;Disable&quot; just ignore it.)</p>
+<p>Once you're done, open a new folder to work in within VSCode. The first thing you'll do is create a new folder in that folder (reference the image below), and name that folder &quot;.vscode&quot;.</p>
+<p><img src="images/3_1-02.png" alt="test" /></p>
+<p>Create a new file within the &quot;.vscode&quot; folder, and name that new file &quot;kailua.json&quot;. Within that file, input the following exactly:</p>
+<pre><code>{
+   &quot;start_path&quot;: &quot;.vscode/entry.lua&quot;,
+   &quot;preload&quot;: {
+       &quot;open&quot;: [&quot;lua51&quot;],
+       &quot;require&quot;: [&quot;.vscode/ca_types&quot;, &quot;.vscode/uimf_types&quot;]
+   }
+}
+</code></pre>
+<p>This file is the injection point for Kailua, so it knows what to do and how to do it. So you're aware for the future - the &quot;start_path&quot; directive tells it &quot;this file leads me to the other files that I have to read and error-check&quot;; the &quot;require&quot; directive tells it &quot;these files give me the definitions to check for errors.&quot; The ca_types.lua file defines many CA functions, so Kailua knows to look for two numbers when using the &quot;cm:random_number(max, min)&quot; command. The entry.lua file will be where we target our own files, to get them debugged.</p>
+<p>Next up - let's create those three new files! In the same folder (.vscode), create entry.lua, ca_types.lua, and uimf_types.lua.</p>
+<p>Now, shoot back to the Tools &amp; Resources page, and pick up the files of those same names, and copy-and-paste their contents in your new files.</p>
+<p>And that's it! I would recommend regularly-ish checking for new ca_types.lua files within <a href="https://discord.gg/HFKff2y">the Modding Den</a>.</p>
 
                     </main>
 
