@@ -16,4 +16,4 @@ The way I'm going to divide up the tutorials is utterly and completely undecided
 
 ### Submissions
 
-If you'd like to submit your tutorial, I don't care.
+If you'd like to submit your tutorial, let me know! There will probably be a cleaner way of this later on, but yeah. Just tell me. Thx.
