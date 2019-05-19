@@ -13,10 +13,9 @@
 
 - combine TSD's [Listener tutorial](https://steamcommunity.com/sharedfiles/filedetails/?id=1314628727) with mine own
 - update all of TSD's tutorials, removing references to CMF and adding in the new script loaders from best-boi Mitch
-- finish formatting and editing the Building Buildings tutorial
 - get mo' permissions, dawg
 
-### Peeps Asked
+### Peeps Asked (All Approved!)
 
 - Cryswar (LL 1-4)
 - Maruka (prefabs/vistas/skins)
