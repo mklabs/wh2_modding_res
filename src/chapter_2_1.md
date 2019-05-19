@@ -154,6 +154,6 @@ Something happened and now you are getting a crash.That happens and it's okay, w
 Thanks for reading!
 
 
-[picture_1]: /docs/images/2_1-01.png
-[picture_2]: /docs/images/2_1-02.png
-[picture_3]: /docs/images/2_1-03.png
+[picture_1]: /images/2_1-01.png
+[picture_2]: /images/2_1-02.png
+[picture_3]: /images/2_1-03.png
