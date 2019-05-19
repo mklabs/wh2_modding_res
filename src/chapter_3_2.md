@@ -39,6 +39,7 @@ At the top of the document is a long list of Events, each clickable to divert to
 I want to start a new function after the player takes over Altdorf. After searching the term "Occup", the event "GarrisonOccupiedEvent" is highlighted. This looks promising! After clicking, the available functions are "garrison_residence" and "character", which seem to be the region that was occupied, and the character that led the assault, in order.
 
 
+
 ### Conditional Coding
 
 Remember "boolean1" from up above? If that is set to true/false, it's not really effective code. We can replace that true/false with a function that returns a true/false value, and that way we can actually check the event, see if a specific thing happened in that event, and then spit out a boolean to trigger the callback function.
