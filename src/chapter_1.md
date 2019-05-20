@@ -17,5 +17,11 @@ Get in contact with the creator, Frodo, in the Modding Den's channel [#rpfm](htt
 #### Scripting Resources
 
 [entry.lua](files/entry.lua)
+
 [ca_types.lua](files/ca_types.lua)
+
 [uimf_types.lua](files/uimf_types.lua)
+
+[Script Doc (Events & Interfaces)](files/scripting_doc.html)
+
+[Script Doc (CM Functions)](files/scripting.txt)

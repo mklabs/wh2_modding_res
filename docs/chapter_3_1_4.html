@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Variables &amp; Types - Modding Resources</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html" class="active"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Modding Resources</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#variables--types" id="variables--types"><h1>Variables &amp; Types</h1></a>
+<p><em>NOTE: I recommend you have the Devtool Console handy to mess around with some of the stuff covered here.</em></p>
+<p>Following the concept of chunks and statements, the next most important subject to cover is variables, and types.</p>
+<p><strong>Variable</strong>: A custom-made keyword that can be used to represent a value
+<strong>Type</strong>: The sort of value that is in a variable. Lua types include: boolean, string, number, table, nil, function. There are more, but we won't need them.</p>
+<p>But before going deeper into a definition, let's look at an example:</p>
+<pre><code>a = 10
+b = 5
+c = a + b
+</code></pre>
+<p>We can see that each of those letters in the chunk above is a <strong>variable</strong>, which are each assigned a <strong>value</strong>. In this case, variable <strong>a</strong> is assigned the value <strong>10</strong>, variable <strong>b</strong> is assigned the value <strong>5</strong>, and the variable <strong>c</strong> is assigned the <strong>value of a plus the value of b</strong>. This instance (c = a + b) works a lot like algebra - you aren't making &quot;c = ab&quot;, but you're adding the value of a (10) to the value of b (5), to get the result of <strong>15</strong>.</p>
+<p>The coolest thing about variables is their dynamism. They can be assigned to any type, change to any type, and they can infinitely change values. Let's take the above code, and mess with it a little bit.</p>
+<p><em>NOTE: From this point on, you'll see → after out() calls. This is to specify what text is actually output.</em></p>
+<pre><code>a = 10
+b = 5
+c = a + b
+
+out(a) → 10
+out(b) → 5
+out(c) → 15
+
+a = 25
+out(a) → 25
+
+out(c) → 15
+
+c = a + b
+out(c) → 30
+</code></pre>
+<p>I wanted to point out an important thing with this example. If a variable is assigned to the values of some other variables (c = a + b), it will do the calculation and assignment the <strong>moment</strong> that the statement is called. If either variable (a or b) is changed after the assignment statement, the assigned variable's (c) value (15) won't change. It takes the <em>variable's value</em>, not the <em>variable itself</em>.</p>
+<p>So, we see here that variables can be numbers, which is one of the primary types in Lua.</p>
+<p><strong>Number</strong>: <em>any</em> numerical value, within a specific number range (a much bigger number than needs to be worried about)</p>
+<p>As we saw above, we can perform some basic arithmetic on numbers.</p>
+<pre><code>a = 5
+b = 2 - 0.34
+c = a + b
+d = c * 2
+e = d / 3
+
+out(c) → 7.56
+out(d) → 15.12
+out(e) → 5.04
+</code></pre>
+<p><strong>String</strong>: <em>any</em> alphanumerical value, within quotation marks (&quot;&quot; or ''). Similar to numbers, size <em>does not matter</em>, Lua can handle millions of characters within a string.</p>
+<p>Like arithmetic for numbers, one can concatenate strings (along with many other stuffs!) to combine several, using the <code>..</code> operator.</p>
+<pre><code>    a = “This “; b = “is “; c = “an “; d = “example.”
+    out(a .. b .. c .. d) → This is an example.
+</code></pre>
+<p><em>NOTE: Yes, you can have several statements on the same line in Lua! The semi-colons are not necessary, I added them for extra readability.</em></p>
+<p>While on the subject, you can concat (cool-kid for concatenate) string literals and variables.</p>
+<pre><code>    a = &quot;example&quot;
+    out(&quot;This is an &quot; .. a) → This is an example
+</code></pre>
+<p><strong>Boolean</strong>: a <code>true</code> or <code>false</code> value.</p>
+<pre><code>    a = false
+    out(a) → false
+    out(a == false) → true
+</code></pre>
+<p>The above probably looks a little weird, but that's because we're learning a new operator! The <code>==</code> operator checks for <em>equality</em>, whereas the <code>=</code> operator <em>assigns a value</em>. The final statement above reads &quot;output the result of a == false&quot;. Since <code>a</code> DOES equal false, it prints &quot;true&quot;.</p>
+<p>It's very important to note that any variable can be <em>treated</em> as a boolean, such as when using the &quot;if something then&quot; statement, or by comparing it to a boolean. If a non-boolean variable is treated as a boolean, it will be converted to <code>false</code> if the value is <code>nil</code> or <code>false</code>; otherwise, it will be converted to <code>true</code>.</p>
+<pre><code>    a = 0
+    b = nil
+    out(a) → 0
+    out(a == false) → false 
+    out(b == false) → true
+</code></pre>
+<p>In this case, <code>a</code> does NOT equal <code>false</code>, because it has a value to it that isn't <code>false</code> or <code>nil</code>. By the same card, <code>b</code> DOES equal <code>false</code>.</p>
+<p>You're probably asking by now, what IS nil? I've mentioned it a number of times already, you're probably ready to lear about it. Here we go!</p>
+<p><strong>Nil</strong>: the absence of data.</p>
+<p>If one were to try to print a <em>non-existent</em> variable, the result would be <code>nil</code>. That's because there <strong>is</strong> no data for that variable.</p>
+<pre><code>    out(a) → nil
+    a = 5
+    out(a) → 5
+</code></pre>
+<p>Nil is a good way to check whether or not something exists, and we'll, towards the bottom of this lesson, talk about how to type-check this data in our scripts to see if variables are NOT nil, and thus exist.</p>
+<p>Nil is also a good way to clear away variables that you don't want to use anymore. There's a more realistic way of doing it, and this probably won't be necessary for most of what you will be doing, but I like to give a full knowledge.</p>
+<pre><code>    a = 5
+    out(a) → 5
+    a = nil -- Memory deallocated, bye &quot;a&quot;!
+    out(a) → nil
+</code></pre>
+<p>Lastly, it's important to note that <code>nil</code> is not the same as <code>null</code>, though they look quick similar. We'll cover that soon-ish, when we get into more CA script interfaces (like FACTION_SCRIPT_INTERFACE that we saw a few lessons ago).</p>
+<p><strong>Function</strong>: a definition for a chunk that can be called at any point, after being defined.</p>
+<p>There are two types of functions - an anonymous function, and a named function. An anonymous function has no name (clearly), so it cannot be called further on in the script. We use anonymous functions relatively frequently, but our focus now will be on named functions, which are functions assigned to a variable.</p>
+<pre><code>    a = 10
+    example = out
+    example(a) → 10
+</code></pre>
+<p>Yes, that's valid! You can actually assign a variable to a function like, it's pretty cool! We have syntactic sugar for assigning a variable to a function, however, and it's more common to see script like that:</p>
+<pre><code>    function example(text)
+        out(text)
+    end
+
+    example(&quot;Testing!&quot;) → Testing!
+
+    example(&quot;A Cooler Test!&quot;) → A Cooler Test!
+</code></pre>
+<p>As an added bonus, we're getting a quick sneak peak at one of the upcoming tutorials: parameters and arguments, for functions. In the above function, &quot;text&quot; is a parameter for <code>example()</code>, which is then passed along to <code>out</code> and triggers that function within the chunk.</p>
+<p><strong>Table</strong>: a collection of more than one piece of data.</p>
+<p>There are several types of tables, which we'll cover later on. I'd like to first look at the array version of tables, the simplest and most common.</p>
+<pre><code>    a = 5
+    b = 10
+    c = 17
+
+    table = {
+        a,
+        b,
+        c
+    } -- assign the three *values* of the variables to the table
+    
+    out(table[1]) → 5 -- Lua tables start at index 1!
+    out(table[2]) → 10
+    out(table[3]) → 17
+    out(table[4]) → nil -- doesn't exist!
+</code></pre>
+<p>Arrays are numbered automatically, so it really reads &quot;the first index of table is 5, the second index of table is 10&quot;, and so on. You <em>access</em> those indexes by using the [num] operator, which we'll look further at in the next tables tutorial later on.</p>
+<p>For now, you've done well, and I haven't even challenged you yet!</p>
+<a class="header" href="#challenge-1" id="challenge-1"><h4>Challenge 1</h4></a>
+<p>Mess with everything in this tutorial using the Devtool Console. Try to grasp the different native types of Lua, and make sure you understand the difference between the <em>assignment</em> operator and the <em>equality</em> operator. There's not really a good challenge to do here, but I do seriously suggest you just mess around with the stuff here. Try some different things like concatenating strings, adding numbers, messing with basic functions, stuff like that. Have fun!</p>
+<a class="header" href="#type-checking" id="type-checking"><h4>Type-Checking</h4></a>
+<p>And before we say goodbye, let's look at a few more CA functions. These ones can type-check for us, seeing if a variable is, for instance, a string.</p>
+<p>The list is as follows:</p>
+<ul>
+<li>is_nil(variable)</li>
+<li>is_string(variable)</li>
+<li>is_number(variable)</li>
+<li>is_boolean(variable)</li>
+<li>is_function(variable)</li>
+<li>is_table(variable)</li>
+</ul>
+<pre><code>    a = 5
+    b = nil
+    c = {1, 2, 3, 5, 70}
+    function d() end
+
+    out(is_number(a)) → true    
+    out(is_nil(b)) → true
+    out(is_table(c)) → true
+    out(is_function(d)) → true
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_3_1_3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_3_1_5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_3_1_3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_3_1_5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

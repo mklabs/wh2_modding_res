@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.1.</strong> Hello World</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -271,9 +271,11 @@ do_stuff()
 <p><a href="https://github.com/Frodo45127/rpfm/releases/latest">RPFM</a> is a great pack-file managing tool, essential for any modder. Active development has new features coming regularly, as well as constant bugfixes or squashings.</p>
 <p>Get in contact with the creator, Frodo, in the Modding Den's channel <a href="https://github.com/Frodo45127/rpfm/releases/latest">#rpfm</a>.</p>
 <a class="header" href="#scripting-resources" id="scripting-resources"><h4>Scripting Resources</h4></a>
-<p><a href="files/entry.lua">entry.lua</a>
-<a href="files/ca_types.lua">ca_types.lua</a>
-<a href="files/uimf_types.lua">uimf_types.lua</a></p>
+<p><a href="files/entry.lua">entry.lua</a></p>
+<p><a href="files/ca_types.lua">ca_types.lua</a></p>
+<p><a href="files/uimf_types.lua">uimf_types.lua</a></p>
+<p><a href="files/scripting_doc.html">Script Doc (Events &amp; Interfaces)</a></p>
+<p><a href="files/scripting.txt">Script Doc (CM Functions)</a></p>
 <a class="header" href="#database-stuff" id="database-stuff"><h1>Database Stuff</h1></a>
 <a class="header" href="#tolerant-tables" id="tolerant-tables"><h1>Tolerant Tables</h1></a>
 <a class="header" href="#whats-a-tolerant-table" id="whats-a-tolerant-table"><h5>What's a tolerant table?</h5></a>
@@ -580,6 +582,10 @@ For now, however, delete all previous entries like usual, add a new row, and inp
 <p>Next up - let's create those three new files! In the same folder (.vscode), create entry.lua, ca_types.lua, and uimf_types.lua.</p>
 <p>Now, shoot back to the Tools &amp; Resources page, and pick up the files of those same names, and copy-and-paste their contents in your new files.</p>
 <p>And that's it! I would recommend regularly-ish checking for new ca_types.lua files within <a href="https://discord.gg/HFKff2y">the Modding Den</a>.</p>
+<a class="header" href="#devtool-console" id="devtool-console"><h1>Devtool Console</h1></a>
+<p>Throughout this tutorial series, I will be referencing the &quot;Devtool Console&quot;, a mod made by mklabs that allows one to run some Lua code while <em>in</em> the game. It's awesome, and I highly recommend it. I'll be suggesting you use it throughout the tutorial series. Do so.</p>
+<p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1574469690">The long and convoluted series of words that you should press on to download and subscribe to the Devtool Console.</a></p>
+<p>The big thing to note is that, if you want to print stuff out onto the Devtool Console itself, you can replace out(text) with print(text). Likewise, some statements in Lua are too big to fit on one line in the Devtool Console, but you can have a statement span several lines if you'd like, as long as it doesn't involve assignment. If you don't know what I mean, read a couple lessons first and then come back.</p>
 <a class="header" href="#hello-world" id="hello-world"><h1>Hello World!</h1></a>
 <p>As with basically every programming tutorial on the globe, I'll begin where they all do - printing a message that says &quot;Hello World!&quot;</p>
 <p>I'd like to quickly note that as this tutorial series progresses, I'm going to be helping less and less and explaining more and more. I don't want to hand-hold you through the entire project, and each lesson will include at least one &quot;challenge&quot;, where I give you an objective and tell you to go do it. Self-guided teaching is important, and once you're done this tutorial series, you'll be expected to be at least remotely competent and able to work this stuff out independently. I highly recommend you stick to the challenges and give them a shot, they'll benefit you if you really want to get good with Lua.</p>
@@ -610,6 +616,331 @@ end
 <p>Within each of these directories (barring the battle one), if you have a function named the same thing as the .lua file (like testing_init from our last example), it will be automatically called. We'll talk more about what this means, and some alternatives to this method that I prefer, but for now we'll stick with it. Remember, if the <strong>function name</strong> matches the <strong>file name</strong> of the script, then it'll be run, except when it's in the /battle directory.</p>
 <a class="header" href="#challenge" id="challenge"><h4>Challenge</h4></a>
 <p>And time for your challenge. We're going to start from the top. Make a brand new pack, and a brand new script file, with a new name. Have this print out the text &quot;Goodbye World!&quot; on to the log file, as before. This time, however, make it print while in the frontend game mode (post-startup menus to select between Custom Battle/Campaign and what not).</p>
+<a class="header" href="#fun-stuff" id="fun-stuff"><h1>Fun Stuff</h1></a>
+<p>For our second lesson, we're going to go right into something more complicated, and I'll give you a few challenges within this. I'll voice this note right at the beginning: <strong>you won't understand every single thing I use here</strong>, and that's literally the point. This second lesson is a quick, semi-complicated script to show you some of the possibilites of scripting, with some intro knowledge on new concepts, and the next few lessons following will go right back into the bare basics.</p>
+<p>First up - challenge time!</p>
+<a class="header" href="#challenge-1" id="challenge-1"><h4>Challenge 1</h4></a>
+<p>Your first challenge is to make a new .pack file, with a single Lua file named &quot;example_script.lua&quot; that will load exclusively in the Eye of the Vortex campaign. Create a blank function within the Lua file, named as we addressed in the last lesson.</p>
+<a class="header" href="#what-were-doing" id="what-were-doing"><h4>What We're Doing</h4></a>
+<p>The project here is to build a slightly solid script that affects a good amount of change. What we'll have by the end of this lesson is a script that gives Lothern control over the Phoenix Gate at the start of a new campaign, and will spawn a new army automatically when the Cult of Excess faction is destroyed.</p>
+<a class="header" href="#transfer-region-on-campaign-start" id="transfer-region-on-campaign-start"><h4>Transfer Region on Campaign Start</h4></a>
+<p>First thing's first, let's grant the region to them! It's important to note <em>when</em> we call <em>what</em> in our scripts. For things we want to do only once, on game start, we can use a nice CA command, <code>cm:is_new_game()</code>. All that command does is check if it's the very first turn, and the game hasn't been saved yet. We'll use that within an &quot;if&quot; statement, as follows:</p>
+<pre><code>function example_script()
+    if cm:is_new_game() == true then
+        -- it's a new game, so it'll run this stuff here
+    else
+        -- it isn't a new game, so it'll run this stuff here
+    end
+end
+</code></pre>
+<p>You might be wondering the point of those &quot;--&quot; bits. Those dashes - two are necessary - allow you to comment your script, which I will be doing quite a bit and try to make a habit of with all scripts. Everything on that line after the &quot;--&quot; is ignored, and allows you to write whatever you want. It's really helpful when you go and look back over very old scripts and are wondering why the heck you did something a certain way. I've been there many times.</p>
+<p>You might be wondering about the &quot;if cm:is_new_game() == true then&quot; bit, too. More or less, when you use the command &quot;cm:is_new_game()&quot;, it returns a value of true/false, depending on whether or not it's currently a new game. We can read that value, like I show above, and go down different branches of our script depending on the answer.</p>
+<p>In a future tutorial, I'll be showing how to find these commands and use them, but for now, blind faith will make this tutorial go quicker and easier.</p>
+<p>On our &quot;if cm:is_new_game() == true&quot; branch, we'll be transfering the region over to Lothern. The command we need to use is <code>cm:transfer_region_to_faction(region_name, faction_name)</code>. region_name and faction_name are both database keys, easy enough to find using the Assembly Kit.</p>
+<pre><code>function example_script()
+    if cm:is_new_game() == true then
+        -- it's a new game, so give Lothern the Phoenix Gate region
+        cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
+    else
+        -- it isn't a new game, so it'll run this stuff here
+    end
+end
+</code></pre>
+<a class="header" href="#challenge-2" id="challenge-2"><h4>Challenge 2</h4></a>
+<p>This one's pretty simplistic, but it'll get harder, don't worry. For now, I would like you to give Lothern a second new region, and to output some text if it isn't a new game.</p>
+<a class="header" href="#are-they-dead-yet" id="are-they-dead-yet"><h4>Are They Dead Yet?</h4></a>
+<p>Alright, next step - we need to create something that checks if the Cult of Excess faction is dead, before we create the thing that'll spawn the new army.</p>
+<p>And no, I won't give you the answers to that challenge above! Figure it out, chap!</p>
+<p>First, a new concept - listeners. One of the lessons very soon, after the basics, goes over listeners in big depth, but suffice it to say: listeners are love, listeners are life. They allow you to &quot;listen&quot; for different things happening in the game - like a battle, a region being captured, a character dying - and to &quot;trigger&quot; a function afterwards. It's the mechanic that powers things like Legendary Lord/Rite unlocks, the Chaos Invasion in big part, post-battle Chivalry or Infamy gains, and a whooole lot more!</p>
+<p>We're going to use a listener that &quot;listens&quot; for Lothern's turn to start, and it'll <em>check</em> to see if the Cult of Excess faction is dead-o-rama. If they are, it'll <em>trigger</em> the spawn of the new army.</p>
+<pre><code>function example_script()
+    if cm:is_new_game() == true then
+        -- it's a new game, so give Lothern the Phoenix Gate region
+        cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
+        -- the second region you should've added in the challenge!
+    else
+        -- it isn't a new game, so it'll run this stuff here
+        -- the output you should've added in the challenge!
+    end
+
+    core:add_listener(
+        &quot;MyFirstListener&quot;,
+        &quot;FactionTurnStart&quot;,
+        function(context)
+            -- is it Lothern's turn?
+            return context:faction():name() == &quot;wh2_main_hef_eataine&quot;
+        end,
+        function(context)
+            -- check to see if the Cult of Excess is living!
+        end,
+        true
+    )
+end
+</code></pre>
+<p>Again, don't fear - I'll cover all this in way more depth, and this is the last time I'm gonna give this warning or clarification. Just accept it.</p>
+<p>To check if they're dead yet, we have to <em>get</em> the faction object, and run a quick check on if they're living or not. We can do that with the CA command <code>cm:get_faction(faction_name)</code>. That returns what CA calls a &quot;FACTION_SCRIPT_INTERFACE&quot;. You can run a lot of functions on a faction object, a &quot;FACTION_SCRIPT_INTERFACE&quot;, as one of them is <code>is_dead()</code>. You can see more if you go to the scripting-doc.html file in Tools &amp; Resources, and search for &quot;FACTION_SCRIPT_INTERFACE&quot;.</p>
+<pre><code>function example_script()
+    if cm:is_new_game() == true then
+        -- it's a new game, so give Lothern the Phoenix Gate region
+        cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
+        -- the second region you should've added in the challenge!
+    else
+        -- it isn't a new game, so it'll run this stuff here
+        -- the output you should've added in the challenge!
+    end
+
+    core:add_listener(
+        &quot;MyFirstListener&quot;,
+        &quot;FactionTurnStart&quot;,
+        function(context)
+            -- is it Lothern's turn?
+            return context:faction():name() == &quot;wh2_main_hef_eataine&quot;
+        end,
+        function(context)
+            -- define a local variable that can be used to shorthand the faction's name
+            local excess_name = &quot;wh2_main_def_cult_of_excess&quot;
+
+            -- define a local variable to access the FACTION_SCRIPT_INTERFACE for Cult of Excess
+            local excess_faction = cm:get_faction(excess_name)
+
+            -- check if they're dead, and if they are ... 
+            if excess_faction:is_dead() == true then
+                -- ... spawn that army!
+            end
+        end,
+        true
+    )
+end
+</code></pre>
+<p>Sweet! This is our first look at variables and the keyword &quot;local&quot;, which defines where that variable exists and can be accessed. More on this in literally the next lesson!</p>
+<a class="header" href="#spawn-that-aaaaarmy" id="spawn-that-aaaaarmy"><h4>Spawn That Aaaaarmy!</h4></a>
+<p>We're coming up close to being done here! All we've gotta do left is spawn the army, and all I've gotta do is challenge you a couple more times!</p>
+<p>The next and penultimate CA command we'll be using is <code>cm:create_force(faction_key, army_list, region_key, x_position, y_position, exclude_named_chars, success_callback)</code>. The parameter list looks slightly daunting, but if you take some time to critically think, the only strange thing should be the very last parameter - success_callback. Luckily for you, we won't even be using that one, really.</p>
+<pre><code>function example_script()
+    if cm:is_new_game() == true then
+        -- it's a new game, so give Lothern the Phoenix Gate region
+        cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
+        -- the second region you should've added in the challenge!
+    else
+        -- it isn't a new game, so it'll run this stuff here
+        -- the output you should've added in the challenge!
+    end
+
+    core:add_listener(
+        &quot;MyFirstListener&quot;,
+        &quot;FactionTurnStart&quot;,
+        function(context)
+            -- is it Lothern's turn?
+            return context:faction():name() == &quot;wh2_main_hef_eataine&quot;
+        end,
+        function(context)
+            -- define a local variable that can be used to shorthand the faction's name
+            local excess_name = &quot;wh2_main_def_cult_of_excess&quot;
+
+            -- define a local variable to access the FACTION_SCRIPT_INTERFACE for Cult of Excess
+            local excess_faction = cm:get_faction(excess_name)
+
+            -- check if they're dead, and if they are ... 
+            if excess_faction:is_dead() == true then
+                -- define a few local variables that we'll use in the command to save some space!
+                local army_list = &quot;&quot;
+                local region_key = &quot;wh2_main_vor_straits_of_lothern_lothern&quot;
+                local x_position = 516
+                local y_position = 430
+
+                -- ... spawn that army!
+                cm:create_force(
+                    excess_name,
+                    army_list,
+                    region_key,
+                    x_position,
+                    y_position,
+                    true,
+                    function(cqi)
+                    end
+                )
+            end
+        end,
+        true
+    )
+end
+</code></pre>
+<p>Those of you critically-thinking will notice that I kept a completely blank string for <code>army_list</code>. Guess what!</p>
+<a class="header" href="#challenge-3" id="challenge-3"><h4>Challenge 3</h4></a>
+<p>Create the army list! It's one single string, with unit keys separated by commas, NO spaces within the string. Give it a shot, I dare you.</p>
+<p>HINT: If you're hitting a wall, global search CA scripts! I won't tell you <strong>what</strong> to search.</p>
+<a class="header" href="#packaging-and-testing" id="packaging-and-testing"><h4>Packaging and Testing</h4></a>
+<p>Alright, with the <code>army_list</code> string expanded, this mod should be fully functional. There is one definite bug that I know will exist, and I'll point out now - if there's a character already standing on (516, 430) game coordinates, the army will not spawn. Explaining how to avoid so would take more time than I want to spend on this lesson, so deal with it.</p>
+<p>Your final task - start testing! If it doesn't work, here's a quick tip: use the out(text) function! You can use it throughout scripts to take a look at what's triggering and what isn't, like so:</p>
+<pre><code>    if cm:is_new_game() == true then
+        -- it's a new game, so give Lothern the Phoenix Gate region
+        out(&quot;It's a new game!&quot;)
+        cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
+        out(&quot;Added Phoenix Gate&quot;)
+        -- the second region you should've added in the challenge!
+        out(&quot;Added the second region!&quot;)
+    else
+        -- it isn't a new game, so it'll run this stuff here
+        out(&quot;It's not a new game!&quot;)
+        -- the output you should've added in the challenge!
+    end
+</code></pre>
+<p>And that's it, yo. Next up, we'll get down to the bare bones and get some great understanding! If some of this stuff didn't make sense, keep pushing on through the next few lessons where I break it down to the bit and hopefully give you a more fuller knowledge on the language. I gave you a glimpse at some story-telling; now let's go back and learn the alphabet, grammar, and colloquialisms.</p>
+<a class="header" href="#chunks--statements" id="chunks--statements"><h1>Chunks &amp; Statements</h1></a>
+<p>The first two terms we'll look at are <strong>chunks</strong> and <strong>statements</strong>. When Lua is brought to its basic skeletal structure, that's all it is - chunks of statements.</p>
+<p><strong>Statement</strong>: A declaration, a thing-to-be-done, a command that Lua will run
+<strong>Chunk</strong>: A sequence of statements, from an entire file to a single line of data</p>
+<p>Every chunk is a to-do list, and a statement is an objective on that list. You can have to-do lists of all shapes and sizes, and each thing that needs to be done can be small - &quot;brushing your teet&quot; - or huge - &quot;spend way too much money on transmission repairs&quot;. No, I'm not still salty about the money I spent on transmission repairs, why do you ask?</p>
+<p>The Lua interpreter divides everything it takes into specific chunks, which we'll look at later on. For now, we understand the term chunk - a to-do list.</p>
+<p>Within each chunk is one or more statements. A statement is one coherent thought or action within Lua. Something like this can be one statement:</p>
+<pre><code>a = 1
+</code></pre>
+<p>Or, this can be one statement:</p>
+<pre><code>a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
+</code></pre>
+<p>That is, one bit of data that Lua has to evaluate and run.</p>
+<p>Remember the term &quot;chunk&quot; - we'll be covering how they're defined later on, when we look at some more keywords.</p>
+<a class="header" href="#variables--types" id="variables--types"><h1>Variables &amp; Types</h1></a>
+<p><em>NOTE: I recommend you have the Devtool Console handy to mess around with some of the stuff covered here.</em></p>
+<p>Following the concept of chunks and statements, the next most important subject to cover is variables, and types.</p>
+<p><strong>Variable</strong>: A custom-made keyword that can be used to represent a value
+<strong>Type</strong>: The sort of value that is in a variable. Lua types include: boolean, string, number, table, nil, function. There are more, but we won't need them.</p>
+<p>But before going deeper into a definition, let's look at an example:</p>
+<pre><code>a = 10
+b = 5
+c = a + b
+</code></pre>
+<p>We can see that each of those letters in the chunk above is a <strong>variable</strong>, which are each assigned a <strong>value</strong>. In this case, variable <strong>a</strong> is assigned the value <strong>10</strong>, variable <strong>b</strong> is assigned the value <strong>5</strong>, and the variable <strong>c</strong> is assigned the <strong>value of a plus the value of b</strong>. This instance (c = a + b) works a lot like algebra - you aren't making &quot;c = ab&quot;, but you're adding the value of a (10) to the value of b (5), to get the result of <strong>15</strong>.</p>
+<p>The coolest thing about variables is their dynamism. They can be assigned to any type, change to any type, and they can infinitely change values. Let's take the above code, and mess with it a little bit.</p>
+<p><em>NOTE: From this point on, you'll see → after out() calls. This is to specify what text is actually output.</em></p>
+<pre><code>a = 10
+b = 5
+c = a + b
+
+out(a) → 10
+out(b) → 5
+out(c) → 15
+
+a = 25
+out(a) → 25
+
+out(c) → 15
+
+c = a + b
+out(c) → 30
+</code></pre>
+<p>I wanted to point out an important thing with this example. If a variable is assigned to the values of some other variables (c = a + b), it will do the calculation and assignment the <strong>moment</strong> that the statement is called. If either variable (a or b) is changed after the assignment statement, the assigned variable's (c) value (15) won't change. It takes the <em>variable's value</em>, not the <em>variable itself</em>.</p>
+<p>So, we see here that variables can be numbers, which is one of the primary types in Lua.</p>
+<p><strong>Number</strong>: <em>any</em> numerical value, within a specific number range (a much bigger number than needs to be worried about)</p>
+<p>As we saw above, we can perform some basic arithmetic on numbers.</p>
+<pre><code>a = 5
+b = 2 - 0.34
+c = a + b
+d = c * 2
+e = d / 3
+
+out(c) → 7.56
+out(d) → 15.12
+out(e) → 5.04
+</code></pre>
+<p><strong>String</strong>: <em>any</em> alphanumerical value, within quotation marks (&quot;&quot; or ''). Similar to numbers, size <em>does not matter</em>, Lua can handle millions of characters within a string.</p>
+<p>Like arithmetic for numbers, one can concatenate strings (along with many other stuffs!) to combine several, using the <code>..</code> operator.</p>
+<pre><code>    a = “This “; b = “is “; c = “an “; d = “example.”
+    out(a .. b .. c .. d) → This is an example.
+</code></pre>
+<p><em>NOTE: Yes, you can have several statements on the same line in Lua! The semi-colons are not necessary, I added them for extra readability.</em></p>
+<p>While on the subject, you can concat (cool-kid for concatenate) string literals and variables.</p>
+<pre><code>    a = &quot;example&quot;
+    out(&quot;This is an &quot; .. a) → This is an example
+</code></pre>
+<p><strong>Boolean</strong>: a <code>true</code> or <code>false</code> value.</p>
+<pre><code>    a = false
+    out(a) → false
+    out(a == false) → true
+</code></pre>
+<p>The above probably looks a little weird, but that's because we're learning a new operator! The <code>==</code> operator checks for <em>equality</em>, whereas the <code>=</code> operator <em>assigns a value</em>. The final statement above reads &quot;output the result of a == false&quot;. Since <code>a</code> DOES equal false, it prints &quot;true&quot;.</p>
+<p>It's very important to note that any variable can be <em>treated</em> as a boolean, such as when using the &quot;if something then&quot; statement, or by comparing it to a boolean. If a non-boolean variable is treated as a boolean, it will be converted to <code>false</code> if the value is <code>nil</code> or <code>false</code>; otherwise, it will be converted to <code>true</code>.</p>
+<pre><code>    a = 0
+    b = nil
+    out(a) → 0
+    out(a == false) → false 
+    out(b == false) → true
+</code></pre>
+<p>In this case, <code>a</code> does NOT equal <code>false</code>, because it has a value to it that isn't <code>false</code> or <code>nil</code>. By the same card, <code>b</code> DOES equal <code>false</code>.</p>
+<p>You're probably asking by now, what IS nil? I've mentioned it a number of times already, you're probably ready to lear about it. Here we go!</p>
+<p><strong>Nil</strong>: the absence of data.</p>
+<p>If one were to try to print a <em>non-existent</em> variable, the result would be <code>nil</code>. That's because there <strong>is</strong> no data for that variable.</p>
+<pre><code>    out(a) → nil
+    a = 5
+    out(a) → 5
+</code></pre>
+<p>Nil is a good way to check whether or not something exists, and we'll, towards the bottom of this lesson, talk about how to type-check this data in our scripts to see if variables are NOT nil, and thus exist.</p>
+<p>Nil is also a good way to clear away variables that you don't want to use anymore. There's a more realistic way of doing it, and this probably won't be necessary for most of what you will be doing, but I like to give a full knowledge.</p>
+<pre><code>    a = 5
+    out(a) → 5
+    a = nil -- Memory deallocated, bye &quot;a&quot;!
+    out(a) → nil
+</code></pre>
+<p>Lastly, it's important to note that <code>nil</code> is not the same as <code>null</code>, though they look quick similar. We'll cover that soon-ish, when we get into more CA script interfaces (like FACTION_SCRIPT_INTERFACE that we saw a few lessons ago).</p>
+<p><strong>Function</strong>: a definition for a chunk that can be called at any point, after being defined.</p>
+<p>There are two types of functions - an anonymous function, and a named function. An anonymous function has no name (clearly), so it cannot be called further on in the script. We use anonymous functions relatively frequently, but our focus now will be on named functions, which are functions assigned to a variable.</p>
+<pre><code>    a = 10
+    example = out
+    example(a) → 10
+</code></pre>
+<p>Yes, that's valid! You can actually assign a variable to a function like, it's pretty cool! We have syntactic sugar for assigning a variable to a function, however, and it's more common to see script like that:</p>
+<pre><code>    function example(text)
+        out(text)
+    end
+
+    example(&quot;Testing!&quot;) → Testing!
+
+    example(&quot;A Cooler Test!&quot;) → A Cooler Test!
+</code></pre>
+<p>As an added bonus, we're getting a quick sneak peak at one of the upcoming tutorials: parameters and arguments, for functions. In the above function, &quot;text&quot; is a parameter for <code>example()</code>, which is then passed along to <code>out</code> and triggers that function within the chunk.</p>
+<p><strong>Table</strong>: a collection of more than one piece of data.</p>
+<p>There are several types of tables, which we'll cover later on. I'd like to first look at the array version of tables, the simplest and most common.</p>
+<pre><code>    a = 5
+    b = 10
+    c = 17
+
+    table = {
+        a,
+        b,
+        c
+    } -- assign the three *values* of the variables to the table
+    
+    out(table[1]) → 5 -- Lua tables start at index 1!
+    out(table[2]) → 10
+    out(table[3]) → 17
+    out(table[4]) → nil -- doesn't exist!
+</code></pre>
+<p>Arrays are numbered automatically, so it really reads &quot;the first index of table is 5, the second index of table is 10&quot;, and so on. You <em>access</em> those indexes by using the [num] operator, which we'll look further at in the next tables tutorial later on.</p>
+<p>For now, you've done well, and I haven't even challenged you yet!</p>
+<a class="header" href="#challenge-1-1" id="challenge-1-1"><h4>Challenge 1</h4></a>
+<p>Mess with everything in this tutorial using the Devtool Console. Try to grasp the different native types of Lua, and make sure you understand the difference between the <em>assignment</em> operator and the <em>equality</em> operator. There's not really a good challenge to do here, but I do seriously suggest you just mess around with the stuff here. Try some different things like concatenating strings, adding numbers, messing with basic functions, stuff like that. Have fun!</p>
+<a class="header" href="#type-checking" id="type-checking"><h4>Type-Checking</h4></a>
+<p>And before we say goodbye, let's look at a few more CA functions. These ones can type-check for us, seeing if a variable is, for instance, a string.</p>
+<p>The list is as follows:</p>
+<ul>
+<li>is_nil(variable)</li>
+<li>is_string(variable)</li>
+<li>is_number(variable)</li>
+<li>is_boolean(variable)</li>
+<li>is_function(variable)</li>
+<li>is_table(variable)</li>
+</ul>
+<pre><code>    a = 5
+    b = nil
+    c = {1, 2, 3, 5, 70}
+    function d() end
+
+    out(is_number(a)) → true    
+    out(is_nil(b)) → true
+    out(is_table(c)) → true
+    out(is_function(d)) → true
+</code></pre>
+<a class="header" href="#expressions--operators" id="expressions--operators"><h1>Expressions &amp; Operators</h1></a>
 <a class="header" href="#listeners" id="listeners"><h1>Listeners</h1></a>
 <a class="header" href="#can-you-hear-me" id="can-you-hear-me"><h3>Can You Hear Me?</h3></a>
 <p>A listener is an important script command that, simply, waits for something to happen - or, <em>listens</em> for something to happen - in the game, and then triggers something else. Using a listener, we can listen for an event such as the creation of an army, the occupation of a city, or even a battle, and then we use the information from that situation, check for something specific, and run our code if the event matches our criteria. For example: we may be looking for Mannfred to occupy Altdorf. In this case we'd have to use a listener to &quot;listen&quot; for a city being occupied, but we don't want to listen for just <em>any</em> city being occupied. In our example, we have to listen for Altdorf being occupied, and for Mannfred doing the occupying. The listener will listen for every single time a city is occupied, and once those two conditions are met - <em>Mannfred</em> occupying <em>Altdorf</em>... Clue, anyone? - then our listener will trigger some code. In layman's code, our listener will <em>do a thing</em>!</p>

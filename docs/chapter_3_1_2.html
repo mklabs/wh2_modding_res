@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Fun Stuff - Modding Resources</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html" class="active"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Modding Resources</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#fun-stuff" id="fun-stuff"><h1>Fun Stuff</h1></a>
+<p>For our second lesson, we're going to go right into something more complicated, and I'll give you a few challenges within this. I'll voice this note right at the beginning: <strong>you won't understand every single thing I use here</strong>, and that's literally the point. This second lesson is a quick, semi-complicated script to show you some of the possibilites of scripting, with some intro knowledge on new concepts, and the next few lessons following will go right back into the bare basics.</p>
+<p>First up - challenge time!</p>
+<a class="header" href="#challenge-1" id="challenge-1"><h4>Challenge 1</h4></a>
+<p>Your first challenge is to make a new .pack file, with a single Lua file named &quot;example_script.lua&quot; that will load exclusively in the Eye of the Vortex campaign. Create a blank function within the Lua file, named as we addressed in the last lesson.</p>
+<a class="header" href="#what-were-doing" id="what-were-doing"><h4>What We're Doing</h4></a>
+<p>The project here is to build a slightly solid script that affects a good amount of change. What we'll have by the end of this lesson is a script that gives Lothern control over the Phoenix Gate at the start of a new campaign, and will spawn a new army automatically when the Cult of Excess faction is destroyed.</p>
+<a class="header" href="#transfer-region-on-campaign-start" id="transfer-region-on-campaign-start"><h4>Transfer Region on Campaign Start</h4></a>
+<p>First thing's first, let's grant the region to them! It's important to note <em>when</em> we call <em>what</em> in our scripts. For things we want to do only once, on game start, we can use a nice CA command, <code>cm:is_new_game()</code>. All that command does is check if it's the very first turn, and the game hasn't been saved yet. We'll use that within an &quot;if&quot; statement, as follows:</p>
+<pre><code>function example_script()
+    if cm:is_new_game() == true then
+        -- it's a new game, so it'll run this stuff here
+    else
+        -- it isn't a new game, so it'll run this stuff here
+    end
+end
+</code></pre>
+<p>You might be wondering the point of those &quot;--&quot; bits. Those dashes - two are necessary - allow you to comment your script, which I will be doing quite a bit and try to make a habit of with all scripts. Everything on that line after the &quot;--&quot; is ignored, and allows you to write whatever you want. It's really helpful when you go and look back over very old scripts and are wondering why the heck you did something a certain way. I've been there many times.</p>
+<p>You might be wondering about the &quot;if cm:is_new_game() == true then&quot; bit, too. More or less, when you use the command &quot;cm:is_new_game()&quot;, it returns a value of true/false, depending on whether or not it's currently a new game. We can read that value, like I show above, and go down different branches of our script depending on the answer.</p>
+<p>In a future tutorial, I'll be showing how to find these commands and use them, but for now, blind faith will make this tutorial go quicker and easier.</p>
+<p>On our &quot;if cm:is_new_game() == true&quot; branch, we'll be transfering the region over to Lothern. The command we need to use is <code>cm:transfer_region_to_faction(region_name, faction_name)</code>. region_name and faction_name are both database keys, easy enough to find using the Assembly Kit.</p>
+<pre><code>function example_script()
+    if cm:is_new_game() == true then
+        -- it's a new game, so give Lothern the Phoenix Gate region
+        cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
+    else
+        -- it isn't a new game, so it'll run this stuff here
+    end
+end
+</code></pre>
+<a class="header" href="#challenge-2" id="challenge-2"><h4>Challenge 2</h4></a>
+<p>This one's pretty simplistic, but it'll get harder, don't worry. For now, I would like you to give Lothern a second new region, and to output some text if it isn't a new game.</p>
+<a class="header" href="#are-they-dead-yet" id="are-they-dead-yet"><h4>Are They Dead Yet?</h4></a>
+<p>Alright, next step - we need to create something that checks if the Cult of Excess faction is dead, before we create the thing that'll spawn the new army.</p>
+<p>And no, I won't give you the answers to that challenge above! Figure it out, chap!</p>
+<p>First, a new concept - listeners. One of the lessons very soon, after the basics, goes over listeners in big depth, but suffice it to say: listeners are love, listeners are life. They allow you to &quot;listen&quot; for different things happening in the game - like a battle, a region being captured, a character dying - and to &quot;trigger&quot; a function afterwards. It's the mechanic that powers things like Legendary Lord/Rite unlocks, the Chaos Invasion in big part, post-battle Chivalry or Infamy gains, and a whooole lot more!</p>
+<p>We're going to use a listener that &quot;listens&quot; for Lothern's turn to start, and it'll <em>check</em> to see if the Cult of Excess faction is dead-o-rama. If they are, it'll <em>trigger</em> the spawn of the new army.</p>
+<pre><code>function example_script()
+    if cm:is_new_game() == true then
+        -- it's a new game, so give Lothern the Phoenix Gate region
+        cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
+        -- the second region you should've added in the challenge!
+    else
+        -- it isn't a new game, so it'll run this stuff here
+        -- the output you should've added in the challenge!
+    end
+
+    core:add_listener(
+        &quot;MyFirstListener&quot;,
+        &quot;FactionTurnStart&quot;,
+        function(context)
+            -- is it Lothern's turn?
+            return context:faction():name() == &quot;wh2_main_hef_eataine&quot;
+        end,
+        function(context)
+            -- check to see if the Cult of Excess is living!
+        end,
+        true
+    )
+end
+</code></pre>
+<p>Again, don't fear - I'll cover all this in way more depth, and this is the last time I'm gonna give this warning or clarification. Just accept it.</p>
+<p>To check if they're dead yet, we have to <em>get</em> the faction object, and run a quick check on if they're living or not. We can do that with the CA command <code>cm:get_faction(faction_name)</code>. That returns what CA calls a &quot;FACTION_SCRIPT_INTERFACE&quot;. You can run a lot of functions on a faction object, a &quot;FACTION_SCRIPT_INTERFACE&quot;, as one of them is <code>is_dead()</code>. You can see more if you go to the scripting-doc.html file in Tools &amp; Resources, and search for &quot;FACTION_SCRIPT_INTERFACE&quot;.</p>
+<pre><code>function example_script()
+    if cm:is_new_game() == true then
+        -- it's a new game, so give Lothern the Phoenix Gate region
+        cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
+        -- the second region you should've added in the challenge!
+    else
+        -- it isn't a new game, so it'll run this stuff here
+        -- the output you should've added in the challenge!
+    end
+
+    core:add_listener(
+        &quot;MyFirstListener&quot;,
+        &quot;FactionTurnStart&quot;,
+        function(context)
+            -- is it Lothern's turn?
+            return context:faction():name() == &quot;wh2_main_hef_eataine&quot;
+        end,
+        function(context)
+            -- define a local variable that can be used to shorthand the faction's name
+            local excess_name = &quot;wh2_main_def_cult_of_excess&quot;
+
+            -- define a local variable to access the FACTION_SCRIPT_INTERFACE for Cult of Excess
+            local excess_faction = cm:get_faction(excess_name)
+
+            -- check if they're dead, and if they are ... 
+            if excess_faction:is_dead() == true then
+                -- ... spawn that army!
+            end
+        end,
+        true
+    )
+end
+</code></pre>
+<p>Sweet! This is our first look at variables and the keyword &quot;local&quot;, which defines where that variable exists and can be accessed. More on this in literally the next lesson!</p>
+<a class="header" href="#spawn-that-aaaaarmy" id="spawn-that-aaaaarmy"><h4>Spawn That Aaaaarmy!</h4></a>
+<p>We're coming up close to being done here! All we've gotta do left is spawn the army, and all I've gotta do is challenge you a couple more times!</p>
+<p>The next and penultimate CA command we'll be using is <code>cm:create_force(faction_key, army_list, region_key, x_position, y_position, exclude_named_chars, success_callback)</code>. The parameter list looks slightly daunting, but if you take some time to critically think, the only strange thing should be the very last parameter - success_callback. Luckily for you, we won't even be using that one, really.</p>
+<pre><code>function example_script()
+    if cm:is_new_game() == true then
+        -- it's a new game, so give Lothern the Phoenix Gate region
+        cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
+        -- the second region you should've added in the challenge!
+    else
+        -- it isn't a new game, so it'll run this stuff here
+        -- the output you should've added in the challenge!
+    end
+
+    core:add_listener(
+        &quot;MyFirstListener&quot;,
+        &quot;FactionTurnStart&quot;,
+        function(context)
+            -- is it Lothern's turn?
+            return context:faction():name() == &quot;wh2_main_hef_eataine&quot;
+        end,
+        function(context)
+            -- define a local variable that can be used to shorthand the faction's name
+            local excess_name = &quot;wh2_main_def_cult_of_excess&quot;
+
+            -- define a local variable to access the FACTION_SCRIPT_INTERFACE for Cult of Excess
+            local excess_faction = cm:get_faction(excess_name)
+
+            -- check if they're dead, and if they are ... 
+            if excess_faction:is_dead() == true then
+                -- define a few local variables that we'll use in the command to save some space!
+                local army_list = &quot;&quot;
+                local region_key = &quot;wh2_main_vor_straits_of_lothern_lothern&quot;
+                local x_position = 516
+                local y_position = 430
+
+                -- ... spawn that army!
+                cm:create_force(
+                    excess_name,
+                    army_list,
+                    region_key,
+                    x_position,
+                    y_position,
+                    true,
+                    function(cqi)
+                    end
+                )
+            end
+        end,
+        true
+    )
+end
+</code></pre>
+<p>Those of you critically-thinking will notice that I kept a completely blank string for <code>army_list</code>. Guess what!</p>
+<a class="header" href="#challenge-3" id="challenge-3"><h4>Challenge 3</h4></a>
+<p>Create the army list! It's one single string, with unit keys separated by commas, NO spaces within the string. Give it a shot, I dare you.</p>
+<p>HINT: If you're hitting a wall, global search CA scripts! I won't tell you <strong>what</strong> to search.</p>
+<a class="header" href="#packaging-and-testing" id="packaging-and-testing"><h4>Packaging and Testing</h4></a>
+<p>Alright, with the <code>army_list</code> string expanded, this mod should be fully functional. There is one definite bug that I know will exist, and I'll point out now - if there's a character already standing on (516, 430) game coordinates, the army will not spawn. Explaining how to avoid so would take more time than I want to spend on this lesson, so deal with it.</p>
+<p>Your final task - start testing! If it doesn't work, here's a quick tip: use the out(text) function! You can use it throughout scripts to take a look at what's triggering and what isn't, like so:</p>
+<pre><code>    if cm:is_new_game() == true then
+        -- it's a new game, so give Lothern the Phoenix Gate region
+        out(&quot;It's a new game!&quot;)
+        cm:transfer_region_to_faction(&quot;wh2_main_vor_phoenix_gate&quot;, &quot;wh2_main_hef_eataine&quot;)
+        out(&quot;Added Phoenix Gate&quot;)
+        -- the second region you should've added in the challenge!
+        out(&quot;Added the second region!&quot;)
+    else
+        -- it isn't a new game, so it'll run this stuff here
+        out(&quot;It's not a new game!&quot;)
+        -- the output you should've added in the challenge!
+    end
+</code></pre>
+<p>And that's it, yo. Next up, we'll get down to the bare bones and get some great understanding! If some of this stuff didn't make sense, keep pushing on through the next few lessons where I break it down to the bit and hopefully give you a more fuller knowledge on the language. I gave you a glimpse at some story-telling; now let's go back and learn the alphabet, grammar, and colloquialisms.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_3_1_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_3_1_3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_3_1_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_3_1_3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
