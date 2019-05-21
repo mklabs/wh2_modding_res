@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chunks &amp; Statements - Modding Resources</title>
+        <title>Functions, Arguments and Parameters - Modding Resources</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html" class="active"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes and Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments and Parameters</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes and Stuff</a></li><li><a href="chapter_3_1_7.html" class="active"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments and Parameters</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -136,33 +136,58 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#chunks--statements" id="chunks--statements"><h1>Chunks &amp; Statements</h1></a>
-<p>The first two terms we'll look at are <strong>chunks</strong> and <strong>statements</strong>. When Lua is brought to its basic skeletal structure, that's all it is - chunks of statements.</p>
-<p><strong>Statement</strong>: A declaration, a thing-to-be-done, a command that Lua will run
-<strong>Chunk</strong>: A sequence of statements, from an entire file to a single line of data</p>
-<p>Every chunk is a to-do list, and a statement is an objective on that list. You can have to-do lists of all shapes and sizes, and each thing that needs to be done can be small - &quot;brushing your teet&quot; - or huge - &quot;spend way too much money on transmission repairs&quot;. No, I'm not still salty about the money I spent on transmission repairs, why do you ask?</p>
-<p>The Lua interpreter divides everything it takes into specific chunks, which we'll look at later on. For now, we understand the term chunk - a to-do list.</p>
-<p>Within each chunk is one or more statements. A statement is one coherent thought or action within Lua. Something like this can be one statement:</p>
-<pre><code>local a = 1
+                        <a class="header" href="#functions-arguments-and-parameters" id="functions-arguments-and-parameters"><h1>Functions, Arguments and Parameters</h1></a>
+<p>Welcome back! On today's lesson, we're going to cover one of the most fundamental types in Lua much further, and that type is, if you can read, <em>functions</em>. Everybody loves functions.</p>
+<p>Functions are a special data type in Lua. Functions have two specific stages: <strong>definition</strong>, and <strong>call</strong>. A function can be defined as many times as one would like, but it will not do anything until the function is <em>called</em>. Quick look, followed by a breakdown:</p>
+<pre><code>    -- DEFINE the function, which we can call and trigger later on, as much as we'd like
+    function example_function()
+        out(&quot;This is your example function&quot;) -- at this point, nothing is output
+    end
+
+    -- actually calling the function to trigger the out!
+    example_function() → This is your example function
 </code></pre>
-<p>Or, this can be one statement:</p>
-<pre><code>local a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
+<p>And that's the basics of it! We should note that in this example, <code>example_function</code> is actually a variable name. The above is syntactic sugar for the following:</p>
+<pre><code>    example_function = function()
+        out(&quot;This is your example function&quot;)
+    end
 </code></pre>
-<p>That is, one bit of data that Lua has to evaluate and run.</p>
-<p>Remember the term &quot;chunk&quot; - we'll be covering how they're defined later on, when we look at some more keywords.</p>
+<p>But the other way is a lot more common, and probably prettier for all eyes. On the case of syntactic sugar, you can simply put the keyword <code>local</code> prior to the keyword <code>function</code>, and it will make it a local variable. I'll be doing that from now on, to beat that idea in your own head.</p>
+<p>Since the name of a function is just a variable, it can be redefined, and even as a different type. If a variable is defined more than once, the latest definition will &quot;win&quot;.</p>
+<pre><code>    local function example_function()
+        out(&quot;This is your example function&quot;)
+    end
+
+    example_function = 10 -- Why would ANYONE do this?!
+
+    example_function() → attempt to call global `example_function`, a number value
+</code></pre>
+<p>The term &quot;call&quot; here is what I mentioned earlier - the <em>call</em> phase of a function. A call to a function is triggered by those two brackets - <code>()</code>.</p>
+<p>At this point, we have a function that prints the same text over and over again. Let's give it some way to change the text based on some dynamism!</p>
+<pre><code>    local function example_function(text)
+        out(text)
+    end
+
+    example_function(&quot;Testing&quot;) → Testing
+    example_function(&quot;Example!&quot;) → Example!
+</code></pre>
+<p>The term &quot;text&quot; is a <code>local variable</code> for that function, available in the entirety of that function's scope. It goes &quot;out of scope&quot; (as the cool kids say) by the <code>end</code> keyword. This is another clever shorthand that the Lua languages gives to us. Use it!</p>
+<p>A clarity-for-clarity's-sake note here: in the above example, &quot;text&quot; is a <em>parameter</em>, which is the fancy word for a local variable assigned to the function's scope. The string &quot;Testing&quot;, or the string &quot;Example!&quot;, are <em>arguments</em>, which is a variable or value that is &quot;passed&quot; into the function and takes the place of the parameter at runtime. We can think of a parameter as a &quot;fill-in-the-blank&quot; space on an entry form, and the argument as whatever we fill in there.</p>
+<p>At this point, we've got all the background knowledge really needed to start doing some more cool stuff! In the next lesson, we'll learn more about script interfaces, we'll go further in-depth about listeners (which we briefly used in lesson #2), and we'll talk about commands and how to check for existing ones! And you'll have A CHALLENGE!</p>
+<p>WOO!</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="chapter_3_1_2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="chapter_3_1_6.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="chapter_3_1_4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="chapter_3_2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -174,13 +199,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="chapter_3_1_2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="chapter_3_1_6.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="chapter_3_1_4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="chapter_3_2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

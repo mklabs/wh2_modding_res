@@ -11,12 +11,12 @@ The Lua interpreter divides everything it takes into specific chunks, which we'l
 
 Within each chunk is one or more statements. A statement is one coherent thought or action within Lua. Something like this can be one statement:
 ```
-a = 1
+local a = 1
 ```
 
 Or, this can be one statement:
 ```
-a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
+local a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
 ```
 
 That is, one bit of data that Lua has to evaluate and run.

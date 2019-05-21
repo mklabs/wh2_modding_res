@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes and Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments and Parameters</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -793,10 +793,10 @@ end
 <p>Every chunk is a to-do list, and a statement is an objective on that list. You can have to-do lists of all shapes and sizes, and each thing that needs to be done can be small - &quot;brushing your teet&quot; - or huge - &quot;spend way too much money on transmission repairs&quot;. No, I'm not still salty about the money I spent on transmission repairs, why do you ask?</p>
 <p>The Lua interpreter divides everything it takes into specific chunks, which we'll look at later on. For now, we understand the term chunk - a to-do list.</p>
 <p>Within each chunk is one or more statements. A statement is one coherent thought or action within Lua. Something like this can be one statement:</p>
-<pre><code>a = 1
+<pre><code>local a = 1
 </code></pre>
 <p>Or, this can be one statement:</p>
-<pre><code>a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
+<pre><code>local a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
 </code></pre>
 <p>That is, one bit of data that Lua has to evaluate and run.</p>
 <p>Remember the term &quot;chunk&quot; - we'll be covering how they're defined later on, when we look at some more keywords.</p>
@@ -899,7 +899,7 @@ out(e) → 5.04
 </code></pre>
 <p>As an added bonus, we're getting a quick sneak peak at one of the upcoming tutorials: parameters and arguments, for functions. In the above function, &quot;text&quot; is a parameter for <code>example()</code>, which is then passed along to <code>out</code> and triggers that function within the chunk.</p>
 <p><strong>Table</strong>: a collection of more than one piece of data.</p>
-<p>There are several types of tables, which we'll cover later on. I'd like to first look at the array version of tables, the simplest and most common.</p>
+<p>There are several types of tables, which we'll cover later on. I'd like to first look at the <em>array</em> version of tables, the simplest and most common.</p>
 <pre><code>    a = 5
     b = 10
     c = 17
@@ -915,7 +915,33 @@ out(e) → 5.04
     out(table[3]) → 17
     out(table[4]) → nil -- doesn't exist!
 </code></pre>
-<p>Arrays are numbered automatically, so it really reads &quot;the first index of table is 5, the second index of table is 10&quot;, and so on. You <em>access</em> those indexes by using the [num] operator, which we'll look further at in the next tables tutorial later on.</p>
+<p>Arrays are numbered automatically, so it really reads &quot;the first index of table is 5, the second index of table is 10&quot;, and so on. You <em>access</em> those indexes by using the <code>\[num\]</code> operator, which we'll look further at in the next tables tutorial later on. The reason this works, however, is because Lua is automatically numbering these values, giving them a <em>key</em>. When you make an array like that, Lua reads it more like the following:</p>
+<pre><code>    a = 5
+    b = 10
+    c = 17
+
+    table = {
+        [1] = a,
+        [2] = b,
+        [3] = c
+    }
+</code></pre>
+<p>The other major type of tables is a <strong>map</strong>, which works by manually assigning the key of a value instead of letting Lua automatically number them, like in arrays.</p>
+<pre><code>    a = 5
+    b = 10
+    c = 15
+
+    table = {
+        [&quot;five&quot;] = a,
+        [&quot;ten&quot;] = b,
+        [&quot;fifteen&quot;] = c
+    }
+
+    out(table[&quot;five&quot;]) → 5
+    out(table[&quot;ten&quot;]) → 10
+    out(table[&quot;fifteen&quot;]) → 15
+</code></pre>
+<p>Maps will come into some great use pretty soon, but for now I just wanted to introduce you to how they look.</p>
 <p>For now, you've done well, and I haven't even challenged you yet!</p>
 <a class="header" href="#challenge-1-1" id="challenge-1-1"><h4>Challenge 1</h4></a>
 <p>Mess with everything in this tutorial using the Devtool Console. Try to grasp the different native types of Lua, and make sure you understand the difference between the <em>assignment</em> operator and the <em>equality</em> operator. There's not really a good challenge to do here, but I do seriously suggest you just mess around with the stuff here. Try some different things like concatenating strings, adding numbers, messing with basic functions, stuff like that. Have fun!</p>
@@ -941,6 +967,199 @@ out(e) → 5.04
     out(is_function(d)) → true
 </code></pre>
 <a class="header" href="#expressions--operators" id="expressions--operators"><h1>Expressions &amp; Operators</h1></a>
+<p>As we've seen, Lua is made up of <code>chunks</code> and <code>statements</code>. Statements can contain variables, and all variables have a type, though it can change at any point.</p>
+<p><strong>Expressions</strong> are the section of a statement that, essentially, tell Lua <em>what to do</em>. They come in a billion different shapes and sizes. For now, we'll cover all the basics you'll need, and some basics you really don't need but I'll hand it to you anyway, and we'll go back and review some older stuff. Here we go!</p>
+<a class="header" href="#math-operators" id="math-operators"><h4>Math Operators</h4></a>
+<p>Sweet. This is what all of those quizzes in grade school trained you for. We have the big four from algebra - addition, subtraction, multiplication, and division.</p>
+<pre><code>    out(2 + 3) → 5
+    out(5 - 1) → 4
+    out(16 * 3) → 48
+    out(9 / 3) → 3
+</code></pre>
+<p>We can also use a <code>-</code> to <em>negate</em> a value, or, in simple terms, turn a positive number into a negative and vice versa.</p>
+<pre><code>    a = 10
+    b = -20
+    out( -a ) → -10
+    out( -b ) → 20
+</code></pre>
+<p>We also have a couple other fun math things. We can raise numbers to any power, using an exponential expression.</p>
+<pre><code>    a = 2
+    b = 4
+    c = 3
+    out( a^a ) → 4
+    out( b^c ) → 64
+    out( 64^0.5 ) → 8 -- getting the square root of a number!
+</code></pre>
+<p>We can also use some modulo math. It's a way of dividing two numbers that gives you the amount <em>remaining</em>, and it's a great way to read if a number is a <em>multiple</em> of another.</p>
+<pre><code>    out(8 % 2) → 0 -- 8/2 = 4, and divides evenly, so nothing is remaining!
+    out(7 % 2) → 1 -- 7/2. &quot;6/2&quot; divides evenly, so we subtract 6 from 7, and get &quot;1&quot; as the remainder!
+    out(8 % 3) → 2 -- 8/3. &quot;6/3&quot; divides evenly, so we subtract 6 from 8, and get &quot;2&quot; as the remainder.
+</code></pre>
+<p>As said, it's a great way to read if a number is a multiple of another. If a modulo expression returns &quot;0&quot;, that means it divided evenly, and is therefore a multiple of the number divided by.</p>
+<p>And that's math!</p>
+<a class="header" href="#comparison-operators" id="comparison-operators"><h4>Comparison Operators</h4></a>
+<p>This sounds a lot more complicated than &quot;math&quot;, eh? It's not that complicated - we're comparing how two variables relate to one another, using expressions we've all seen before. The list of comparison operators are as follows:</p>
+<p>&lt; -- &quot;less than&quot;
+&gt; -- &quot;greater than&quot;
+&lt;= -- &quot;less than or equal to&quot;
+&gt;= &quot;greater than or equal to&quot;
+== &quot;equal to&quot;
+~= &quot;not equal to&quot;</p>
+<p>All of these expressions result in a boolean value.</p>
+<pre><code>    a = 10
+    b = 7 + 3
+    out(a == b) → true -- they ARE equal!
+    out(a ~= b) → false -- they ARE NOT not equal (weird, I know)!
+
+    c = 8
+    d = 7
+    
+    out(c &gt; d) → true -- 8 is greater than 7
+    out(c &lt; d) → false -- 8 is NOT less than 7
+</code></pre>
+<p>It's important to note that Lua will consider different types to be different values. A string and a number will always be different. Lua will throw an error if you attempt to compare - using less-than or greater-than - any two separate types. Lua will not throw an error for &quot;==&quot; and &quot;~=&quot;, however, and if they are separate types, they will always be inequal.</p>
+<pre><code>    a = 15
+    b = &quot;15&quot;
+    out(a == b) → false -- they are different types!
+    out(a &gt;= b) → error (attempt to compare number with string)
+</code></pre>
+<p>Do note that you can compare strings using greater or less than, but it compares the alphanumerical order of the first character. “0” is less than every number or letter, whereas “a” is greater than every number and less than every letter, and “z” is greater than every number or letter. Again, not really important, but you came here to read me ramble on about random stuff.</p>
+<p>And that ends our comparison operators!</p>
+<a class="header" href="#logical-operators" id="logical-operators"><h4>Logical Operators</h4></a>
+<p>Next up are our logical operators! We have three operators to concern ourselves with here - <strong>and</strong>, <strong>or</strong>, and <strong>not</strong>.</p>
+<p><em>Not</em>, as a logical operator, is pretty simple and super handy. It basically converts the value to the right of it into a boolean, and reverses it. Any value other than <code>nil</code> or <code>false</code> will be converted into <code>false</code>, and <code>nil</code> or <code>false</code> will be converted to <code>true</code>. Let's take a look:</p>
+<pre><code>    a = true
+    b = nil
+    out(not b) → true -- prints a double negative - not false, so true
+    out(not a) → false -- reverses the value of &quot;true&quot;
+
+    c = 100
+    out(c) → 100
+    out(not not c) → true -- c is a number, &quot;not c&quot; would become &quot;false&quot;, and &quot;not false&quot; would become &quot;true&quot;
+</code></pre>
+<p>The operators <strong>and</strong> and <strong>or</strong> are the hearts of a lot of logic in Lua. &quot;If this and this, then do this&quot;.</p>
+<pre><code>    a = 15
+    b = false
+    if a == 15 and not b then -- &quot;if a is equal to the number fifteen, and &quot;not b&quot; returns true, then ... &quot;
+        out(&quot;It does the thing!&quot;) -- &quot; ... print the text! &quot;
+    end
+</code></pre>
+<p>You'll practically always see these two used in this way, for <em>conditional statements</em> like that - if these conditions work out, then do this other thing.</p>
+<a class="header" href="#homeless-operators" id="homeless-operators"><h4>Homeless Operators</h4></a>
+<p>I don't really have a category for these two operators, but they're incredibly important.</p>
+<p>First off, we have <strong>concatenation</strong>, which we've seen before. It's a way to add two strings together, and make them into one happy family, using a simple pair of dots.</p>
+<pre><code>    a = &quot;Hello&quot;
+    b = &quot;World!&quot;
+    out(a .. &quot; &quot; .. b) → Hello World!
+</code></pre>
+<p>A couple of notes real quick - I have the blank space in a string in the middle, to make sure it doesn't print &quot;HelloWorld!&quot;. Also, I like to add spaces on either side of my concatenation operator, but that's personal taste, this would also be valid:</p>
+<pre><code>    out(a..&quot; &quot;..b) → Hello World!
+</code></pre>
+<p>And lastly, we have one more operator, and this time for the table type. The character <code>#</code> can be used to read the number of entries within an array. It's pretty awesome, let me show you:</p>
+<pre><code>    table = {&quot;this&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;, &quot;array&quot;}
+    out(#table) → 5 -- there are five strings within the table!
+</code></pre>
+<p>Please note that you really shouldn't use the <code>#</code> operator if the table is not definitely an array. I'll show you why using it on maps might mess something up:</p>
+<pre><code>    table = {
+        [1] = &quot;test&quot;,
+        [2] = &quot;example&quot;,
+        [5] = &quot;boom&quot;,
+        [7000] = &quot;woo&quot;,
+        [3] = &quot;argh&quot;
+    }
+
+    out(#table) → 7000
+</code></pre>
+<p>In technicalities, it's doing that because it's reading the <em>highest index in that table</em>, or the highest numerical key. Those are assigned automatically, in order, for arrays; in maps, there's no such guarantee.</p>
+<a class="header" href="#challenge-1-2" id="challenge-1-2"><h4>Challenge 1</h4></a>
+<p>As with last, no challenge! We have only a couple more lessons to do before we get into the REAL nitty-gritty, and once we do there will be a lot of nice challenges. For now, keep messing with this stuff in the DevTool Console, test around.</p>
+<a class="header" href="#scopes-and-stuff" id="scopes-and-stuff"><h1>Scopes and Stuff</h1></a>
+<p>A super important concept in Lua is the concept of <em>scope</em>. Every single variable made has a <em>scope</em>, which is used to define <strong>where</strong> a variable can be accessed.</p>
+<p>By default, all variables are <code>global</code>, which means they're in the entire <strong>global environment</strong>. The global environment is a slightly-fancy way of saying &quot;available within the entire program&quot;. When writing Total War scripts, it's a little suboptimal to use global variables, for a few reasons -
+1) What if someone else wants to use a variable named <code>a</code>, and you do as well? This would force you to have a fully unique name for every single variable everywhere. Kinda a pain!
+2) Saving that variable globally is taking up memory, since that variable will never be destroyed. It will take a lot of work to actually cause performance issues, but it's good to be mindful of.
+3) What if we want our variable to be a secret? Huh? They can't get our birthday present! <em>gollum</em></p>
+<p>And all this is where the keyword <code>local</code> comes in. The <code>local</code> keyword defines a specific scope for a variable, and prevents them from being a global variable.</p>
+<pre><code>function example()
+    local var = &quot;Hello World!&quot;
+    out(var)
+end
+
+example() → Hello World!
+out(var) → nil -- the variable &quot;var&quot; doesn't exist here!
+</code></pre>
+<p>In this example, the variable <code>var</code> is defined within the function <code>example</code>'s definition. That means that <code>var</code> is only available from <em>where it is defined</em> (ie. local var =) to <em>where the scope ends</em>. In this case, the scope <em>ends</em> at the <code>end</code> keyword.</p>
+<p>This is as good a time as any to look at the other ways scope can be defined. A variable can be scoped to the <em>root</em> of a script, or any number of nestled scopes within that root.</p>
+<p>Other key-words other than <code>function</code> that define a scope (and their end point) are as follows:</p>
+<ul>
+<li>do --[[ the scope ]] end</li>
+<li>function function_name() [[ the scope ]] end</li>
+<li>if whatever then [[ the scope ]] end</li>
+<li>while whatever then [[ the scope ]] end</li>
+</ul>
+<p>Let's take a slightly-complicated look at that:</p>
+<pre><code>local a = 5 -- visible to everything BELOW this line!
+
+function example_thing()
+    local b = a -- visible to everything BELOW this line, until the &quot;end&quot; that matches &quot;function&quot;
+    do 
+        local c = 15 -- visible to everything BELOW this line, until the &quot;end&quot; that matches &quot;do&quot;
+        out(c)
+        out(b) 
+    end
+    out(b)
+    -- c is NOT available here!
+end
+
+-- b and c are NOT available here!
+out(a) → 5
+</code></pre>
+<p>This is a good point as any to explain two things, and issue two directives:</p>
+<ol>
+<li>ALWAYS use the keyword <code>local</code>.</li>
+<li>ALWAYS use good indentations!</li>
+</ol>
+<p>Be smart with where exactly the term &quot;local&quot; is used - you'll pick up how later on as you go and pick my brain, but for now, understand that you must ALWAYS put the keyword <code>local</code> before a variable!</p>
+<p>As you can see with the example_thing() function above, proper indentation is a GREAT way to visibly see scopes and quickly tell where a variable is and isn't available.</p>
+<a class="header" href="#functions-arguments-and-parameters" id="functions-arguments-and-parameters"><h1>Functions, Arguments and Parameters</h1></a>
+<p>Welcome back! On today's lesson, we're going to cover one of the most fundamental types in Lua much further, and that type is, if you can read, <em>functions</em>. Everybody loves functions.</p>
+<p>Functions are a special data type in Lua. Functions have two specific stages: <strong>definition</strong>, and <strong>call</strong>. A function can be defined as many times as one would like, but it will not do anything until the function is <em>called</em>. Quick look, followed by a breakdown:</p>
+<pre><code>    -- DEFINE the function, which we can call and trigger later on, as much as we'd like
+    function example_function()
+        out(&quot;This is your example function&quot;) -- at this point, nothing is output
+    end
+
+    -- actually calling the function to trigger the out!
+    example_function() → This is your example function
+</code></pre>
+<p>And that's the basics of it! We should note that in this example, <code>example_function</code> is actually a variable name. The above is syntactic sugar for the following:</p>
+<pre><code>    example_function = function()
+        out(&quot;This is your example function&quot;)
+    end
+</code></pre>
+<p>But the other way is a lot more common, and probably prettier for all eyes. On the case of syntactic sugar, you can simply put the keyword <code>local</code> prior to the keyword <code>function</code>, and it will make it a local variable. I'll be doing that from now on, to beat that idea in your own head.</p>
+<p>Since the name of a function is just a variable, it can be redefined, and even as a different type. If a variable is defined more than once, the latest definition will &quot;win&quot;.</p>
+<pre><code>    local function example_function()
+        out(&quot;This is your example function&quot;)
+    end
+
+    example_function = 10 -- Why would ANYONE do this?!
+
+    example_function() → attempt to call global `example_function`, a number value
+</code></pre>
+<p>The term &quot;call&quot; here is what I mentioned earlier - the <em>call</em> phase of a function. A call to a function is triggered by those two brackets - <code>()</code>.</p>
+<p>At this point, we have a function that prints the same text over and over again. Let's give it some way to change the text based on some dynamism!</p>
+<pre><code>    local function example_function(text)
+        out(text)
+    end
+
+    example_function(&quot;Testing&quot;) → Testing
+    example_function(&quot;Example!&quot;) → Example!
+</code></pre>
+<p>The term &quot;text&quot; is a <code>local variable</code> for that function, available in the entirety of that function's scope. It goes &quot;out of scope&quot; (as the cool kids say) by the <code>end</code> keyword. This is another clever shorthand that the Lua languages gives to us. Use it!</p>
+<p>A clarity-for-clarity's-sake note here: in the above example, &quot;text&quot; is a <em>parameter</em>, which is the fancy word for a local variable assigned to the function's scope. The string &quot;Testing&quot;, or the string &quot;Example!&quot;, are <em>arguments</em>, which is a variable or value that is &quot;passed&quot; into the function and takes the place of the parameter at runtime. We can think of a parameter as a &quot;fill-in-the-blank&quot; space on an entry form, and the argument as whatever we fill in there.</p>
+<p>At this point, we've got all the background knowledge really needed to start doing some more cool stuff! In the next lesson, we'll learn more about script interfaces, we'll go further in-depth about listeners (which we briefly used in lesson #2), and we'll talk about commands and how to check for existing ones! And you'll have A CHALLENGE!</p>
+<p>WOO!</p>
 <a class="header" href="#listeners" id="listeners"><h1>Listeners</h1></a>
 <a class="header" href="#can-you-hear-me" id="can-you-hear-me"><h3>Can You Hear Me?</h3></a>
 <p>A listener is an important script command that, simply, waits for something to happen - or, <em>listens</em> for something to happen - in the game, and then triggers something else. Using a listener, we can listen for an event such as the creation of an army, the occupation of a city, or even a battle, and then we use the information from that situation, check for something specific, and run our code if the event matches our criteria. For example: we may be looking for Mannfred to occupy Altdorf. In this case we'd have to use a listener to &quot;listen&quot; for a city being occupied, but we don't want to listen for just <em>any</em> city being occupied. In our example, we have to listen for Altdorf being occupied, and for Mannfred doing the occupying. The listener will listen for every single time a city is occupied, and once those two conditions are met - <em>Mannfred</em> occupying <em>Altdorf</em>... Clue, anyone? - then our listener will trigger some code. In layman's code, our listener will <em>do a thing</em>!</p>

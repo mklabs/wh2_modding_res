@@ -150,7 +150,7 @@ As an added bonus, we're getting a quick sneak peak at one of the upcoming tutor
 
 **Table**: a collection of more than one piece of data.
 
-There are several types of tables, which we'll cover later on. I'd like to first look at the array version of tables, the simplest and most common.
+There are several types of tables, which we'll cover later on. I'd like to first look at the *array* version of tables, the simplest and most common.
 
 ```
     a = 5
@@ -169,7 +169,39 @@ There are several types of tables, which we'll cover later on. I'd like to first
     out(table[4]) → nil -- doesn't exist!
 ```
 
-Arrays are numbered automatically, so it really reads "the first index of table is 5, the second index of table is 10", and so on. You *access* those indexes by using the \[num\] operator, which we'll look further at in the next tables tutorial later on.
+Arrays are numbered automatically, so it really reads "the first index of table is 5, the second index of table is 10", and so on. You *access* those indexes by using the `\[num\]` operator, which we'll look further at in the next tables tutorial later on. The reason this works, however, is because Lua is automatically numbering these values, giving them a *key*. When you make an array like that, Lua reads it more like the following:
+
+```
+    a = 5
+    b = 10
+    c = 17
+
+    table = {
+        [1] = a,
+        [2] = b,
+        [3] = c
+    }
+```
+
+The other major type of tables is a **map**, which works by manually assigning the key of a value instead of letting Lua automatically number them, like in arrays.
+
+```
+    a = 5
+    b = 10
+    c = 15
+
+    table = {
+        ["five"] = a,
+        ["ten"] = b,
+        ["fifteen"] = c
+    }
+
+    out(table["five"]) → 5
+    out(table["ten"]) → 10
+    out(table["fifteen"]) → 15
+```
+
+Maps will come into some great use pretty soon, but for now I just wanted to introduce you to how they look.
 
 For now, you've done well, and I haven't even challenged you yet!
 

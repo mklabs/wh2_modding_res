@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html" class="active"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html" class="active"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes and Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments and Parameters</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -137,6 +137,112 @@
                 <div id="content" class="content">
                     <main>
                         <a class="header" href="#expressions--operators" id="expressions--operators"><h1>Expressions &amp; Operators</h1></a>
+<p>As we've seen, Lua is made up of <code>chunks</code> and <code>statements</code>. Statements can contain variables, and all variables have a type, though it can change at any point.</p>
+<p><strong>Expressions</strong> are the section of a statement that, essentially, tell Lua <em>what to do</em>. They come in a billion different shapes and sizes. For now, we'll cover all the basics you'll need, and some basics you really don't need but I'll hand it to you anyway, and we'll go back and review some older stuff. Here we go!</p>
+<a class="header" href="#math-operators" id="math-operators"><h4>Math Operators</h4></a>
+<p>Sweet. This is what all of those quizzes in grade school trained you for. We have the big four from algebra - addition, subtraction, multiplication, and division.</p>
+<pre><code>    out(2 + 3) → 5
+    out(5 - 1) → 4
+    out(16 * 3) → 48
+    out(9 / 3) → 3
+</code></pre>
+<p>We can also use a <code>-</code> to <em>negate</em> a value, or, in simple terms, turn a positive number into a negative and vice versa.</p>
+<pre><code>    a = 10
+    b = -20
+    out( -a ) → -10
+    out( -b ) → 20
+</code></pre>
+<p>We also have a couple other fun math things. We can raise numbers to any power, using an exponential expression.</p>
+<pre><code>    a = 2
+    b = 4
+    c = 3
+    out( a^a ) → 4
+    out( b^c ) → 64
+    out( 64^0.5 ) → 8 -- getting the square root of a number!
+</code></pre>
+<p>We can also use some modulo math. It's a way of dividing two numbers that gives you the amount <em>remaining</em>, and it's a great way to read if a number is a <em>multiple</em> of another.</p>
+<pre><code>    out(8 % 2) → 0 -- 8/2 = 4, and divides evenly, so nothing is remaining!
+    out(7 % 2) → 1 -- 7/2. &quot;6/2&quot; divides evenly, so we subtract 6 from 7, and get &quot;1&quot; as the remainder!
+    out(8 % 3) → 2 -- 8/3. &quot;6/3&quot; divides evenly, so we subtract 6 from 8, and get &quot;2&quot; as the remainder.
+</code></pre>
+<p>As said, it's a great way to read if a number is a multiple of another. If a modulo expression returns &quot;0&quot;, that means it divided evenly, and is therefore a multiple of the number divided by.</p>
+<p>And that's math!</p>
+<a class="header" href="#comparison-operators" id="comparison-operators"><h4>Comparison Operators</h4></a>
+<p>This sounds a lot more complicated than &quot;math&quot;, eh? It's not that complicated - we're comparing how two variables relate to one another, using expressions we've all seen before. The list of comparison operators are as follows:</p>
+<p>&lt; -- &quot;less than&quot;
+&gt; -- &quot;greater than&quot;
+&lt;= -- &quot;less than or equal to&quot;
+&gt;= &quot;greater than or equal to&quot;
+== &quot;equal to&quot;
+~= &quot;not equal to&quot;</p>
+<p>All of these expressions result in a boolean value.</p>
+<pre><code>    a = 10
+    b = 7 + 3
+    out(a == b) → true -- they ARE equal!
+    out(a ~= b) → false -- they ARE NOT not equal (weird, I know)!
+
+    c = 8
+    d = 7
+    
+    out(c &gt; d) → true -- 8 is greater than 7
+    out(c &lt; d) → false -- 8 is NOT less than 7
+</code></pre>
+<p>It's important to note that Lua will consider different types to be different values. A string and a number will always be different. Lua will throw an error if you attempt to compare - using less-than or greater-than - any two separate types. Lua will not throw an error for &quot;==&quot; and &quot;~=&quot;, however, and if they are separate types, they will always be inequal.</p>
+<pre><code>    a = 15
+    b = &quot;15&quot;
+    out(a == b) → false -- they are different types!
+    out(a &gt;= b) → error (attempt to compare number with string)
+</code></pre>
+<p>Do note that you can compare strings using greater or less than, but it compares the alphanumerical order of the first character. “0” is less than every number or letter, whereas “a” is greater than every number and less than every letter, and “z” is greater than every number or letter. Again, not really important, but you came here to read me ramble on about random stuff.</p>
+<p>And that ends our comparison operators!</p>
+<a class="header" href="#logical-operators" id="logical-operators"><h4>Logical Operators</h4></a>
+<p>Next up are our logical operators! We have three operators to concern ourselves with here - <strong>and</strong>, <strong>or</strong>, and <strong>not</strong>.</p>
+<p><em>Not</em>, as a logical operator, is pretty simple and super handy. It basically converts the value to the right of it into a boolean, and reverses it. Any value other than <code>nil</code> or <code>false</code> will be converted into <code>false</code>, and <code>nil</code> or <code>false</code> will be converted to <code>true</code>. Let's take a look:</p>
+<pre><code>    a = true
+    b = nil
+    out(not b) → true -- prints a double negative - not false, so true
+    out(not a) → false -- reverses the value of &quot;true&quot;
+
+    c = 100
+    out(c) → 100
+    out(not not c) → true -- c is a number, &quot;not c&quot; would become &quot;false&quot;, and &quot;not false&quot; would become &quot;true&quot;
+</code></pre>
+<p>The operators <strong>and</strong> and <strong>or</strong> are the hearts of a lot of logic in Lua. &quot;If this and this, then do this&quot;.</p>
+<pre><code>    a = 15
+    b = false
+    if a == 15 and not b then -- &quot;if a is equal to the number fifteen, and &quot;not b&quot; returns true, then ... &quot;
+        out(&quot;It does the thing!&quot;) -- &quot; ... print the text! &quot;
+    end
+</code></pre>
+<p>You'll practically always see these two used in this way, for <em>conditional statements</em> like that - if these conditions work out, then do this other thing.</p>
+<a class="header" href="#homeless-operators" id="homeless-operators"><h4>Homeless Operators</h4></a>
+<p>I don't really have a category for these two operators, but they're incredibly important.</p>
+<p>First off, we have <strong>concatenation</strong>, which we've seen before. It's a way to add two strings together, and make them into one happy family, using a simple pair of dots.</p>
+<pre><code>    a = &quot;Hello&quot;
+    b = &quot;World!&quot;
+    out(a .. &quot; &quot; .. b) → Hello World!
+</code></pre>
+<p>A couple of notes real quick - I have the blank space in a string in the middle, to make sure it doesn't print &quot;HelloWorld!&quot;. Also, I like to add spaces on either side of my concatenation operator, but that's personal taste, this would also be valid:</p>
+<pre><code>    out(a..&quot; &quot;..b) → Hello World!
+</code></pre>
+<p>And lastly, we have one more operator, and this time for the table type. The character <code>#</code> can be used to read the number of entries within an array. It's pretty awesome, let me show you:</p>
+<pre><code>    table = {&quot;this&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;, &quot;array&quot;}
+    out(#table) → 5 -- there are five strings within the table!
+</code></pre>
+<p>Please note that you really shouldn't use the <code>#</code> operator if the table is not definitely an array. I'll show you why using it on maps might mess something up:</p>
+<pre><code>    table = {
+        [1] = &quot;test&quot;,
+        [2] = &quot;example&quot;,
+        [5] = &quot;boom&quot;,
+        [7000] = &quot;woo&quot;,
+        [3] = &quot;argh&quot;
+    }
+
+    out(#table) → 7000
+</code></pre>
+<p>In technicalities, it's doing that because it's reading the <em>highest index in that table</em>, or the highest numerical key. Those are assigned automatically, in order, for arrays; in maps, there's no such guarantee.</p>
+<a class="header" href="#challenge-1" id="challenge-1"><h4>Challenge 1</h4></a>
+<p>As with last, no challenge! We have only a couple more lessons to do before we get into the REAL nitty-gritty, and once we do there will be a lot of nice challenges. For now, keep messing with this stuff in the DevTool Console, test around.</p>
 
                     </main>
 
@@ -149,7 +255,7 @@
                         
 
                         
-                            <a rel="next" href="chapter_3_2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="chapter_3_1_6.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -167,7 +273,7 @@
                 
 
                 
-                    <a href="chapter_3_2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="chapter_3_1_6.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
