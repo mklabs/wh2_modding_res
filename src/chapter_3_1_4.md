@@ -9,7 +9,7 @@ Following the concept of chunks and statements, the next most important subject 
 
 But before going deeper into a definition, let's look at an example:
 
-```
+```lua
 a = 10
 b = 5
 c = a + b
@@ -21,7 +21,7 @@ The coolest thing about variables is their dynamism. They can be assigned to any
 
 *NOTE: From this point on, you'll see → after out() calls. This is to specify what text is actually output.*
 
-```
+```lua
 a = 10
 b = 5
 c = a + b
@@ -47,7 +47,7 @@ So, we see here that variables can be numbers, which is one of the primary types
 
 As we saw above, we can perform some basic arithmetic on numbers. 
 
-```
+```lua
 a = 5
 b = 2 - 0.34
 c = a + b
@@ -63,7 +63,7 @@ out(e) → 5.04
 
 Like arithmetic for numbers, one can concatenate strings (along with many other stuffs!) to combine several, using the `..` operator.
 
-```
+```lua
 	a = “This “; b = “is “; c = “an “; d = “example.”
 	out(a .. b .. c .. d) → This is an example.
 ```
@@ -72,14 +72,14 @@ Like arithmetic for numbers, one can concatenate strings (along with many other 
 
 While on the subject, you can concat (cool-kid for concatenate) string literals and variables.
 
-```
+```lua
     a = "example"
     out("This is an " .. a) → This is an example
 ```
 
 **Boolean**: a `true` or `false` value. 
 
-```
+```lua
     a = false
     out(a) → false
     out(a == false) → true
@@ -89,7 +89,7 @@ The above probably looks a little weird, but that's because we're learning a new
 
 It's very important to note that any variable can be *treated* as a boolean, such as when using the "if something then" statement, or by comparing it to a boolean. If a non-boolean variable is treated as a boolean, it will be converted to `false` if the value is `nil` or `false`; otherwise, it will be converted to `true`.
 
-```
+```lua
     a = 0
     b = nil
     out(a) → 0
@@ -105,7 +105,7 @@ You're probably asking by now, what IS nil? I've mentioned it a number of times 
 
 If one were to try to print a *non-existent* variable, the result would be `nil`. That's because there **is** no data for that variable.
 
-```
+```lua
     out(a) → nil
     a = 5
     out(a) → 5
@@ -115,7 +115,7 @@ Nil is a good way to check whether or not something exists, and we'll, towards t
 
 Nil is also a good way to clear away variables that you don't want to use anymore. There's a more realistic way of doing it, and this probably won't be necessary for most of what you will be doing, but I like to give a full knowledge.
 
-```
+```lua
     a = 5
     out(a) → 5
     a = nil -- Memory deallocated, bye "a"!
@@ -128,7 +128,7 @@ Lastly, it's important to note that `nil` is not the same as `null`, though they
 
 There are two types of functions - an anonymous function, and a named function. An anonymous function has no name (clearly), so it cannot be called further on in the script. We use anonymous functions relatively frequently, but our focus now will be on named functions, which are functions assigned to a variable.
 
-```
+```lua
     a = 10
     example = out
     example(a) → 10
@@ -136,7 +136,7 @@ There are two types of functions - an anonymous function, and a named function. 
 
 Yes, that's valid! You can actually assign a variable to a function like, it's pretty cool! We have syntactic sugar for assigning a variable to a function, however, and it's more common to see script like that:
 
-```
+```lua
     function example(text)
         out(text)
     end
@@ -152,7 +152,7 @@ As an added bonus, we're getting a quick sneak peak at one of the upcoming tutor
 
 There are several types of tables, which we'll cover later on. I'd like to first look at the *array* version of tables, the simplest and most common.
 
-```
+```lua
     a = 5
     b = 10
     c = 17
@@ -171,7 +171,7 @@ There are several types of tables, which we'll cover later on. I'd like to first
 
 Arrays are numbered automatically, so it really reads "the first index of table is 5, the second index of table is 10", and so on. You *access* those indexes by using the `\[num\]` operator, which we'll look further at in the next tables tutorial later on. The reason this works, however, is because Lua is automatically numbering these values, giving them a *key*. When you make an array like that, Lua reads it more like the following:
 
-```
+```lua
     a = 5
     b = 10
     c = 17
@@ -185,7 +185,7 @@ Arrays are numbered automatically, so it really reads "the first index of table 
 
 The other major type of tables is a **map**, which works by manually assigning the key of a value instead of letting Lua automatically number them, like in arrays.
 
-```
+```lua
     a = 5
     b = 10
     c = 15
@@ -221,7 +221,7 @@ The list is as follows:
 - is_function(variable)
 - is_table(variable)
 
-```
+```lua
     a = 5
     b = nil
     c = {1, 2, 3, 5, 70}

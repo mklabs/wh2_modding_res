@@ -3,13 +3,14 @@
 A super important concept in Lua is the concept of *scope*. Every single variable made has a *scope*, which is used to define **where** a variable can be accessed.
 
 By default, all variables are `global`, which means they're in the entire **global environment**. The global environment is a slightly-fancy way of saying "available within the entire program". When writing Total War scripts, it's a little suboptimal to use global variables, for a few reasons -
-    1) What if someone else wants to use a variable named `a`, and you do as well? This would force you to have a fully unique name for every single variable everywhere. Kinda a pain!
-    2) Saving that variable globally is taking up memory, since that variable will never be destroyed. It will take a lot of work to actually cause performance issues, but it's good to be mindful of.
-    3) What if we want our variable to be a secret? Huh? They can't get our birthday present! *gollum*
+
+1) What if someone else wants to use a variable named `a`, and you do as well? This would force you to have a fully unique name for every single variable everywhere. Kinda a pain!
+2) Saving that variable globally is taking up memory, since that variable will never be destroyed. It will take a lot of work to actually cause performance issues, but it's good to be mindful of.
+3) What if we want our variable to be a secret? Huh? They can't get our birthday present! *gollum*
 
 And all this is where the keyword `local` comes in. The `local` keyword defines a specific scope for a variable, and prevents them from being a global variable.
 
-```
+```lua
 function example()
     local var = "Hello World!"
     out(var)
@@ -30,7 +31,7 @@ Other key-words other than `function` that define a scope (and their end point) 
 - while whatever then [[ the scope ]] end
 
 Let's take a slightly-complicated look at that:
-```
+```lua
 local a = 5 -- visible to everything BELOW this line!
 
 function example_thing()

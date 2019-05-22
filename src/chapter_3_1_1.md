@@ -5,13 +5,13 @@ As with basically every programming tutorial on the globe, I'll begin where they
 I'd like to quickly note that as this tutorial series progresses, I'm going to be helping less and less and explaining more and more. I don't want to hand-hold you through the entire project, and each lesson will include at least one "challenge", where I give you an objective and tell you to go do it. Self-guided teaching is important, and once you're done this tutorial series, you'll be expected to be at least remotely competent and able to work this stuff out independently. I highly recommend you stick to the challenges and give them a shot, they'll benefit you if you really want to get good with Lua.
 
 Alright, within your text editor of choice, create a new file. Within that file, type the following block:
-```
+```lua
 function testing_init()
     out("Hello World!")
 end
 ```
 
-This is our first look at functions, which I'll go much further in detail about next lesson. "testing_init()" is a function, which does the "out("Hello World!") line when it's called. Likewise, "out("Hello World")" is a function of its own, and it prints the text within the brackets to a log.txt file, which CA uses for error-checking scripts and printing out details. We're using it for this first tutorial, but we'll see it many more times as we go on.
+This is our first look at functions, which I'll go much further in detail about next lesson. testing_init()" is a function, which does the "out("Hello World!") line when it's called. Likewise, "out("Hello World")" is a function of its own, and it prints the text within the brackets to a log.txt file, which CA uses for error-checking scripts and printing out details. We're using it for this first tutorial, but we'll see it many more times as we go on.
 
 Save it, and save as "testing_init.lua" within your modding folder on your PC. Boom, your first Lua file. And you did it *all* by yourself!
 

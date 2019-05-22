@@ -16,7 +16,7 @@ The project here is to build a slightly solid script that affects a good amount 
 
 First thing's first, let's grant the region to them! It's important to note *when* we call *what* in our scripts. For things we want to do only once, on game start, we can use a nice CA command, `cm:is_new_game()`. All that command does is check if it's the very first turn, and the game hasn't been saved yet. We'll use that within an "if" statement, as follows:
 
-```
+```lua
 function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so it'll run this stuff here
@@ -34,7 +34,7 @@ In a future tutorial, I'll be showing how to find these commands and use them, b
 
 On our "if cm:is_new_game() == true" branch, we'll be transfering the region over to Lothern. The command we need to use is `cm:transfer_region_to_faction(region_name, faction_name)`. region_name and faction_name are both database keys, easy enough to find using the Assembly Kit.
 
-```
+```lua
 function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
@@ -59,7 +59,7 @@ First, a new concept - listeners. One of the lessons very soon, after the basics
 
 We're going to use a listener that "listens" for Lothern's turn to start, and it'll *check* to see if the Cult of Excess faction is dead-o-rama. If they are, it'll *trigger* the spawn of the new army.
 
-```
+```lua
 function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
@@ -89,7 +89,7 @@ Again, don't fear - I'll cover all this in way more depth, and this is the last 
 
 To check if they're dead yet, we have to *get* the faction object, and run a quick check on if they're living or not. We can do that with the CA command `cm:get_faction(faction_name)`. That returns what CA calls a "FACTION_SCRIPT_INTERFACE". You can run a lot of functions on a faction object, a "FACTION_SCRIPT_INTERFACE", as one of them is `is_dead()`. You can see more if you go to the scripting-doc.html file in Tools & Resources, and search for "FACTION_SCRIPT_INTERFACE".
 
-```
+```lua
 function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
@@ -132,7 +132,7 @@ We're coming up close to being done here! All we've gotta do left is spawn the a
 
 The next and penultimate CA command we'll be using is `cm:create_force(faction_key, army_list, region_key, x_position, y_position, exclude_named_chars, success_callback)`. The parameter list looks slightly daunting, but if you take some time to critically think, the only strange thing should be the very last parameter - success_callback. Luckily for you, we won't even be using that one, really.
 
-```
+```lua
 function example_script()
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
@@ -197,7 +197,7 @@ Alright, with the `army_list` string expanded, this mod should be fully function
 
 Your final task - start testing! If it doesn't work, here's a quick tip: use the out(text) function! You can use it throughout scripts to take a look at what's triggering and what isn't, like so:
 
-```
+```lua
     if cm:is_new_game() == true then
         -- it's a new game, so give Lothern the Phoenix Gate region
         out("It's a new game!")

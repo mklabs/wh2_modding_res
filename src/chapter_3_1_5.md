@@ -8,7 +8,7 @@ As we've seen, Lua is made up of `chunks` and `statements`. Statements can conta
 
 Sweet. This is what all of those quizzes in grade school trained you for. We have the big four from algebra - addition, subtraction, multiplication, and division.
 
-```
+```lua
     out(2 + 3) → 5
     out(5 - 1) → 4
     out(16 * 3) → 48
@@ -17,7 +17,7 @@ Sweet. This is what all of those quizzes in grade school trained you for. We hav
 
 We can also use a `-` to *negate* a value, or, in simple terms, turn a positive number into a negative and vice versa.
 
-```
+```lua
     a = 10
     b = -20
     out( -a ) → -10
@@ -26,7 +26,7 @@ We can also use a `-` to *negate* a value, or, in simple terms, turn a positive 
 
 We also have a couple other fun math things. We can raise numbers to any power, using an exponential expression. 
 
-```
+```lua
     a = 2
     b = 4
     c = 3
@@ -37,7 +37,7 @@ We also have a couple other fun math things. We can raise numbers to any power, 
 
 We can also use some modulo math. It's a way of dividing two numbers that gives you the amount *remaining*, and it's a great way to read if a number is a *multiple* of another.
 
-```
+```lua
     out(8 % 2) → 0 -- 8/2 = 4, and divides evenly, so nothing is remaining!
     out(7 % 2) → 1 -- 7/2. "6/2" divides evenly, so we subtract 6 from 7, and get "1" as the remainder!
     out(8 % 3) → 2 -- 8/3. "6/3" divides evenly, so we subtract 6 from 8, and get "2" as the remainder.
@@ -51,16 +51,16 @@ And that's math!
 
 This sounds a lot more complicated than "math", eh? It's not that complicated - we're comparing how two variables relate to one another, using expressions we've all seen before. The list of comparison operators are as follows:
 
-< -- "less than"
-\> -- "greater than"
-<= -- "less than or equal to"
-\>= "greater than or equal to"
-== "equal to"
-~= "not equal to"
+- < -- "less than"
+- \> -- "greater than"
+- <= -- "less than or equal to"
+- \>= "greater than or equal to"
+- == "equal to"
+- ~= "not equal to"
 
 All of these expressions result in a boolean value.
 
-```
+```lua
     a = 10
     b = 7 + 3
     out(a == b) → true -- they ARE equal!
@@ -75,7 +75,7 @@ All of these expressions result in a boolean value.
 
 It's important to note that Lua will consider different types to be different values. A string and a number will always be different. Lua will throw an error if you attempt to compare - using less-than or greater-than - any two separate types. Lua will not throw an error for "==" and "~=", however, and if they are separate types, they will always be inequal.
 
-```
+```lua
     a = 15
     b = "15"
     out(a == b) → false -- they are different types!
@@ -92,7 +92,7 @@ Next up are our logical operators! We have three operators to concern ourselves 
 
 *Not*, as a logical operator, is pretty simple and super handy. It basically converts the value to the right of it into a boolean, and reverses it. Any value other than `nil` or `false` will be converted into `false`, and `nil` or `false` will be converted to `true`. Let's take a look:
 
-```
+```lua
     a = true
     b = nil
     out(not b) → true -- prints a double negative - not false, so true
@@ -105,7 +105,7 @@ Next up are our logical operators! We have three operators to concern ourselves 
 
 The operators **and** and **or** are the hearts of a lot of logic in Lua. "If this and this, then do this". 
 
-```
+```lua
     a = 15
     b = false
     if a == 15 and not b then -- "if a is equal to the number fifteen, and "not b" returns true, then ... "
@@ -121,7 +121,7 @@ I don't really have a category for these two operators, but they're incredibly i
 
 First off, we have **concatenation**, which we've seen before. It's a way to add two strings together, and make them into one happy family, using a simple pair of dots.
 
-```
+```lua
     a = "Hello"
     b = "World!"
     out(a .. " " .. b) → Hello World!
@@ -129,20 +129,20 @@ First off, we have **concatenation**, which we've seen before. It's a way to add
 
 A couple of notes real quick - I have the blank space in a string in the middle, to make sure it doesn't print "HelloWorld!". Also, I like to add spaces on either side of my concatenation operator, but that's personal taste, this would also be valid:
 
-```
+```lua
     out(a.." "..b) → Hello World!
 ```
 
 And lastly, we have one more operator, and this time for the table type. The character `#` can be used to read the number of entries within an array. It's pretty awesome, let me show you:
 
-```
+```lua
     table = {"this", "is", "an", "example", "array"}
     out(#table) → 5 -- there are five strings within the table!
 ```
 
 Please note that you really shouldn't use the `#` operator if the table is not definitely an array. I'll show you why using it on maps might mess something up:
 
-```
+```lua
     table = {
         [1] = "test",
         [2] = "example",

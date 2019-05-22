@@ -4,7 +4,7 @@ Welcome back! On today's lesson, we're going to cover one of the most fundamenta
 
 Functions are a special data type in Lua. Functions have two specific stages: **definition**, and **call**. A function can be defined as many times as one would like, but it will not do anything until the function is *called*. Quick look, followed by a breakdown:
 
-```
+```lua
     -- DEFINE the function, which we can call and trigger later on, as much as we'd like
     function example_function()
         out("This is your example function") -- at this point, nothing is output
@@ -16,7 +16,7 @@ Functions are a special data type in Lua. Functions have two specific stages: **
 
 And that's the basics of it! We should note that in this example, `example_function` is actually a variable name. The above is syntactic sugar for the following:
 
-```
+```lua
     example_function = function()
         out("This is your example function")
     end
@@ -26,7 +26,7 @@ But the other way is a lot more common, and probably prettier for all eyes. On t
 
 Since the name of a function is just a variable, it can be redefined, and even as a different type. If a variable is defined more than once, the latest definition will "win".
 
-```
+```lua
     local function example_function()
         out("This is your example function")
     end
@@ -40,7 +40,7 @@ The term "call" here is what I mentioned earlier - the *call* phase of a functio
 
 At this point, we have a function that prints the same text over and over again. Let's give it some way to change the text based on some dynamism!
 
-```
+```lua
     local function example_function(text)
         out(text)
     end
@@ -57,7 +57,7 @@ One final thing we should know about before we go on is *return values*. In the 
 
 The keyword `return` is neat, and two-fold. Its first, and primary purpose, is to take whatever is to the right of it and shoot it back out, if the function is called. Its second, and still very-important, purpose is to stop the function once the keyword is called. Let's take a look at a common example of return values:
 
-```
+```lua
     local function double(num)
         -- if the parameter is not a number type, then output some text and then STOP the function, to prevent it from going on
         if not is_number(num) then
@@ -80,7 +80,7 @@ The keyword `return` is neat, and two-fold. Its first, and primary purpose, is t
 
 You can return any type, and you can even return multiple values at once. Say you wanted to take the above function, but instead of just doubling the number, you *also* tripled it, and wanted to get both values.
 
-```
+```lua
     local function double_and_triple(num)
         -- if the parameter is not a number type, then output some text and then STOP the function, to prevent it from going on
         if not is_number(num) then

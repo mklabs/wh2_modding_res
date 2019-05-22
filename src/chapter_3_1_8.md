@@ -72,7 +72,7 @@ Similar to commands, script interfaces are a way to access some game data with s
 
 Script interfaces are objects that we can apply some functions *to* (functions applied to an object are known as methods, but we'll talk about that terminology later). In our previous example, we did the following:
 
-```
+```lua
     local excess_faction = cm:get_faction(excess_name)
     if excess_faction:is_dead() == true then
 ```
