@@ -11,7 +11,7 @@ This tutorial assumes you already have RPFM downloaded. If you don't yet, go gra
 
 #### Notepad++ Setup
 
-First off, [we need to grab Notepad++][https://notepad-plus-plus.org/]. Download it, install it wherever.
+First off, [we need to grab Notepad++](https://notepad-plus-plus.org/). Download it, install it wherever.
 
 Notepad++ is a beautiful text-editing program, and we'll be using it for a couple things. At this point in my existence, I use Notepad++ mainly for global searching through libraries of scripts, it's a great way to quickly read very many scripts at the same time.
 
@@ -28,7 +28,7 @@ And that's Notepad++! You can make scripts in there as well, using "File -> New"
 
 #### Visual Studio Code Setup
 
-Clearly, one needs Visual Studio Code. [Go get Visual Studio Code][https://code.visualstudio.com/].
+Clearly, one needs Visual Studio Code. [Go get Visual Studio Code](https://code.visualstudio.com/).
 
 You got it? No? Why are you reading this?
 
@@ -57,7 +57,7 @@ Once you're done, open a new folder to work in within VSCode. The first thing yo
 
 Create a new file within the ".vscode" folder, and name that new file "kailua.json". Within that file, input the following exactly:
 
-```
+```json
 {
    "start_path": ".vscode/entry.lua",
    "preload": {
