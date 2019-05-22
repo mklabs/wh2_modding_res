@@ -124,7 +124,7 @@ function example_script()
 end
 ```
 
-Sweet! This is our first look at variables and the keyword "local", which defines where that variable exists and can be accessed. More on this in literally the next lesson!
+Sweet! This is our first look at variables and the keyword "local", which defines where that variable exists and can be accessed. More on this later on!
 
 #### Spawn That Aaaaarmy!
 

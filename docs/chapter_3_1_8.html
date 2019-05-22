@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Commands, Interfaces &amp; Listeners - Modding Resources</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_8.html" class="active"><strong aria-hidden="true">3.1.9.</strong> Commands, Interfaces &amp; Listeners</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Modding Resources</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#commands-interfaces--listeners" id="commands-interfaces--listeners"><h1>Commands, Interfaces &amp; Listeners</h1></a>
+<p>For today's lesson, the subject is three-fold: <strong>commands</strong>, <strong>interfaces</strong>, and <strong>listeners</strong>. We've looked at all three of these before - all in lesson #2 - but in this lesson, we'll be going way further in-depth so you might have a better grasp of all of those subjects.</p>
+<a class="header" href="#commands" id="commands"><h4>Commands</h4></a>
+<p>A command, put <em>simply</em>, is a CA-defined Lua function that does some cool stuff that we can't do. We've seen a few already - <code>cm:transfer_region_to_faction()</code> and <code>cm:create_force()</code>. Commands are used to communicate between the Lua environment and the actual Total War Engine - the base C++ code that defines the majority of the game.</p>
+<p>Through these commands, we can script a whole lot of stuff! From character spawns, to new effects applied to characters and factions and armies, to quest battles, to unlocking rites, and so on.</p>
+<p>In big part, commands make or break what can be done with scripts. Commands are the driving force of most any script. At this point, though, you might be asking - &quot;how the HECK do I find out what the commands are?&quot; And that, my friend, is why you're reading this lesson. Or maybe you got lost when you were just trying to find funny videos about cats. Either way, next paragraph!</p>
+<p>So, once more in the <a href="./chapter_1.html">&quot;Tools &amp; Resources&quot;</a> page on this site, there's a section within called &quot;Scripting Resources&quot;. We'll look at, first, the &quot;Scripting Doc (CM Functions)&quot; file. Open it up!</p>
+<p>Now, before we go on, one thing MUST be covered. <strong>EVERY command in this document needs to have a prefix of <code>cm:</code>.</strong></p>
+<p>In this document, let's take a look at the two commands that we've used already.</p>
+<pre><code>    Command: 	transfer_region_to_faction	
+    Description: 	Transfer a region ownership to a faction.	
+    Usage: 		transfer_region_to_faction(&quot;region&quot;, &quot;faction&quot;)
+</code></pre>
+<p>This is relatively straightforward. The <code>Command:</code> line tells you what to affix to <code>cm:</code>, so this would be <code>cm:transfer_region_to_faction</code>. Since it's a <em>function call</em>, which we learned about just last episode and you wouldn't dare forget so soon, we add the brackets to it: <code>cm:transfer_region_to_faction()</code>.</p>
+<p>We can see in <code>Usage:</code> that it takes TWO parameters. They seem to be strings, one of which says &quot;region&quot;, the other &quot;faction&quot;. It's easy enough to tell that means &quot;the region key in string&quot;, and &quot;the faction key in string&quot;. So, overall, the command call would look like this: <code>cm:transfer_region_to_faction(&quot;phoenix_gate&quot;, &quot;eataine&quot;)</code>.</p>
+<pre><code>    Command: 	create_force	
+    Description: 	create a navy or army at a position.  Final parameter specified whether the command goes via the command queue	
+    Usage: 		create_force(&quot;faction_key&quot;, &quot;unit_list&quot;, &quot;region_key&quot;, x_position, y_position, exclude_named_characters, &quot;id&quot;, true)
+</code></pre>
+<p>The same applies here. <code>cm:create_force()</code>, with a bunch of parameters. You might notice, however, that it's <em>completely wrong</em> compared to what we used before. Instead of <code>&quot;id&quot;</code>, we used <code>success_callback</code>, and there WAS no parameter after that. What the heck?</p>
+<p>Well, in this situation, it pays to be careful. I advise you to use the CM Scripting Doc cautiously. It isn't fool-proof, and every change that CA has made over the years hasn't been recorded in there - there are commands listed that haven't been functional since Total War: Empire. This is when I point you back to the <a href="./chapter_3_1.html">Setup lesson</a>, if you haven't done that, and tell you to go do it. There are two hyper important tricks in there that will help you understand what to do in a situation like this:</p>
+<ol>
+<li>
+<p>Use the script dump! All you have to do is use &quot;Find In Files ... &quot; within Notepad++, type in the name of the command (ie. <code>create_force</code>), and wait for it to search all the files. It will come up with some hits, and you can read through CA scripts to see what they do and how it's used.</p>
+</li>
+<li>
+<p>Use Kailua! It might take some time to fully understand the <code>ca_types.lua</code> file that we've made for TW:WH2, but it should be pretty easy to <em>read</em> it if you want to know the parameters of a function. Open <code>ca_types.lua</code>, within VSCode (or whatever), search for the name of the command again (<code>create_force</code>), and it will show you some neat stuff. I'll go over what it looks like now, just so you know:</p>
+</li>
+</ol>
+<pre><code>--# assume CM.create_force: method(
+--#     faction_key: string,
+--#     unitstring: string,
+--#     region_key: string,
+--#     xPos: number,
+--#     yPos: number,
+--#     exclude_named_chars: boolean,
+--#     callback: (function(CA_CQI))?
+--# )
+</code></pre>
+<p>Each of these lines is a <em>parameter</em>, and it's split into a name and a type. The name is just a description of what should go there - a faction key, a region key, etc., - and the type defines, of course, the type!</p>
+<p>There's a third example I'd like to go into, which is return types via the CA commands. It works just like regular return values (seen from the <a href="./chapter_3_1_7.html">last lesson</a>), but sometimes the return value is vague, and it's really hard to read using CA's scripting doc. Again, utilize the script dump and Kailua. In Kailua, it'll look a little different - let's grab an example of a command with a return value.</p>
+<pre><code>--# assume CM.get_saved_value: method(valueKey: string) --&gt; WHATEVER
+</code></pre>
+<p><em>NOTE: <code>WHATEVER</code> is a beautiful keyword in Kailua that lets you not define the type of a value, instead of saying &quot;return a number&quot; it says &quot;return literally whatever&quot;</em></p>
+<p>Some functions in the ca_types files have a <code>--&gt;</code> to their end; on the right side of that arrow is the return value. Easy enough to read!</p>
+<p>And that's my explanation of CA commands! Hope you had as much fun as I did.</p>
+<a class="header" href="#interfaces" id="interfaces"><h4>Interfaces</h4></a>
+<p>Similar to commands, script interfaces are a way to access some game data with some Lua. We looked at them previously - in the second lesson, we used a <code>FACTION_SCRIPT_INTERFACE</code>, which we got by using the command <code>cm:get_faction(&quot;faction_key&quot;)</code>.</p>
+<p>Script interfaces are objects that we can apply some functions <em>to</em> (functions applied to an object are known as methods, but we'll talk about that terminology later). In our previous example, we did the following:</p>
+<pre><code>    local excess_faction = cm:get_faction(excess_name)
+    if excess_faction:is_dead() == true then
+</code></pre>
+<p>Wherein, of course, <code>excess_name</code> was a local variable a bit further up. In this example, <code>cm:get_faction()</code> has a <em>return value</em> of a <code>FACTION_SCRIPT_INTERFACE</code>, which we assigned to the local variable <code>excess_faction</code>. <code>FACTION_SCRIPT_INTERFACES</code> have a method called <code>is_dead()</code>, which lets us read if the faction is, well... dead. But how did I know to use that? <em>gasp</em></p>
+<p>Also similar to commands, script interfaces are documented with a slightly-questionable CA file, though this one is typically waaaay more reliable, if a bit inconsistent with some naming. We can, again, grab it from the <a href="./chapter_1.html">Tools &amp; Resources</a> page, this time under the title &quot;Scripting Doc (Events &amp; Interfaces). Our big focus for now is the latter half of that name - Interfaces - though we'll be getting into events right in the next section!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_3_1_7.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_3_2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_3_1_7.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_3_2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

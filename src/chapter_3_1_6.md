@@ -1,4 +1,4 @@
-# Scopes and Stuff
+# Scopes & Stuff
 
 A super important concept in Lua is the concept of *scope*. Every single variable made has a *scope*, which is used to define **where** a variable can be accessed.
 

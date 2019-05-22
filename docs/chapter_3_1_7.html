@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Functions, Arguments and Parameters - Modding Resources</title>
+        <title>Functions, Arguments &amp; Parameters (Also, Returns) - Modding Resources</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes and Stuff</a></li><li><a href="chapter_3_1_7.html" class="active"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments and Parameters</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_7.html" class="active"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.1.9.</strong> Commands, Interfaces &amp; Listeners</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -136,7 +136,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#functions-arguments-and-parameters" id="functions-arguments-and-parameters"><h1>Functions, Arguments and Parameters</h1></a>
+                        <a class="header" href="#functions-arguments--parameters-also-returns" id="functions-arguments--parameters-also-returns"><h1>Functions, Arguments &amp; Parameters (Also, Returns)</h1></a>
 <p>Welcome back! On today's lesson, we're going to cover one of the most fundamental types in Lua much further, and that type is, if you can read, <em>functions</em>. Everybody loves functions.</p>
 <p>Functions are a special data type in Lua. Functions have two specific stages: <strong>definition</strong>, and <strong>call</strong>. A function can be defined as many times as one would like, but it will not do anything until the function is <em>called</em>. Quick look, followed by a breakdown:</p>
 <pre><code>    -- DEFINE the function, which we can call and trigger later on, as much as we'd like
@@ -173,6 +173,49 @@
 </code></pre>
 <p>The term &quot;text&quot; is a <code>local variable</code> for that function, available in the entirety of that function's scope. It goes &quot;out of scope&quot; (as the cool kids say) by the <code>end</code> keyword. This is another clever shorthand that the Lua languages gives to us. Use it!</p>
 <p>A clarity-for-clarity's-sake note here: in the above example, &quot;text&quot; is a <em>parameter</em>, which is the fancy word for a local variable assigned to the function's scope. The string &quot;Testing&quot;, or the string &quot;Example!&quot;, are <em>arguments</em>, which is a variable or value that is &quot;passed&quot; into the function and takes the place of the parameter at runtime. We can think of a parameter as a &quot;fill-in-the-blank&quot; space on an entry form, and the argument as whatever we fill in there.</p>
+<p>One final thing we should know about before we go on is <em>return values</em>. In the above, we're just passing stuff <em>into</em> a function. But what if I want to take stuff <em>out</em> of a function? Well, return values, of course!</p>
+<p>The keyword <code>return</code> is neat, and two-fold. Its first, and primary purpose, is to take whatever is to the right of it and shoot it back out, if the function is called. Its second, and still very-important, purpose is to stop the function once the keyword is called. Let's take a look at a common example of return values:</p>
+<pre><code>    local function double(num)
+        -- if the parameter is not a number type, then output some text and then STOP the function, to prevent it from going on
+        if not is_number(num) then
+            out(&quot;double() called, but you didn't supply a number! Aborting function!&quot;)
+            return
+        end
+
+        -- if the parameter is a number type, then double it and return it! (we can safely assume that &quot;num&quot; IS a number, because otherwise the function wouldn't go this far)
+        local val = num * 2
+        return val
+    end
+
+    local a = 2
+    out(a) → 2
+
+    -- define a local variable as the RESULT of &quot;double(a)&quot;
+    local b = double(a)
+    out(b) → 4
+</code></pre>
+<p>You can return any type, and you can even return multiple values at once. Say you wanted to take the above function, but instead of just doubling the number, you <em>also</em> tripled it, and wanted to get both values.</p>
+<pre><code>    local function double_and_triple(num)
+        -- if the parameter is not a number type, then output some text and then STOP the function, to prevent it from going on
+        if not is_number(num) then
+            out(&quot;double_and_triple() called, but you didn't supply a number! Aborting function!&quot;)
+            return
+        end
+
+        local double = num * 2
+        local triple = num * 3
+
+        -- this is it, just separate the return values or variables with a comma!
+        return double, triple
+    end
+
+    local number = 5
+
+    local d, t = double_and_triple(number)
+    out(d) → 10
+    out(t) → 15
+</code></pre>
+<p>I'd like to point out that I'm changing the names of my variables to point out that <em>the name of parameters can be whatever you want</em>. Don't be confused by me defining the function as <code>local function double_and_triple(num)</code> and calling it using <code>double_and_triple(number)</code>. <code>num</code> is a local variable, available only in the SCOPE of the function, whereas <code>number</code> is a <em>different</em> local variable, available to a higher scope but below the function definition.</p>
 <p>At this point, we've got all the background knowledge really needed to start doing some more cool stuff! In the next lesson, we'll learn more about script interfaces, we'll go further in-depth about listeners (which we briefly used in lesson #2), and we'll talk about commands and how to check for existing ones! And you'll have A CHALLENGE!</p>
 <p>WOO!</p>
 
@@ -187,7 +230,7 @@
                         
 
                         
-                            <a rel="next" href="chapter_3_2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="chapter_3_1_8.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -205,7 +248,7 @@
                 
 
                 
-                    <a href="chapter_3_2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="chapter_3_1_8.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

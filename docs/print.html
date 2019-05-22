@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes and Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments and Parameters</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
+            <ol class="chapter"><li class="affix"><a href="chapter_0_1.html">Modding Resources</a></li><li class="affix"><a href="chapter_0_2.html">Converting to Markdown</a></li><li class="affix"><a href="to_do.html">TO DO</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Tools &amp; Resources</a></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Database Editing</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Tolerant Tables</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.2.</strong> Building Buildings</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Lua</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> From Start To Scratch</a></li><li><ol class="section"><li><a href="chapter_3_1_0.html"><strong aria-hidden="true">3.1.1.</strong> Foreword: Devtool Console</a></li><li><a href="chapter_3_1_1.html"><strong aria-hidden="true">3.1.2.</strong> Hello World</a></li><li><a href="chapter_3_1_2.html"><strong aria-hidden="true">3.1.3.</strong> Fun Stuff</a></li><li><a href="chapter_3_1_3.html"><strong aria-hidden="true">3.1.4.</strong> Chunks &amp; Statements</a></li><li><a href="chapter_3_1_4.html"><strong aria-hidden="true">3.1.5.</strong> Variables &amp; Types</a></li><li><a href="chapter_3_1_5.html"><strong aria-hidden="true">3.1.6.</strong> Expressions &amp; Operators</a></li><li><a href="chapter_3_1_6.html"><strong aria-hidden="true">3.1.7.</strong> Scopes &amp; Stuff</a></li><li><a href="chapter_3_1_7.html"><strong aria-hidden="true">3.1.8.</strong> Functions, Arguments &amp; Parameters (Also, Returns)</a></li><li><a href="chapter_3_1_8.html"><strong aria-hidden="true">3.1.9.</strong> Commands, Interfaces &amp; Listeners</a></li></ol></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Listeners</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Etc</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -712,7 +712,7 @@ end
     )
 end
 </code></pre>
-<p>Sweet! This is our first look at variables and the keyword &quot;local&quot;, which defines where that variable exists and can be accessed. More on this in literally the next lesson!</p>
+<p>Sweet! This is our first look at variables and the keyword &quot;local&quot;, which defines where that variable exists and can be accessed. More on this later on!</p>
 <a class="header" href="#spawn-that-aaaaarmy" id="spawn-that-aaaaarmy"><h4>Spawn That Aaaaarmy!</h4></a>
 <p>We're coming up close to being done here! All we've gotta do left is spawn the army, and all I've gotta do is challenge you a couple more times!</p>
 <p>The next and penultimate CA command we'll be using is <code>cm:create_force(faction_key, army_list, region_key, x_position, y_position, exclude_named_chars, success_callback)</code>. The parameter list looks slightly daunting, but if you take some time to critically think, the only strange thing should be the very last parameter - success_callback. Luckily for you, we won't even be using that one, really.</p>
@@ -793,10 +793,10 @@ end
 <p>Every chunk is a to-do list, and a statement is an objective on that list. You can have to-do lists of all shapes and sizes, and each thing that needs to be done can be small - &quot;brushing your teet&quot; - or huge - &quot;spend way too much money on transmission repairs&quot;. No, I'm not still salty about the money I spent on transmission repairs, why do you ask?</p>
 <p>The Lua interpreter divides everything it takes into specific chunks, which we'll look at later on. For now, we understand the term chunk - a to-do list.</p>
 <p>Within each chunk is one or more statements. A statement is one coherent thought or action within Lua. Something like this can be one statement:</p>
-<pre><code>local a = 1
+<pre><code>a = 1
 </code></pre>
 <p>Or, this can be one statement:</p>
-<pre><code>local a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
+<pre><code>a = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 - 1 / 70 * 300 + 5180 - 418 + 405
 </code></pre>
 <p>That is, one bit of data that Lua has to evaluate and run.</p>
 <p>Remember the term &quot;chunk&quot; - we'll be covering how they're defined later on, when we look at some more keywords.</p>
@@ -1073,7 +1073,7 @@ out(e) → 5.04
 <p>In technicalities, it's doing that because it's reading the <em>highest index in that table</em>, or the highest numerical key. Those are assigned automatically, in order, for arrays; in maps, there's no such guarantee.</p>
 <a class="header" href="#challenge-1-2" id="challenge-1-2"><h4>Challenge 1</h4></a>
 <p>As with last, no challenge! We have only a couple more lessons to do before we get into the REAL nitty-gritty, and once we do there will be a lot of nice challenges. For now, keep messing with this stuff in the DevTool Console, test around.</p>
-<a class="header" href="#scopes-and-stuff" id="scopes-and-stuff"><h1>Scopes and Stuff</h1></a>
+<a class="header" href="#scopes--stuff" id="scopes--stuff"><h1>Scopes &amp; Stuff</h1></a>
 <p>A super important concept in Lua is the concept of <em>scope</em>. Every single variable made has a <em>scope</em>, which is used to define <strong>where</strong> a variable can be accessed.</p>
 <p>By default, all variables are <code>global</code>, which means they're in the entire <strong>global environment</strong>. The global environment is a slightly-fancy way of saying &quot;available within the entire program&quot;. When writing Total War scripts, it's a little suboptimal to use global variables, for a few reasons -
 1) What if someone else wants to use a variable named <code>a</code>, and you do as well? This would force you to have a fully unique name for every single variable everywhere. Kinda a pain!
@@ -1121,7 +1121,7 @@ out(a) → 5
 </ol>
 <p>Be smart with where exactly the term &quot;local&quot; is used - you'll pick up how later on as you go and pick my brain, but for now, understand that you must ALWAYS put the keyword <code>local</code> before a variable!</p>
 <p>As you can see with the example_thing() function above, proper indentation is a GREAT way to visibly see scopes and quickly tell where a variable is and isn't available.</p>
-<a class="header" href="#functions-arguments-and-parameters" id="functions-arguments-and-parameters"><h1>Functions, Arguments and Parameters</h1></a>
+<a class="header" href="#functions-arguments--parameters-also-returns" id="functions-arguments--parameters-also-returns"><h1>Functions, Arguments &amp; Parameters (Also, Returns)</h1></a>
 <p>Welcome back! On today's lesson, we're going to cover one of the most fundamental types in Lua much further, and that type is, if you can read, <em>functions</em>. Everybody loves functions.</p>
 <p>Functions are a special data type in Lua. Functions have two specific stages: <strong>definition</strong>, and <strong>call</strong>. A function can be defined as many times as one would like, but it will not do anything until the function is <em>called</em>. Quick look, followed by a breakdown:</p>
 <pre><code>    -- DEFINE the function, which we can call and trigger later on, as much as we'd like
@@ -1158,8 +1158,105 @@ out(a) → 5
 </code></pre>
 <p>The term &quot;text&quot; is a <code>local variable</code> for that function, available in the entirety of that function's scope. It goes &quot;out of scope&quot; (as the cool kids say) by the <code>end</code> keyword. This is another clever shorthand that the Lua languages gives to us. Use it!</p>
 <p>A clarity-for-clarity's-sake note here: in the above example, &quot;text&quot; is a <em>parameter</em>, which is the fancy word for a local variable assigned to the function's scope. The string &quot;Testing&quot;, or the string &quot;Example!&quot;, are <em>arguments</em>, which is a variable or value that is &quot;passed&quot; into the function and takes the place of the parameter at runtime. We can think of a parameter as a &quot;fill-in-the-blank&quot; space on an entry form, and the argument as whatever we fill in there.</p>
+<p>One final thing we should know about before we go on is <em>return values</em>. In the above, we're just passing stuff <em>into</em> a function. But what if I want to take stuff <em>out</em> of a function? Well, return values, of course!</p>
+<p>The keyword <code>return</code> is neat, and two-fold. Its first, and primary purpose, is to take whatever is to the right of it and shoot it back out, if the function is called. Its second, and still very-important, purpose is to stop the function once the keyword is called. Let's take a look at a common example of return values:</p>
+<pre><code>    local function double(num)
+        -- if the parameter is not a number type, then output some text and then STOP the function, to prevent it from going on
+        if not is_number(num) then
+            out(&quot;double() called, but you didn't supply a number! Aborting function!&quot;)
+            return
+        end
+
+        -- if the parameter is a number type, then double it and return it! (we can safely assume that &quot;num&quot; IS a number, because otherwise the function wouldn't go this far)
+        local val = num * 2
+        return val
+    end
+
+    local a = 2
+    out(a) → 2
+
+    -- define a local variable as the RESULT of &quot;double(a)&quot;
+    local b = double(a)
+    out(b) → 4
+</code></pre>
+<p>You can return any type, and you can even return multiple values at once. Say you wanted to take the above function, but instead of just doubling the number, you <em>also</em> tripled it, and wanted to get both values.</p>
+<pre><code>    local function double_and_triple(num)
+        -- if the parameter is not a number type, then output some text and then STOP the function, to prevent it from going on
+        if not is_number(num) then
+            out(&quot;double_and_triple() called, but you didn't supply a number! Aborting function!&quot;)
+            return
+        end
+
+        local double = num * 2
+        local triple = num * 3
+
+        -- this is it, just separate the return values or variables with a comma!
+        return double, triple
+    end
+
+    local number = 5
+
+    local d, t = double_and_triple(number)
+    out(d) → 10
+    out(t) → 15
+</code></pre>
+<p>I'd like to point out that I'm changing the names of my variables to point out that <em>the name of parameters can be whatever you want</em>. Don't be confused by me defining the function as <code>local function double_and_triple(num)</code> and calling it using <code>double_and_triple(number)</code>. <code>num</code> is a local variable, available only in the SCOPE of the function, whereas <code>number</code> is a <em>different</em> local variable, available to a higher scope but below the function definition.</p>
 <p>At this point, we've got all the background knowledge really needed to start doing some more cool stuff! In the next lesson, we'll learn more about script interfaces, we'll go further in-depth about listeners (which we briefly used in lesson #2), and we'll talk about commands and how to check for existing ones! And you'll have A CHALLENGE!</p>
 <p>WOO!</p>
+<a class="header" href="#commands-interfaces--listeners" id="commands-interfaces--listeners"><h1>Commands, Interfaces &amp; Listeners</h1></a>
+<p>For today's lesson, the subject is three-fold: <strong>commands</strong>, <strong>interfaces</strong>, and <strong>listeners</strong>. We've looked at all three of these before - all in lesson #2 - but in this lesson, we'll be going way further in-depth so you might have a better grasp of all of those subjects.</p>
+<a class="header" href="#commands" id="commands"><h4>Commands</h4></a>
+<p>A command, put <em>simply</em>, is a CA-defined Lua function that does some cool stuff that we can't do. We've seen a few already - <code>cm:transfer_region_to_faction()</code> and <code>cm:create_force()</code>. Commands are used to communicate between the Lua environment and the actual Total War Engine - the base C++ code that defines the majority of the game.</p>
+<p>Through these commands, we can script a whole lot of stuff! From character spawns, to new effects applied to characters and factions and armies, to quest battles, to unlocking rites, and so on.</p>
+<p>In big part, commands make or break what can be done with scripts. Commands are the driving force of most any script. At this point, though, you might be asking - &quot;how the HECK do I find out what the commands are?&quot; And that, my friend, is why you're reading this lesson. Or maybe you got lost when you were just trying to find funny videos about cats. Either way, next paragraph!</p>
+<p>So, once more in the <a href="./chapter_1.html">&quot;Tools &amp; Resources&quot;</a> page on this site, there's a section within called &quot;Scripting Resources&quot;. We'll look at, first, the &quot;Scripting Doc (CM Functions)&quot; file. Open it up!</p>
+<p>Now, before we go on, one thing MUST be covered. <strong>EVERY command in this document needs to have a prefix of <code>cm:</code>.</strong></p>
+<p>In this document, let's take a look at the two commands that we've used already.</p>
+<pre><code>    Command: 	transfer_region_to_faction	
+    Description: 	Transfer a region ownership to a faction.	
+    Usage: 		transfer_region_to_faction(&quot;region&quot;, &quot;faction&quot;)
+</code></pre>
+<p>This is relatively straightforward. The <code>Command:</code> line tells you what to affix to <code>cm:</code>, so this would be <code>cm:transfer_region_to_faction</code>. Since it's a <em>function call</em>, which we learned about just last episode and you wouldn't dare forget so soon, we add the brackets to it: <code>cm:transfer_region_to_faction()</code>.</p>
+<p>We can see in <code>Usage:</code> that it takes TWO parameters. They seem to be strings, one of which says &quot;region&quot;, the other &quot;faction&quot;. It's easy enough to tell that means &quot;the region key in string&quot;, and &quot;the faction key in string&quot;. So, overall, the command call would look like this: <code>cm:transfer_region_to_faction(&quot;phoenix_gate&quot;, &quot;eataine&quot;)</code>.</p>
+<pre><code>    Command: 	create_force	
+    Description: 	create a navy or army at a position.  Final parameter specified whether the command goes via the command queue	
+    Usage: 		create_force(&quot;faction_key&quot;, &quot;unit_list&quot;, &quot;region_key&quot;, x_position, y_position, exclude_named_characters, &quot;id&quot;, true)
+</code></pre>
+<p>The same applies here. <code>cm:create_force()</code>, with a bunch of parameters. You might notice, however, that it's <em>completely wrong</em> compared to what we used before. Instead of <code>&quot;id&quot;</code>, we used <code>success_callback</code>, and there WAS no parameter after that. What the heck?</p>
+<p>Well, in this situation, it pays to be careful. I advise you to use the CM Scripting Doc cautiously. It isn't fool-proof, and every change that CA has made over the years hasn't been recorded in there - there are commands listed that haven't been functional since Total War: Empire. This is when I point you back to the <a href="./chapter_3_1.html">Setup lesson</a>, if you haven't done that, and tell you to go do it. There are two hyper important tricks in there that will help you understand what to do in a situation like this:</p>
+<ol>
+<li>
+<p>Use the script dump! All you have to do is use &quot;Find In Files ... &quot; within Notepad++, type in the name of the command (ie. <code>create_force</code>), and wait for it to search all the files. It will come up with some hits, and you can read through CA scripts to see what they do and how it's used.</p>
+</li>
+<li>
+<p>Use Kailua! It might take some time to fully understand the <code>ca_types.lua</code> file that we've made for TW:WH2, but it should be pretty easy to <em>read</em> it if you want to know the parameters of a function. Open <code>ca_types.lua</code>, within VSCode (or whatever), search for the name of the command again (<code>create_force</code>), and it will show you some neat stuff. I'll go over what it looks like now, just so you know:</p>
+</li>
+</ol>
+<pre><code>--# assume CM.create_force: method(
+--#     faction_key: string,
+--#     unitstring: string,
+--#     region_key: string,
+--#     xPos: number,
+--#     yPos: number,
+--#     exclude_named_chars: boolean,
+--#     callback: (function(CA_CQI))?
+--# )
+</code></pre>
+<p>Each of these lines is a <em>parameter</em>, and it's split into a name and a type. The name is just a description of what should go there - a faction key, a region key, etc., - and the type defines, of course, the type!</p>
+<p>There's a third example I'd like to go into, which is return types via the CA commands. It works just like regular return values (seen from the <a href="./chapter_3_1_7.html">last lesson</a>), but sometimes the return value is vague, and it's really hard to read using CA's scripting doc. Again, utilize the script dump and Kailua. In Kailua, it'll look a little different - let's grab an example of a command with a return value.</p>
+<pre><code>--# assume CM.get_saved_value: method(valueKey: string) --&gt; WHATEVER
+</code></pre>
+<p><em>NOTE: <code>WHATEVER</code> is a beautiful keyword in Kailua that lets you not define the type of a value, instead of saying &quot;return a number&quot; it says &quot;return literally whatever&quot;</em></p>
+<p>Some functions in the ca_types files have a <code>--&gt;</code> to their end; on the right side of that arrow is the return value. Easy enough to read!</p>
+<p>And that's my explanation of CA commands! Hope you had as much fun as I did.</p>
+<a class="header" href="#interfaces" id="interfaces"><h4>Interfaces</h4></a>
+<p>Similar to commands, script interfaces are a way to access some game data with some Lua. We looked at them previously - in the second lesson, we used a <code>FACTION_SCRIPT_INTERFACE</code>, which we got by using the command <code>cm:get_faction(&quot;faction_key&quot;)</code>.</p>
+<p>Script interfaces are objects that we can apply some functions <em>to</em> (functions applied to an object are known as methods, but we'll talk about that terminology later). In our previous example, we did the following:</p>
+<pre><code>    local excess_faction = cm:get_faction(excess_name)
+    if excess_faction:is_dead() == true then
+</code></pre>
+<p>Wherein, of course, <code>excess_name</code> was a local variable a bit further up. In this example, <code>cm:get_faction()</code> has a <em>return value</em> of a <code>FACTION_SCRIPT_INTERFACE</code>, which we assigned to the local variable <code>excess_faction</code>. <code>FACTION_SCRIPT_INTERFACES</code> have a method called <code>is_dead()</code>, which lets us read if the faction is, well... dead. But how did I know to use that? <em>gasp</em></p>
+<p>Also similar to commands, script interfaces are documented with a slightly-questionable CA file, though this one is typically waaaay more reliable, if a bit inconsistent with some naming. We can, again, grab it from the <a href="./chapter_1.html">Tools &amp; Resources</a> page, this time under the title &quot;Scripting Doc (Events &amp; Interfaces). Our big focus for now is the latter half of that name - Interfaces - though we'll be getting into events right in the next section!</p>
 <a class="header" href="#listeners" id="listeners"><h1>Listeners</h1></a>
 <a class="header" href="#can-you-hear-me" id="can-you-hear-me"><h3>Can You Hear Me?</h3></a>
 <p>A listener is an important script command that, simply, waits for something to happen - or, <em>listens</em> for something to happen - in the game, and then triggers something else. Using a listener, we can listen for an event such as the creation of an army, the occupation of a city, or even a battle, and then we use the information from that situation, check for something specific, and run our code if the event matches our criteria. For example: we may be looking for Mannfred to occupy Altdorf. In this case we'd have to use a listener to &quot;listen&quot; for a city being occupied, but we don't want to listen for just <em>any</em> city being occupied. In our example, we have to listen for Altdorf being occupied, and for Mannfred doing the occupying. The listener will listen for every single time a city is occupied, and once those two conditions are met - <em>Mannfred</em> occupying <em>Altdorf</em>... Clue, anyone? - then our listener will trigger some code. In layman's code, our listener will <em>do a thing</em>!</p>
